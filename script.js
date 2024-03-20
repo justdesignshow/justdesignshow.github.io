@@ -12,7 +12,7 @@ var typed = new Typed(".auto-type",{
     backSpeed : 30,
     looped : true,
     cursorChar: "I",
-    cursor: "#fff724",
+    onComplete(instance) {instance.cursor.remove();}
     }
 )
 
@@ -101,73 +101,24 @@ var typed = new Typed(".auto-type",{
 
 
 
-
-scrollableElement.addEventListener('wheel', (ev) => {
-  let targetElement = ev.target;
-  while (targetElement != null) {
-      if (targetElement.id === 'scroll') { // replace 'blacklisted-div' with the id of your div
-          // If we're at the top or bottom of the div, allow horizontal scroll
-          if ((ev.deltaY < 0 && targetElement.scrollTop === 0) ||
-              (ev.deltaY > 0 && targetElement.scrollTop + targetElement.clientHeight >= targetElement.scrollHeight)) {
-              break;
-          }
-          // If horizontal scroll is at the end, allow default vertical scroll
-          if (scrollableElement.scrollLeft >= scrollableElement.scrollWidth - scrollableElement.clientWidth) {
-              return;
-          }
-          ev.preventDefault();  // stop scrolling in another direction
-          scrollableElement.scrollLeft += (ev.deltaY + ev.deltaX);
-          return; // don't prevent default if the target is inside the blacklisted div
-      }
-      targetElement = targetElement.parentNode;
-  }
-
-  if (document.documentElement.clientWidth > 600) {
-      ev.preventDefault();  // stop scrolling in another direction
-      scrollableElement.scrollLeft += (ev.deltaY + ev.deltaX);
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// THIS IS THE OLD WORKING ONE
 
 // scrollableElement.addEventListener('wheel', (ev) => {
 //   let targetElement = ev.target;
 //   while (targetElement != null) {
 //       if (targetElement.id === 'scroll') { // replace 'blacklisted-div' with the id of your div
-//           // calculate distance from cursor to the center of the blacklisted div
-//           let rect = targetElement.getBoundingClientRect();
-//           let dx = rect.left + rect.width / 2 - ev.clientX;
-//           let dy = rect.top + rect.height / 2 - ev.clientY;
-//           let distance = Math.sqrt(dx * dx + dy * dy);
-
-//           // adjust scroll amount based on distance
-//           let scrollAmount = (ev.deltaY + ev.deltaX) * Math.max(0, 1 - distance / 500); // adjust the 500 to change the effect range
-
-//           scrollableElement.scrollLeft += scrollAmount;
-//           return;
+//           // If we're at the top or bottom of the div, allow horizontal scroll
+//           if ((ev.deltaY < 0 && targetElement.scrollTop === 0) ||
+//               (ev.deltaY > 0 && targetElement.scrollTop + targetElement.clientHeight >= targetElement.scrollHeight)) {
+//               break;
+//           }
+//           // If horizontal scroll is at the end, allow default vertical scroll
+//           if (scrollableElement.scrollLeft >= scrollableElement.scrollWidth - scrollableElement.clientWidth) {
+//               return;
+//           }
+//           ev.preventDefault();  // stop scrolling in another direction
+//           scrollableElement.scrollLeft += (ev.deltaY + ev.deltaX);
+//           return; // don't prevent default if the target is inside the blacklisted div
 //       }
 //       targetElement = targetElement.parentNode;
 //   }
@@ -177,6 +128,69 @@ scrollableElement.addEventListener('wheel', (ev) => {
 //       scrollableElement.scrollLeft += (ev.deltaY + ev.deltaX);
 //   }
 // });
+
+
+
+
+
+let startY;
+
+// Save the initial touch position
+scrollableElement.addEventListener('touchstart', (ev) => {
+    startY = ev.touches[0].pageY;
+}, { passive: true });
+
+scrollableElement.addEventListener('touchmove', handleScroll, { passive: false });
+scrollableElement.addEventListener('wheel', handleScroll);
+
+function handleScroll(ev) {
+    let deltaY;
+    if (ev.type === 'wheel') {
+        deltaY = ev.deltaY;
+    } else if (ev.type === 'touchmove') {
+        deltaY = startY - ev.touches[0].pageY;
+        startY = ev.touches[0].pageY;
+    }
+
+    let targetElement = ev.target;
+    while (targetElement != null) {
+        if (targetElement.id === 'scroll') { // replace 'scroll' with the id of your div
+            // If we're at the top or bottom of the div, allow horizontal scroll
+            if ((deltaY < 0 && targetElement.scrollTop === 0) ||
+                (deltaY > 0 && targetElement.scrollTop + targetElement.clientHeight >= targetElement.scrollHeight)) {
+                break;
+            }
+            // If horizontal scroll is at the end, allow default vertical scroll
+            if (scrollableElement.scrollLeft >= scrollableElement.scrollWidth - scrollableElement.clientWidth) {
+                return;
+            }
+            ev.preventDefault();  // stop scrolling in another direction
+            scrollableElement.scrollLeft += deltaY * 3; // Increase the multiplier to make scrolling faster
+            return; // don't prevent default if the target is inside the blacklisted div
+        }
+        targetElement = targetElement.parentNode;
+    }
+
+    if (document.documentElement.clientWidth > 600) {
+        ev.preventDefault();  // stop scrolling in another direction
+        scrollableElement.scrollLeft += deltaY * 1.5; // Increase the multiplier to make scrolling faster
+    }
+}
+
+// Reset startY at the end of the touch
+scrollableElement.addEventListener('touchend', () => {
+    startY = null;
+}, { passive: true });
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -216,3 +230,10 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => {
   observer.observe(section);
 });
+
+
+
+
+
+
+

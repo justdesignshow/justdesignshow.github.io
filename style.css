@@ -88,6 +88,7 @@ ul {list-style-type: none}
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    will-change: scroll-position;
 }
 
 #menuToggle span:first-child {transform-origin: 0% 0%;}
@@ -134,6 +135,7 @@ ul {list-style-type: none}
     display: flex;
     width: 100vw;
     background: linear-gradient(0.75turn, #dddd26 0%, #ffff8d9a 100%);
+    -moz-backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     flex-direction: column;
@@ -144,8 +146,9 @@ ul {list-style-type: none}
     display: flex;
     width: 100vw;
     background: #121212;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
     flex-direction: column;
 }
 
@@ -221,19 +224,28 @@ ul {list-style-type: none}
     display: none;}
 
 .student:hover {
-    transform: scale(1.1);
-    --webkit-transform: scale(1.1);
-    --moz-transform: scale(1.1);
-    transition: 100ms ease-in-out;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transition: 500ms ease-in-out;
     -webkit-transition: 100ms ease-in-out;
     -moz-transition: 100ms ease-in-out;
-
 }
 
-#danyalahmed {background-image: url("images/danyalahmed.webp")}
+
+/* INDIVIDUAL PHOTO FILES */
+/* #danyalahmed {background-image: url("images/danyalahmed.webp")}
 #jaidhaliwal {background-image: url("images/jaidhaliwal.webp")}
 #ksawierwydra {background-image: url("images/ksawierwydra.webp")}
-#tenzinlockley {background-image: url("images/tenzinlockley.webp")}
+#tenzinlockley {background-image: url("images/tenzinlockley.webp")} */
+
+/* SPRITES */
+#danyalahmed {background: url('images/sprites.webp') -0 -0;}
+#jaidhaliwal {background: url('images/sprites.webp') -250px -0;}
+#ksawierwydra {background: url('images/sprites.webp') -500px -0;}
+#tenzinlockley {background: url('images/sprites.webp') -750px -0;}
+
+
 
 .students-grid-right {
     margin-top: 0;
@@ -307,3 +319,11 @@ body:has(#helo:hover) #logo {opacity: 1}
     .hero-sub {line-height: 3.12vw;} 
     div.hero-sub>h1 {font-size: 2.8vw;}
 }
+
+
+
+
+
+
+
+
