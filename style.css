@@ -110,7 +110,7 @@ ul {list-style-type: none}
 .pages {
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: hidden;
     will-change: scroll-position;
 }
 
@@ -295,6 +295,12 @@ ul {list-style-type: none}
 
 body:has(#helo:hover) #logo {opacity: 1}
 
+@media only screen and (max-height: 900px) {
+    .container{line-height: 9.375vw;}
+    .design{padding-left: 2.775vw}
+    div.container>h1 {font-size: 12vw;}
+}
+
 @media only screen and (max-width: 750px) {
 	.hero-grid-right {width:40px}
     .hero-sub {line-height: 3.9vw} 
@@ -329,7 +335,7 @@ body:has(#helo:hover) #logo {opacity: 1}
 
 #DANYALAHMED {background: url('sprites.webp') -250px -0;}
 #EVANGELOSANGELOU {background: url('sprites.webp') -0 -0;}
-#SARAANSTSEE {background: url('sprites.webp') -0 -0;}
+#SARAANSTEE {background: url('sprites.webp') -0 -0;}
 #JADEBEARD {background: url('sprites.webp') -0 -0;}
 #FARZANANOOR {background: url('sprites.webp') -0 -0;}
 #KAIBURLEY {background: url('sprites.webp') -0 -0;}
