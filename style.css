@@ -1,7 +1,30 @@
+@import url("https://p.typekit.net/p.css?s=1&k=piq8ebp&ht=tk&f=47182.47185.48394.48401&a=151776399&app=typekit&e=css");
+@font-face {
+font-family:"space-mono";
+src:url("https://use.typekit.net/af/d27913/00000000000000007735e94a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/d27913/00000000000000007735e94a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/d27913/00000000000000007735e94a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;font-display: swap;
+}
+@font-face {
+font-family:"space-mono";
+src:url("https://use.typekit.net/af/85404f/00000000000000007735e94b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/85404f/00000000000000007735e94b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/85404f/00000000000000007735e94b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;font-display: swap;
+}
+@font-face {
+font-family:"owners";
+src:url("https://use.typekit.net/af/bd0005/00000000000000007735f283/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/bd0005/00000000000000007735f283/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/bd0005/00000000000000007735f283/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;font-display: swap;
+}
+@font-face {
+font-family:"owners";
+src:url("https://use.typekit.net/af/c5cea3/00000000000000007735f293/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/c5cea3/00000000000000007735f293/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/c5cea3/00000000000000007735f293/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;font-display: swap;
+}
+
+.tk-space-mono { font-family: "space-mono",mono; }
+.tk-owners { font-family: "owners",sans-serif; }
+
 * {text-decoration: none;}
-
 body { margin: 0px 0px 0px 0px;}
-
 html { scroll-behavior: smooth;}
 
 h1 {font-family: "owners", sans-serif;
@@ -87,7 +110,7 @@ ul {list-style-type: none}
 .pages {
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow: hidden;
     will-change: scroll-position;
 }
 
@@ -204,7 +227,6 @@ ul {list-style-type: none}
     background: linear-gradient(0turn, #000000 0%, #00000000 50%);
     opacity: 1;}
 
-
 .quote {
     color: #000;
     flex-direction: column;
@@ -231,21 +253,6 @@ ul {list-style-type: none}
     -webkit-transition: 100ms ease-in-out;
     -moz-transition: 100ms ease-in-out;
 }
-
-
-/* INDIVIDUAL PHOTO FILES */
-/* #danyalahmed {background-image: url("images/danyalahmed.webp")}
-#jaidhaliwal {background-image: url("images/jaidhaliwal.webp")}
-#ksawierwydra {background-image: url("images/ksawierwydra.webp")}
-#tenzinlockley {background-image: url("images/tenzinlockley.webp")} */
-
-/* SPRITES */
-#danyalahmed {background: url('images/sprites.webp') -0 -0;}
-#jaidhaliwal {background: url('images/sprites.webp') -250px -0;}
-#ksawierwydra {background: url('images/sprites.webp') -500px -0;}
-#tenzinlockley {background: url('images/sprites.webp') -750px -0;}
-
-
 
 .students-grid-right {
     margin-top: 0;
@@ -288,11 +295,50 @@ ul {list-style-type: none}
 
 body:has(#helo:hover) #logo {opacity: 1}
 
+@media only screen and (min-width: 1400px) {
+    @media only screen and (max-height: 700px) {
+        .container{line-height: 9.375vw}
+        .design{padding-left: 2.775vw}
+        div.container>h1 {font-size: 12vw}}
+    @media only screen and (max-height: 600px) {
+        .container{line-height: 7.03125vw}
+        .design{padding-left: 2.08125vw}
+        div.container>h1 {font-size: 9vw}}}
+
+@media only screen and (min-width: 1600px) {
+    @media only screen and (max-height: 900px) {
+        .container{line-height: 9.375vw}
+        .design{padding-left: 2.775vw}
+        div.container>h1 {font-size: 12vw}}
+    @media only screen and (max-height: 750px) {
+        .container{line-height: 7.03125vw}
+        .design{padding-left: 2.08125vw}
+        div.container>h1 {font-size: 9vw}}}
+
+@media only screen and (min-width: 1900px) {
+    @media only screen and (max-height: 1050px) {
+        .container{line-height: 9.375vw}
+        .design{padding-left: 2.775vw}
+        div.container>h1 {font-size: 12vw}}
+    @media only screen and (max-height: 850px) {
+        .container{line-height: 7.03125vw}
+        .design{padding-left: 2.08125vw}
+        div.container>h1 {font-size: 9vw}}}
+
+@media only screen and (min-width: 2200px) {
+    @media only screen and (max-height: 1150px) {
+        .container{line-height: 9.375vw}
+        .design{padding-left: 2.775vw}
+        div.container>h1 {font-size: 12vw}}
+    @media only screen and (max-height: 950px) {
+        .container{line-height: 7.03125vw}
+        .design{padding-left: 2.08125vw}
+        div.container>h1 {font-size: 9vw}}}
+
 @media only screen and (max-width: 750px) {
 	.hero-grid-right {width:40px}
     .hero-sub {line-height: 3.9vw} 
-    div.hero-sub>h1 {font-size: 3.5vw}
-}
+    div.hero-sub>h1 {font-size: 3.5vw}}
 
 @media only screen and (max-width: 600px) {
     .nav1 {display: block}
@@ -320,10 +366,48 @@ body:has(#helo:hover) #logo {opacity: 1}
     div.hero-sub>h1 {font-size: 2.8vw;}
 }
 
-
-
-
-
-
-
-
+#DANYALAHMED {background: url('sprites.webp') -250px -0;}
+#EVANGELOSANGELOU {background: url('sprites.webp') -0 -0;}
+#SARAANSTEE {background: url('sprites.webp') -0 -0;}
+#JADEBEARD {background: url('sprites.webp') -0 -0;}
+#FARZANANOOR {background: url('sprites.webp') -0 -0;}
+#KAIBURLEY {background: url('sprites.webp') -0 -0;}
+#XIYUCAI {background: url('sprites.webp') -0 -0;}
+#KEYICHEN {background: url('sprites.webp') -0 -0;}
+#DORIDASHTI {background: url('sprites.webp') -0 -0;}
+#ADRIANDELGADO {background: url('sprites.webp') -0 -0;}
+#DORIDASHTI {background: url('sprites.webp') -0 -0;}
+#JAIDHALIWAL {background: url('sprites.webp') -500px -0;}
+#BOBBIEDIKE {background: url('sprites.webp') -0 -0;}
+#CHARLIEFIRZPATRICK {background: url('sprites.webp') -0 -0;}
+#SAMUELGREEN {background: url('sprites.webp') -0 -0;}
+#ZIMOUHUANG {background: url('sprites.webp') -0 -0;}
+#RUICHENHUANG {background: url('sprites.webp') -0 -0;}
+#ZHEHUANG {background: url('sprites.webp') -0 -0;}
+#REHEEMIFILL {background: url('sprites.webp') -0 -0;}
+#MIRELALESNEANU {background: url('sprites.webp') -0 -0;}
+#YUJIALI {background: url('sprites.webp') -0 -0;}
+#YONGLINLIAO {background: url('sprites.webp') -0 -0;}
+#ALEXLINDON {background: url('sprites.webp') -0 -0;}
+#ZHENLILIU {background: url('sprites.webp') -0 -0;}
+#CHIHIMLO {background: url('sprites.webp') -0 -0;}
+#TENZINLOCKLEY {background: url('sprites.webp') -1000px -0;}
+#LOKEYEANNETUNG {background: url('sprites.webp') -0 -0;}
+#GIOVANNINAMISDIAZ {background: url('sprites.webp') -0 -0;}
+#ADAOBIOBIOHA {background: url('sprites.webp') -0 -0;}
+#ALEXANDRAPANAYI {background: url('sprites.webp') -0 -0;}
+#ANGELIKAPIORO {background: url('sprites.webp') -0 -0;}
+#SAVINASALLAN {background: url('sprites.webp') -0 -0;}
+#TOMASSAMPAIOROCHA {background: url('sprites.webp') -0 -0;}
+#JACKSARTAN {background: url('sprites.webp') -0 -0;}
+#ELINORSLACK {background: url('sprites.webp') -0 -0;}
+#MOHAMMEDUDDIN {background: url('sprites.webp') -0 -0;}
+#BRITNEYWALLBANK {background: url('sprites.webp') -0 -0;}
+#HOHINWAN {background: url('sprites.webp') -0 -0;}
+#IZZYWILDE {background: url('sprites.webp') -0 -0;}
+#XIZEWU {background: url('sprites.webp') -0 -0;}
+#ZHAWENWU {background: url('sprites.webp') -0 -0;}
+#KSAWIERWYDRA {background: url('sprites.webp') -750px -0;}
+#SIFANXIANG {background: url('sprites.webp') -0 -0;}
+#HUANGZHE {background: url('sprites.webp') -0 -0;}
+#HUANGZIMOU {background: url('sprites.webp') -0 -0;}

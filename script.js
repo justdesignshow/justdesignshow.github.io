@@ -10,7 +10,7 @@ setTimeout(function() {
     cursorChar: "I",
     onComplete(instance) {instance.cursor.remove();}
   });
-}, 3000); // 3000 milliseconds = 3 seconds
+}, 1000);
 
 
 window.onload = function() {
@@ -28,7 +28,7 @@ scrollableElement.addEventListener('touchstart', (ev) => {
 }, { passive: true });
 
 scrollableElement.addEventListener('touchmove', handleScroll, { passive: false });
-scrollableElement.addEventListener('wheel', handleScroll, {passive: true});
+scrollableElement.addEventListener('wheel', handleScroll, {passive: false});
 
 function handleScroll(ev) {
     let deltaY;
