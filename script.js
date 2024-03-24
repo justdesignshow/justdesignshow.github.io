@@ -10,7 +10,7 @@ setTimeout(function() {
     cursorChar: "I",
     onComplete(instance) {instance.cursor.remove();}
   });
-}, 3000);
+}, 4000);
 
 
 window.onload = function() {
@@ -91,3 +91,24 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 
 sections.forEach(section => {observer.observe(section);});
+
+// JavaScript to manually implement sticky behavior
+if (document.documentElement.clientWidth < 600) {
+    // JavaScript to enhance sticky behavior and ensure the element stays on top
+    var studentsTop = document.querySelector('.students-top');
+    var studentsTopInitialOffset = studentsTop.offsetTop; // Store the initial offset top
+
+    window.addEventListener('scroll', function() {
+    if (window.pageYOffset >= studentsTopInitialOffset) {
+        studentsTop.style.position = 'fixed';
+        studentsTop.style.top = '0';
+        studentsTop.style.zIndex = '9999'; // High z-index to ensure it stays on top
+        studentsTop.style.background = 'var(--black)';
+
+    } else {
+        studentsTop.style.position = 'static'; // Revert to default positioning
+        studentsTop.style.top = '';
+        studentsTop.style.zIndex = ''; // Reset z-index
+    }
+    });
+}

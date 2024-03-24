@@ -14,7 +14,7 @@
                 <ul class="menu">
                     <li><a href="#home"><h1>HOME</h1></a></li>
                     <li><a href="#about"><h1>ABOUT</h1></a></li>
-                    <li><a href="#directory"><h1>DIRECTIONS</h1></a></li>
+                    <li><a href="#directions"><h1>DIRECTIONS</h1></a></li>
                     <li><a href="#students"><h1>STUDENTS</h1></a></li>
                 </ul>
             </div>
@@ -66,9 +66,21 @@
                     </div>
                 </section>
             </div>
-            <div class="about">
-                <section id="about">
-                <div style="
+            <section id="about">
+                <div class="about-column">
+                    <h1>EXAMPLE</h1>
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h3>
+                </div>
+                <div class="about-column">
+                    <h1>EXAMPLE</h1>
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h3>
+                </div>
+                <div class="about-column">
+                    <h1>FOLLOW OUR SOCIALS</h1>
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h3>
+                </div>
+            </section>
+                <!-- <div style="
                 display: flex;
                 flex-direction: row;
                 align-items: right;
@@ -91,16 +103,10 @@
                             XX - XX MAY 2024</h1>
                     </div>
                     <div class="about-grid hero-grid-right bottom-right" style="border-width: 1px 0px 0px 1px;"></div>
-                </div>
-            </section>
-            </div>
+                </div> -->
             <div class="directions">
                 <section id="directions">
-                <div style="
-                display: flex;
-                flex-direction: row;
-                width: 100vw;
-                height: 15vh;">
+                <div class="pageheader">
                     <div class="directions-grid directions-grid-left" style="border-width: 0px 1px 1px 0px">
                     </div>
                     <div class="directions-grid directions-grid-right" style="color: #ffffff; border-width: 0px 0px 1px 1px;text-align: left; padding-left:20px; padding-bottom: 10px; display: flex; flex-direction: column-reverse; align-items: flex-start; ">
@@ -122,96 +128,91 @@
             </div>
             <div class="directions">
                 <section id="students">
-                    <div style="
-                    display: flex;
-                    flex-direction: row;
-                    width: 100vw;
-                    height: 15vh;">
-                        <div class="directions-grid directions-grid-left" style="border-width: 0px 0px 1px 0px">
+                    <div class="students-top">
+                        <div class="pageheader">
+                            <div class="directions-grid directions-grid-left" style="border-width: 0px 0px 1px 0px">
+                            </div>
+                            <div class="directions-grid directions-grid-right" style="color: #ffffff; border-width: 0px 0px 1px 2px;text-align: left; padding-left:20px; padding-bottom: 10px; display: flex; flex-direction: column-reverse; align-items: flex-start; ">
+                                <h1>STUDENTS</h1>
+                            </div>
                         </div>
-                        <div class="directions-grid directions-grid-right" style="color: #ffffff; border-width: 0px 0px 1px 2px;text-align: left; padding-left:20px; padding-bottom: 10px; display: flex; flex-direction: column-reverse; align-items: flex-start; ">
-                            <h1>STUDENTS</h1>
-                        </div>
-                    </div>
-                    <div style="
-                    display: flex;
-                    flex-direction: row;
-                    width: 100vw;
-                    height: 7vh;">
-                        <div class="directions-grid directions-grid-left" style="border-width: 1px 0px 0px 0px">
-                        </div>
-                        <div class="directions-grid directions-grid-right" style="color: #ffffff; border-width: 1px 0px 2px 2px;text-align: left; padding-left:20px; padding-bottom: 10px; display: flex; flex-direction: column-reverse; align-items: flex-start; ">
-                            <h3>filters will go here</h3>
+                        <div class="" style="
+                        display: flex;
+                        flex-direction: row;
+                        width: 100vw;
+                        height: 7vh;">
+                            <div class="directions-grid directions-grid-left" style="border-width: 1px 0px 0px 0px">
+                            </div>
+                            <div class="directions-grid directions-grid-right" style="color: #ffffff; border-width: 1px 0px 2px 2px;text-align: left; padding-left:20px; padding-bottom: 10px; display: flex; flex-direction: column-reverse; align-items: flex-start; ">
+                                <h3>filters will go here</h3>
+                            </div>
                         </div>
                     </div>
-                    <div id="scroll" style="
-                    display: flex;
-                    flex-direction: row;
-                    align-items: right;
-                    width: 100vw;
-                    height: 78vh;
-                    overflow-y: scroll;">
+                    <div id="scroll">
                         <div class="directions-grid directions-grid-left" style="color: #ffffff; border-width: 0px 0px 0px 0px">
                             <h1></h1>
                         </div>
                         <div class="directions-grid students-grid-right" id="students-container" style="border-width: 0px 0px 0px 2px;">
                             <script>
                                 let students = [
-                                {n: 'DANYAL AHMED', q: 'SO YOU JUST PICK FONTS AND STUFF?'},
-                                {n: 'EVANGELOS ANGELOU', q: ''},
-                                {n: 'SARA ANSTEE', q: ''},
-                                {n: 'JADE BEARD', q: ''},
-                                {n: 'FARZANA NOOR', q: ''},
-                                {n: 'KAI BURLEY', q: 'SO YOU JUST TAKE PRETTY PICS?'},
-                                {n: 'XIYU CAI', q: ''},
-                                {n: 'KEYI CHEN', q: ''},
-                                {n: 'DORI DASHTI', q: ''},
-                                {n: 'ADRIAN DELGADO', q: ''},
-                                {n: 'DORI DASHTI', q: ''},
-                                {n: 'JAI DHALIWAL', q: 'SO YOU JUST PICK FONTS AND STUFF?'},
-                                {n: 'BOBBIE DIKE', q: ''},
-                                {n: 'CHARLIE FIRZPATRICK', q: ''},
-                                {n: 'SAMUEL GREEN', q: ''},
-                                {n: 'ZIMOU HUANG', q: ''},
-                                {n: 'RUICHEN HUANG', q: ''},
-                                {n: 'ZHE HUANG', q: ''},
-                                {n: 'REHEEM IFILL', q: ''},
-                                {n: 'MIRELA LESNEANU', q: ''},
-                                {n: 'YUJIA LI', q: ''},
-                                {n: 'YONGLIN LIAO', q: ''},
-                                {n: 'ALEX LINDON', q: ''},
-                                {n: 'ZHENLI LIU', q: ''},
-                                {n: 'CHI HIM LO', q: ''},
-                                {n: 'TENZIN LOCKLEY', q: 'SO YOU JUST PICK FONTS AND STUFF?'},
-                                {n: 'GIOVANNI NAMIS DIAZ', q: ''},
-                                {n: 'ADAOBI OBIOHA', q: ''},
-                                {n: 'ALEXANDRA PANAYI', q: ''},
-                                {n: 'ANGELIKA PIORO', q: ''},
-                                {n: 'SAVINA SALLAN', q: ''},
-                                {n: 'TOMAS SAMPAIO ROCHA', q: ''},
-                                {n: 'JACK SARTAN', q: ''},
-                                {n: 'ELINOR SLACK', q: ''},
-                                {n: 'MOHAMMED UDDIN', q: ''},
-                                {n: 'BRITNEY WALLBANK', q: ''},
-                                {n: 'HO HIN WAN', q: ''},
-                                {n: 'IZZY WILDE', q: ''},
-                                {n: 'XIZE WU', q: ''},
-                                {n: 'ZHAWEN WU', q: ''},
-                                {n: 'KSAWIER WYDRA', q: 'SO YOU JUST PICK FONTS AND STUFF?'},
-                                {n: 'SIFAN XIANG', q: ''},
-                                {n: 'LOKE YEANNE TUNG', q: ''},
-                                {n: 'HUANG ZHE', q: ''},
-                                {n: 'HUANG ZIMOU', q: ''},
+                                {n: 'DANYAL AHMED', s:'<>', q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'EVANGELOS ANGELOU', s:'<>', q: ''},
+                                {n: 'SARA ANSTEE', s:'<>', q: ''},
+                                {n: 'JADE BEARD', s:'<>', q: ''},
+                                {n: 'FARZANA NOOR', s:'<>', q: ''},
+                                {n: 'KAI BURLEY', s:'<>', q: 'SO YOU JUST TAKE PRETTY PICS?'},
+                                {n: 'XIYU CAI', s:'<>', q: ''},
+                                {n: 'KEYI CHEN', s:'<>', q: ''},
+                                {n: 'DORI DASHTI', s:'<>', q: ''},
+                                {n: 'ADRIAN DELGADO', s:'<>', q: ''},
+                                {n: 'DORI DASHTI', s:'<>', q: ''},
+                                {n: 'JAI DHALIWAL', s:'<>', q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'BOBBIE DIKE', s:'<>', q: ''},
+                                {n: 'CHARLIE FIRZPATRICK', s:'<>', q: ''},
+                                {n: 'SAMUEL GREEN', s:'<>', q: ''},
+                                {n: 'ZIMOU HUANG', s:'<>', q: ''},
+                                {n: 'RUICHEN HUANG', s:'<>', q: ''},
+                                {n: 'ZHE HUANG', s:'<>', q: ''},
+                                {n: 'REHEEM IFILL', s:'<>', q: ''},
+                                {n: 'MIRELA LESNEANU', s:'<>', q: ''},
+                                {n: 'YUJIA LI', s:'<>', q: ''},
+                                {n: 'YONGLIN LIAO', s:'<>', q: ''},
+                                {n: 'ALEX LINDON', s:'<>', q: ''},
+                                {n: 'ZHENLI LIU', s:'<>', q: ''},
+                                {n: 'CHI HIM LO', s:'<>', q: ''},
+                                {n: 'TENZIN LOCKLEY', s:'<>', q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'GIOVANNI NAMIS DIAZ', s:'<>', q: ''},
+                                {n: 'ADAOBI OBIOHA', s:'<>', q: ''},
+                                {n: 'ALEXANDRA PANAYI', s:'<>', q: ''},
+                                {n: 'ANGELIKA PIORO', s:'<>', q: ''},
+                                {n: 'SAVINA SALLAN', s:'<>', q: ''},
+                                {n: 'TOMAS SAMPAIO ROCHA', s:'<>', q: ''},
+                                {n: 'JACK SARTAN', s:'<>', q: ''},
+                                {n: 'ELINOR SLACK', s:'<>', q: ''},
+                                {n: 'MOHAMMED UDDIN', s:'<>', q: ''},
+                                {n: 'BRITNEY WALLBANK', s:'<>', q: ''},
+                                {n: 'HO HIN WAN', s:'<>', q: ''},
+                                {n: 'IZZY WILDE', s:'<>', q: ''},
+                                {n: 'XIZE WU', s:'<>', q: ''},
+                                {n: 'ZHAWEN WU', s:'<>', q: ''},
+                                {n: 'KSAWIER WYDRA', s:'<>', q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'SIFAN XIANG', s:'<>', q: ''},
+                                {n: 'LOKE YEANNE TUNG', s:'<>', q: ''},
+                                {n: 'HUANG ZHE', s:'<>', q: ''},
+                                {n: 'HUANG ZIMOU', s:'<>', q: ''},
                                 ];
                                 let container = document.getElementById('students-container');
                                 students.forEach(student => {
                                     let sD = document.createElement('div');
                                     sD.className = 'student';
                                     sD.id = student.n.replace(/ /g, '');
+                                    let a = document.createElement('a');
+                                    a.href = '/' + sD.id;
+                                    a.appendChild(sD);
                                     let n = document.createElement('div');
                                     n.className = 'name';
                                     let nameH1 = document.createElement('h1');
-                                    nameH1.innerHTML = student.n;
+                                    nameH1.innerHTML = student.n + "<br>" + student.s;
                                     n.appendChild(nameH1);
                                     let q = document.createElement('div');
                                     q.className = 'quote';
@@ -220,7 +221,7 @@
                                     q.appendChild(quoteH1);
                                     sD.appendChild(n);
                                     sD.appendChild(q);
-                                    container.appendChild(sD);
+                                    container.appendChild(a);
                                 });
                             </script>
                         </div>

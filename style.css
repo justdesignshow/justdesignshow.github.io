@@ -24,8 +24,8 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;font-dis
 .tk-owners { font-family: "owners",sans-serif; }
 
 * {text-decoration: none;}
-body { margin: 0px 0px 0px 0px;}
-html { scroll-behavior: smooth;}
+body {margin: 0px 0px 0px 0px}
+html {scroll-behavior: smooth; --black: #121212; --yellow: #DDDC26;}
 
 h1 {font-family: "owners", sans-serif;
     letter-spacing: 1pt;
@@ -41,10 +41,9 @@ h2 {
 h3 {font-family: "space-mono", mono;
     font-weight: 400;
     font-style: normal;
-    color: #F3F2EB;
     font-size: 16px;}
 
-.typed-cursor{color: #DDDC26; }
+.typed-cursor{color: var(--yellow)}
 
 a {color: inherit;}
 
@@ -97,7 +96,7 @@ ul {list-style-type: none}
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #000000;
+    background: var(--black);
     border-radius: 0;
     z-index: 1;
     left: 0px;
@@ -112,6 +111,7 @@ ul {list-style-type: none}
     flex-direction: row;
     overflow: hidden;
     will-change: scroll-position;
+    width: 100vw;
 }
 
 #menuToggle span:first-child {transform-origin: 0% 0%;}
@@ -129,7 +129,7 @@ ul {list-style-type: none}
     padding: 75px;
     padding-top: 125px;
     background-attachment: fixed;
-    background: linear-gradient(0.75turn, #DDDC26 1%, #ffff8dce 10%);
+    background: linear-gradient(0.75turn, var(--yellow) 1%, #ffff8dce 10%);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     -webkit-font-smoothing: antialiased;
@@ -151,24 +151,40 @@ ul {list-style-type: none}
     flex-direction: column;
     align-items: right;
     width: 100vw;
-    background: #121212;
+    background: var(--black)
 }
 
-.about {
+.pageheader {
     display: flex;
+    flex-direction: row;
     width: 100vw;
-    background: linear-gradient(0.75turn, #dddd26 0%, #ffff8d9a 100%);
+    height: 15vh;
+}
+
+#about {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(0.75turn, var(--yellow) 0%, #ffff8d9a 100%);
     -moz-backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    flex-direction: column;
     margin-left: calc(100vw - 50px);
+    gap: 100px;
+    align-items: center;
+    padding: 0 100px 0 100px;
+}
+
+.about-column {
+    padding: 50px;
+    color: var(--black);
+    width: 400px;
 }
 
 .directions {
     display: flex;
     width: 100vw;
-    background: #121212;
+    background: var(--black);
     -moz-backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
@@ -177,12 +193,12 @@ ul {list-style-type: none}
 
 .hero-grid {
 	border-style: solid; 
-	border-color: #DDDC26;
+	border-color: var(--yellow)
 }
 
 .about-grid {
 	border-style: solid; 
-	border-color: #000000;
+	border-color: var(--black)
 }
 
 .directions-grid {
@@ -203,6 +219,30 @@ ul {list-style-type: none}
 
 .hero-sub {line-height: 34px;}
 
+#scroll {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    width: 100vw;
+    height: 78vh;
+    overflow-y: scroll;}
+
+.students-grid-right {
+    margin-top: 0;
+    align-self: flex-start;
+    flex: 1;
+    display: flex;
+    padding:20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    z-index: 1;
+}
+
+.students-top {
+    z-index: 999;
+    background-color: var(--black);}
+
 .student {
     height: 250px;
     width: 250px;
@@ -210,40 +250,25 @@ ul {list-style-type: none}
     flex-direction: column-reverse;
     line-height: 30px;
     color: #F3F2EB;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -webkit-background-position: center;
+    transform: scale(1.0);
 }
 
-.name {
-    display: flex;
+.name, .quote {width: fill; height: 100%; padding: 15px; padding-bottom: 10px;}
+
+.name {display: flex;
     flex-direction: column-reverse;
-    width: fill;
-    height: 100%;
-    padding: 15px;
-    padding-bottom: 10px;
-    background: linear-gradient(0turn, #000000 0%, #00000000 50%);
-    opacity: 1;}
+    background: linear-gradient(0turn, #000000 0%, #00000000 50%)}
 
 .quote {
-    color: #000;
+    color: var(--black);
     flex-direction: column;
-    width: fill;
-    height: 100%;
-    padding: 15px;
-    padding-bottom: 10px;
-    background: linear-gradient(0.25turn, #dddd26 0%, #ffff8d9a 100%);
+    background: linear-gradient(0.25turn, var(--yellow) 0%, #ffff8d9a 100%);
     /* -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px); */
-    display: none;}
+    display: none}
 
-.student:hover .quote {
-    display: flex;}
-
-.student:hover .name {
-    display: none;}
+.student:hover .quote {display: flex;}
+.student:hover .name {display: none;}
 
 .student:hover {
     transform: scale(1.05);
@@ -252,18 +277,6 @@ ul {list-style-type: none}
     transition: 500ms ease-in-out;
     -webkit-transition: 100ms ease-in-out;
     -moz-transition: 100ms ease-in-out;
-}
-
-.students-grid-right {
-    margin-top: 0;
-    align-self: flex-start;
-    flex: 1;
-    min-width: 80vw;
-    display: flex;
-    padding:20px;
-    gap: 20px;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
 
 .topnav {
@@ -282,58 +295,55 @@ ul {list-style-type: none}
     font-size: 10px;
 }
 
+/* CSS to style the element when it's sticky */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%; /* Ensure full width */
+    z-index: 1000; /* High z-index to stay on top */
+  }
+  
+  
+
 .animate{
     transition: 100ms ease-in-out;
     -webkit-transition: 100ms ease-in-out;
     -moz-transition: 100ms ease-in-out;
 }
 
-.topnav a:hover {color: #DDDC26}
+.topnav a:hover {color: var(--yellow)}
 .topnav a.active {color: white}
 
-#logo {opacity: 0}
+#logo {opacity: 0; color: white;}
 
 body:has(#helo:hover) #logo {opacity: 1}
 
-@media only screen and (min-width: 1200px) {
-    @media only screen and (max-height: 800px) {
-        .container{line-height: 9.375vw}
-        .design{padding-left: 2.775vw}
-        div.container>h1 {font-size: 12vw}}
-    @media only screen and (max-height: 700px) {
-        .container{line-height: 7.03125vw}
-        .design{padding-left: 2.08125vw}
-        div.container>h1 {font-size: 9vw}}}
+@media only screen and (min-width: 1200px) and (max-height: 800px),
+       only screen and (min-width: 1400px) and (max-height: 1000px),
+       only screen and (min-width: 1600px) and (max-height: 1150px),
+       only screen and (min-width: 1800px) and (max-height: 1200px) {
+    .container{line-height: 9.375vw}
+    .design{padding-left: 2.775vw}
+    div.container>h1 {font-size: 12vw}
+}
 
-@media only screen and (min-width: 1400px) {
-    @media only screen and (max-height: 1000px) {
-        .container{line-height: 9.375vw}
-        .design{padding-left: 2.775vw}
-        div.container>h1 {font-size: 12vw}}
-    @media only screen and (max-height: 850px) {
-        .container{line-height: 7.03125vw}
-        .design{padding-left: 2.08125vw}
-        div.container>h1 {font-size: 9vw}}}
+@media only screen and (min-width: 1200px) and (max-height: 700px),
+       only screen and (min-width: 1400px) and (max-height: 850px),
+       only screen and (min-width: 1600px) and (max-height: 950px),
+       only screen and (min-width: 1800px) and (max-height: 1050px) {
+    .container{line-height: 7.03125vw}
+    .design{padding-left: 2.08125vw}
+    div.container>h1 {font-size: 9vw}
+}
 
-@media only screen and (min-width: 1600px) {
-    @media only screen and (max-height: 1150px) {
-        .container{line-height: 9.375vw}
-        .design{padding-left: 2.775vw}
-        div.container>h1 {font-size: 12vw}}
-    @media only screen and (max-height: 950px) {
-        .container{line-height: 7.03125vw}
-        .design{padding-left: 2.08125vw}
-        div.container>h1 {font-size: 9vw}}}
-
-@media only screen and (min-width: 1800px) {
-    @media only screen and (max-height: 1250px) {
-        .container{line-height: 9.375vw}
-        .design{padding-left: 2.775vw}
-        div.container>h1 {font-size: 12vw}}
-    @media only screen and (max-height: 1050px) {
-        .container{line-height: 7.03125vw}
-        .design{padding-left: 2.08125vw}
-        div.container>h1 {font-size: 9vw}}}
+@media only screen and (min-width: 1200px) and (max-height: 500px),
+       only screen and (min-width: 1400px) and (max-height: 550px),
+       only screen and (min-width: 1600px) and (max-height: 650px),
+       only screen and (min-width: 1800px) and (max-height: 750px) {
+    .container{line-height: 4.6875vw}
+    .design{padding-left: 1.3875vw}
+    div.container>h1 {font-size: 6vw}
+}
 
 @media only screen and (max-width: 750px) {
 	.hero-grid-right {width:40px}
@@ -341,15 +351,58 @@ body:has(#helo:hover) #logo {opacity: 1}
     div.hero-sub>h1 {font-size: 3.5vw}}
 
 @media only screen and (max-width: 600px) {
+    html {--black: #000;} 
     .nav1 {display: block}
     .topnav {display: none}
     .hero-grid-right {width:40px}
-    .hero {background-color: #000}
     .container{line-height: 11.25vw}
     .design{padding-left: 3.33vw}
     div.container>h1 {font-size: 14.4vw}
-    .pages {flex-direction: column; overflow-y: scroll}
-    .about {margin-left: auto;}
+    .pages {flex-direction: column; overflow-y: scroll; width: 100%; overflow-x: hidden;}
+    
+    #about {
+        height: fit-content;
+        width: 100vw;
+        flex-direction: column;
+        margin-left: auto;
+        padding: 0  0 0 20px;
+        gap: 0px;
+    }
+
+    .about-column {
+        padding: 50px 100px 50px 100px;
+        color: var(--black);
+        width: auto;
+    }
+
+    .students-grid-right {
+        margin-top: 0;
+        align-self: flex-start;
+        flex: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: calc(100% - 75px);
+        align-items: center;
+    }
+
+    #scroll {
+        display: flex;
+        flex-direction: row;
+        align-items: right;
+        height: fit-content;
+        width: auto;
+        overflow-y: hidden;}
+    
+    .pageheader {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 70px;
+    }
+
+    .students-top {position: sticky; top: 0; align-self: flex-start;}
+    .directions-grid-left {width: 75px; min-width: 75px;}
 }
 
 @media only screen and (max-width: 470px) {
