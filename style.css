@@ -31,17 +31,12 @@ h1 {font-family: "owners", sans-serif;
     letter-spacing: 1pt;
     margin: 0;}
 
-h2 {
-    margin: 0;
-    font-family: "owners", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: 1pt;}
-
-h3 {font-family: "space-mono", mono;
+h2 {font-family: "space-mono", mono;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;}
+
+h3 {}
 
 .typed-cursor{color: var(--yellow)}
 
@@ -286,13 +281,13 @@ ul {list-style-type: none}
     overflow: hidden;
 }
 
-.topnav a {
+.topnav h1 {
     float: left;
     color: #ffffff78;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 16px;
 }
 
 /* CSS to style the element when it's sticky */
@@ -311,12 +306,21 @@ ul {list-style-type: none}
     -moz-transition: 100ms ease-in-out;
 }
 
-.topnav a:hover {color: var(--yellow)}
-.topnav a.active {color: white}
+.topnav a h1:hover {color: var(--yellow)}
+.topnav a h1.active {color: white;}
 
-#logo {opacity: 0; color: white;}
 
-body:has(#helo:hover) #logo {opacity: 1}
+#logo {
+    color: white;
+    opacity: 0;
+}
+
+.hero-grid:hover #logo {
+    opacity: .5;
+}
+
+
+
 
 @media only screen and (min-width: 1200px) and (max-height: 800px),
        only screen and (min-width: 1400px) and (max-height: 1000px),
