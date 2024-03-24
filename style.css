@@ -295,28 +295,18 @@ ul {list-style-type: none}
 
 body:has(#helo:hover) #logo {opacity: 1}
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
+    @media only screen and (max-height: 800px) {
+        .container{line-height: 9.375vw}
+        .design{padding-left: 2.775vw}
+        div.container>h1 {font-size: 12vw}}
     @media only screen and (max-height: 700px) {
-        .container{line-height: 9.375vw}
-        .design{padding-left: 2.775vw}
-        div.container>h1 {font-size: 12vw}}
-    @media only screen and (max-height: 600px) {
         .container{line-height: 7.03125vw}
         .design{padding-left: 2.08125vw}
         div.container>h1 {font-size: 9vw}}}
 
-@media only screen and (min-width: 1600px) {
-    @media only screen and (max-height: 900px) {
-        .container{line-height: 9.375vw}
-        .design{padding-left: 2.775vw}
-        div.container>h1 {font-size: 12vw}}
-    @media only screen and (max-height: 750px) {
-        .container{line-height: 7.03125vw}
-        .design{padding-left: 2.08125vw}
-        div.container>h1 {font-size: 9vw}}}
-
-@media only screen and (min-width: 1900px) {
-    @media only screen and (max-height: 1050px) {
+@media only screen and (min-width: 1400px) {
+    @media only screen and (max-height: 1000px) {
         .container{line-height: 9.375vw}
         .design{padding-left: 2.775vw}
         div.container>h1 {font-size: 12vw}}
@@ -325,12 +315,22 @@ body:has(#helo:hover) #logo {opacity: 1}
         .design{padding-left: 2.08125vw}
         div.container>h1 {font-size: 9vw}}}
 
-@media only screen and (min-width: 2200px) {
+@media only screen and (min-width: 1600px) {
     @media only screen and (max-height: 1150px) {
         .container{line-height: 9.375vw}
         .design{padding-left: 2.775vw}
         div.container>h1 {font-size: 12vw}}
     @media only screen and (max-height: 950px) {
+        .container{line-height: 7.03125vw}
+        .design{padding-left: 2.08125vw}
+        div.container>h1 {font-size: 9vw}}}
+
+@media only screen and (min-width: 1800px) {
+    @media only screen and (max-height: 1250px) {
+        .container{line-height: 9.375vw}
+        .design{padding-left: 2.775vw}
+        div.container>h1 {font-size: 12vw}}
+    @media only screen and (max-height: 1050px) {
         .container{line-height: 7.03125vw}
         .design{padding-left: 2.08125vw}
         div.container>h1 {font-size: 9vw}}}
