@@ -1,120 +1,234 @@
-<!doctype html>
-<html lang=en>
-<meta charset=UTF-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<link rel=preload href=style.css as=style onload='this.onload=null,this.rel="stylesheet"'>
-<link rel=stylesheet href=style.css>
-<title>JUST DESIGN DEGREE SHOW</title>
-<meta name=description content="The degree show for Graphic Design BA Hons, Coventry University">
-<head ontouchstart="">
-<nav role=navigation class=nav1>
-<div id=menuToggle>
-<input type=checkbox id=Toggle aria-label="Hamburger Menu">
-<span></span><span></span><span></span>
-<ul class=menu>
-<li><a href=#home><h1>HOME</h1></a></li>
-<li><a href=#about><h1>ABOUT</h1></a></li>
-<li><a href=#directions><h1>DIRECTIONS</h1></a></li>
-<li><a href=#students><h1>STUDENTS</h1></a></li>
-</ul>
-</div>
-</nav>
-<div class=topnav style=align-self:flex-start;z-index:9999>
-<a href=#home><h1>HOME</h1></a>
-<a href=#about><h1>ABOUT</h1></a>
-<a href=#directions><h1>DIRECTIONS</h1></a>
-<a href=#students><h1>STUDENTS</h1></a>
-</div>
-</head>
-<body>
-<div class=pages id=scrollableElement>
-<div style=width:100vw;height:100vh;background:#0ff>
-<section id=home>
-<div class=hero style=position:fixed>
-<div style=display:flex;flex-direction:row;align-items:right;width:100%;height:70vh>
-<div class="hero-grid hero-grid-left" style="border-width:0 1px 1px 0;display:flex;flex-direction:column-reverse;align-items:flex-end;padding-right:20px">
-<div class=container id=helo>
-<h1><span class=auto-type>JUST</span><br><span class=design>DESIGN.</span></h1>
-</div>
-<h2><span id=logo class=animate>font-family: "owners", sans-serif;<br>
-letter-spacing: 1pt;<br>
-line-height: 12.5vw;<br>
-margin: 0;<br>
-color: #F3F2EB;</span></h2>
-</div>
-<div class="hero-grid hero-grid-right" style="border-width:0 0 1px 1px"></div>
-</div>
-<div style=display:flex;flex-direction:row;align-items:right;width:100%;height:30vh>
-<div class="hero-grid hero-grid-left hero-sub" style="color:#f3f2eb;border-width:1px 1px 0 0;text-align:right;padding-right:20px;padding-top:20px">
-<h1>GRAPHIC DESIGN BA (HONS)<br>
-DEGREE SHOW<br>
-XX - XX MAY 2024</h1>
-</div>
-<div class="hero-grid hero-grid-right bottom-right" style="border-width:1px 0 0 1px"></div>
-</div>
-</div>
-</section>
-</div>
-<section id=about>
-<div class=about-column>
-<h1>EXAMPLE</h1>
-<h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2>
-</div>
-<div class=about-column>
-<h1>EXAMPLE</h1>
-<h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2>
-</div>
-<div class=about-column>
-<h1>FOLLOW OUR SOCIALS</h1>
-<h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2>
-</div>
-</section>
-<div class=directions>
-<section id=directions>
-<div class=pageheader>
-<div class="directions-grid directions-grid-left" style="border-width:0 1px 1px 0">
-</div>
-<div class="directions-grid directions-grid-right" style="color:#fff;border-width:0 0 1px 1px;text-align:left;padding-left:20px;padding-bottom:10px;display:flex;flex-direction:column-reverse;align-items:flex-start">
-<h1>DIRECTIONS</h1>
-</div>
-</div>
-<div style=display:flex;flex-direction:row;align-items:right;width:100vw;height:85vh>
-<div class="directions-grid directions-grid-left" style="color:#fff;border-width:1px 1px 0 0">
-<h1></h1>
-</div>
-<div class="directions-grid directions-grid-right bottom-right" style="border-width:1px 0 0 1px"></div>
-</div>
-</section>
-</div>
-<div class=directions>
-<section id=students>
-<div class=students-top>
-<div class=pageheader>
-<div class="directions-grid directions-grid-left" style="border-width:0 0 1px 0">
-</div>
-<div class="directions-grid directions-grid-right" style="color:#fff;border-width:0 0 1px 2px;text-align:left;padding-left:20px;padding-bottom:10px;display:flex;flex-direction:column-reverse;align-items:flex-start">
-<h1>STUDENTS</h1>
-</div>
-</div>
-<div style=display:flex;flex-direction:row;width:100vw;height:7vh>
-<div class="directions-grid directions-grid-left" style="border-width:1px 0 0 0">
-</div>
-<div class="directions-grid directions-grid-right" style="color:#fff;border-width:1px 0 2px 2px;text-align:left;padding-left:20px;padding-bottom:10px;display:flex;flex-direction:column-reverse;align-items:flex-start">
-<h2>filters will go here</h2>
-</div>
-</div>
-</div>
-<div id=scroll>
-<div class="directions-grid directions-grid-left" style="color:#fff;border-width:0 0 0 0">
-<h1></h1>
-</div>
-<div class="directions-grid students-grid-right" id=students-container style="border-width:0 0 0 2px">
-<script>let students=[{n:"DANYAL AHMED",s:"<>",q:"SO YOU JUST PICK FONTS AND STUFF?"},{n:"EVANGELOS ANGELOU",s:"<>",q:""},{n:"SARA ANSTEE",s:"<>",q:""},{n:"JADE BEARD",s:"<>",q:""},{n:"FARZANA NOOR",s:"<>",q:""},{n:"KAI BURLEY",s:"<>",q:"SO YOU JUST TAKE PRETTY PICS?"},{n:"XIYU CAI",s:"<>",q:""},{n:"KEYI CHEN",s:"<>",q:""},{n:"DORI DASHTI",s:"<>",q:""},{n:"ADRIAN DELGADO",s:"<>",q:""},{n:"DORI DASHTI",s:"<>",q:""},{n:"JAI DHALIWAL",s:"<>",q:"SO YOU JUST PICK FONTS AND STUFF?"},{n:"BOBBIE DIKE",s:"<>",q:""},{n:"CHARLIE FIRZPATRICK",s:"<>",q:""},{n:"SAMUEL GREEN",s:"<>",q:""},{n:"ZIMOU HUANG",s:"<>",q:""},{n:"RUICHEN HUANG",s:"<>",q:""},{n:"ZHE HUANG",s:"<>",q:""},{n:"REHEEM IFILL",s:"<>",q:""},{n:"MIRELA LESNEANU",s:"<>",q:""},{n:"YUJIA LI",s:"<>",q:""},{n:"YONGLIN LIAO",s:"<>",q:""},{n:"ALEX LINDON",s:"<>",q:""},{n:"ZHENLI LIU",s:"<>",q:""},{n:"CHI HIM LO",s:"<>",q:""},{n:"TENZIN LOCKLEY",s:"<>",q:"SO YOU JUST PICK FONTS AND STUFF?"},{n:"GIOVANNI NAMIS DIAZ",s:"<>",q:""},{n:"ADAOBI OBIOHA",s:"<>",q:""},{n:"ALEXANDRA PANAYI",s:"<>",q:""},{n:"ANGELIKA PIORO",s:"<>",q:""},{n:"SAVINA SALLAN",s:"<>",q:""},{n:"TOMAS SAMPAIO ROCHA",s:"<>",q:""},{n:"JACK SARTAN",s:"<>",q:""},{n:"ELINOR SLACK",s:"<>",q:""},{n:"MOHAMMED UDDIN",s:"<>",q:""},{n:"BRITNEY WALLBANK",s:"<>",q:""},{n:"HO HIN WAN",s:"<>",q:""},{n:"IZZY WILDE",s:"<>",q:""},{n:"XIZE WU",s:"<>",q:""},{n:"ZHAWEN WU",s:"<>",q:""},{n:"KSAWIER WYDRA",s:"<>",q:"SO YOU JUST PICK FONTS AND STUFF?"},{n:"SIFAN XIANG",s:"<>",q:""},{n:"LOKE YEANNE TUNG",s:"<>",q:""},{n:"HUANG ZHE",s:"<>",q:""},{n:"HUANG ZIMOU",s:"<>",q:""}],container=document.getElementById("students-container");students.forEach((n=>{let A=document.createElement("div");A.className="student",A.id=n.n.replace(/ /g,"");let e=document.createElement("a");e.href="/"+A.id,e.appendChild(A);let s=document.createElement("div");s.className="name";let I=document.createElement("h1");I.innerHTML=n.n+"<br>"+n.s,s.appendChild(I);let N=document.createElement("div");N.className="quote";let E=document.createElement("h1");E.innerHTML='"'+n.q+'"',N.appendChild(E),A.appendChild(s),A.appendChild(N),container.appendChild(e)}))</script>
-</div>
-</div>
-</section>
-</div>
-</div>
-</body>
-<script defer src=script.js></script>
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="style.css">
+    <title>JUST DESIGN DEGREE SHOW</title>
+    <meta name="description" content="The degree show for Graphic Design BA Hons, Coventry University">
+    <head ontouchstart="">
+        <nav role="navigation" class="nav1">
+            <div id="menuToggle">
+                <input type="checkbox" id="Toggle" aria-label="Hamburger Menu"/>
+                <span></span><span></span><span></span>
+                <ul class="menu">
+                    <li><a href="#home"><h1>HOME</h1></a></li>
+                    <li><a href="#about"><h1>ABOUT</h1></a></li>
+                    <li><a href="#directions"><h1>DIRECTIONS</h1></a></li>
+                    <li><a href="#students"><h1>STUDENTS</h1></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="topnav" style="align-self: flex-start; z-index: 9999;">
+            <a href="#home"><h1>HOME</h1></a>
+            <a href="#about"><h1>ABOUT</h1></a>
+            <a href="#directions"><h1>DIRECTIONS</h1></a>
+            <a href="#students"><h1>STUDENTS</h1></a>
+        </div>
+    </head>
+    <body>
+        <div class="pages" id="scrollableElement">
+            <div style="width: 100vw; height: 100vh">
+                <section id="home">
+                    <div class="hero" style="position: fixed;">
+                        <div style="
+                        display: flex;
+                        flex-direction: row;
+                        align-items: right;
+                        width: 100%;
+                        height: 70vh;">
+                            <div class="hero-grid hero-grid-left" style="border-width: 0px 1px 1px 0px; display: flex; flex-direction: column-reverse; align-items: flex-end; padding-right: 20px;">
+                                <div class="container" id="helo">
+                                    <h1><span class="auto-type">JUST</span><br><span class="design">DESIGN.</span></h1>
+                                </div>
+                                <h2><span id="logo" class="animate">font-family: "owners", sans-serif;<br>
+                                    letter-spacing: 1pt;<br>
+                                    line-height: 12.5vw;<br>
+                                    margin: 0;<br>
+                                    color: #F3F2EB;</span></h2>
+                            </div>
+                            <div class="hero-grid hero-grid-right" style="border-width: 0px 0px 1px 1px;"></div>
+                        </div>
+                        <div style="
+                        display: flex;
+                        flex-direction: row;
+                        align-items: right;
+                        width: 100%;
+                        height: 30vh;">
+                            <div class="hero-grid hero-grid-left hero-sub" style="color: #F3F2EB; border-width: 1px 1px 0px 0px; text-align: right;padding-right:20px;padding-top:20px;">
+                                <h1>GRAPHIC DESIGN BA (HONS)<br>
+                                    DEGREE SHOW<br>
+                                    XX - XX MAY 2024</h1>
+                                
+                            </div>
+                            <div class="hero-grid hero-grid-right bottom-right" style="border-width: 1px 0px 0px 1px;"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section id="about">
+                <div class="about-column">
+                    <h1>EXAMPLE</h1>
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2>
+                </div>
+                <div class="about-column">
+                    <h1>EXAMPLE</h1>
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2>
+                </div>
+                <div class="about-column">
+                    <h1>FOLLOW OUR SOCIALS</h1>
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2>
+                </div>
+            </section>
+            <div class="directions">
+                <section id="directions">
+                <div class="pageheader">
+                    <div class="directions-grid directions-grid-left" style="border-width: 0px 1px 1px 0px">
+                    </div>
+                    <div class="directions-grid directions-grid-right" style="color: #ffffff; border-width: 0px 0px 1px 1px;text-align: left; padding-left:20px; padding-bottom: 10px; display: flex; flex-direction: column-reverse; align-items: flex-start; ">
+                        <h1>DIRECTIONS</h1>
+                    </div>
+                </div>
+                <div style="
+                display: flex;
+                flex-direction: row;
+                align-items: right;
+                width: 100vw;
+                height: 85vh;">
+                    <div class="directions-grid directions-grid-left" style="color: #ffffff; border-width: 1px 1px 0px 0px">
+                        <h1></h1>
+                    </div>
+                    <div class="directions-grid directions-grid-right bottom-right" style="border-width: 1px 0px 0px 1px"></div>
+                </div>
+            </section>
+            </div>
+            <div class="directions">
+                <section id="students">
+                    <div class="students-top">
+                        <div class="pageheader">
+                            <div class="directions-grid directions-grid-left" style="border-width: 0px 0px 1px 0px">
+                            </div>
+                            <div class="directions-grid directions-grid-right" style="color: #ffffff; border-width: 0px 0px 1px 2px;text-align: left; padding-left:20px; padding-bottom: 10px; display: flex; flex-direction: column-reverse; align-items: flex-start; ">
+                                <h1>STUDENTS</h1>
+                            </div>
+                        </div>
+                        <div class="" style="
+                        display: flex;
+                        flex-direction: row;
+                        width: 100vw;
+                        height: 7vh;">
+                            <div class="directions-grid directions-grid-left" style="border-width: 1px 0px 0px 0px">
+                            </div>
+                            <div class="directions-grid directions-grid-right filters">
+                                <button class="filter"><h1><></h1></button>
+                                <button class="filter"><h1>?</h1></button>
+                                <button class="filter"><h1>!</h1></button>
+                                <button class="filter"><h1>*</h1></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="scroll">
+                        <div class="directions-grid directions-grid-left" style="color: #ffffff; border-width: 0px 0px 0px 0px">
+                            <h1></h1>
+                        </div>
+                        <div class="directions-grid students-grid-right" id="students-container" style="border-width: 0px 0px 0px 2px;">
+                            <script>
+                                let students = [
+                                {n: 'DANYAL AHMED', s:['<>'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'EVANGELOS ANGELOU', s:['<>'], q: ''},
+                                {n: 'SARA ANSTEE', s:['<>'], q: ''},
+                                {n: 'JADE BEARD', s:['<>'], q: ''},
+                                {n: 'FARZANA NOOR', s:['<>'], q: ''},
+                                {n: 'KAI BURLEY', s:['<>'], q: 'SO YOU JUST TAKE PRETTY PICS?'},
+                                {n: 'XIYU CAI', s:['<>'], q: ''},
+                                {n: 'KEYI CHEN', s:['<>'], q: ''},
+                                {n: 'DORI DASHTI', s:['<>'], q: ''},
+                                {n: 'ADRIAN DELGADO', s:['<>'], q: ''},
+                                {n: 'JAI DHALIWAL', s:['<>'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'BOBBIE DIKE', s:['<>'], q: ''},
+                                {n: 'CHARLIE FIRZPATRICK', s:['<>'], q: ''},
+                                {n: 'SAMUEL GREEN', s:['<>'], q: ''},
+                                {n: 'ZIMOU HUANG', s:['<>'], q: ''},
+                                {n: 'RUICHEN HUANG', s:['<>'], q: ''},
+                                {n: 'ZHE HUANG', s:['<>'], q: ''},
+                                {n: 'REHEEM IFILL', s:['<>'], q: ''},
+                                {n: 'MIRELA LESNEANU', s:['*'], q: ''},
+                                {n: 'YUJIA LI', s:['<>'], q: ''},
+                                {n: 'YONGLIN LIAO', s:['<>'], q: ''},
+                                {n: 'ALEX LINDON', s:['<>'], q: ''},
+                                {n: 'ZHENLI LIU', s:['<>'], q: ''},
+                                {n: 'CHI HIM LO', s:['<>'], q: ''},
+                                {n: 'ANNA TENZIN LOCKLEY', s:['<>'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'GIOVANNI NAMIS DIAZ', s:['<>'], q: ''},
+                                {n: 'ADAOBI OBIOHA', s:['<>'], q: ''},
+                                {n: 'ALEXANDRA PANAYI', s:['<>'], q: ''},
+                                {n: 'ANGELIKA PIORO', s:['<>'], q: ''},
+                                {n: 'SAVINA SALLAN', s:['<>'], q: ''},
+                                {n: 'TOMAS SAMPAIO ROCHA', s:['<>'], q: ''},
+                                {n: 'JACK SARTAN', s:['<>'], q: ''},
+                                {n: 'ELINOR SLACK', s:['<>'], q: ''},
+                                {n: 'MOHAMMED UDDIN', s:['<>'], q: ''},
+                                {n: 'BRITNEY WALLBANK', s:['<>'], q: ''},
+                                {n: 'HO HIN WAN', s:['<>'], q: ''},
+                                {n: 'IZZY WILDE', s:['<>'], q: ''},
+                                {n: 'XIZE WU', s:['<>'], q: ''},
+                                {n: 'ZHANWEN WU', s:['<>'], q: ''},
+                                {n: 'KSAWIER WYDRA', s:['<>'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'SIFAN XIANG', s:['<>'], q: ''},
+                                {n: 'LOKE YEANNE TUNG', s:['<>'], q: ''},
+                                {n: 'ZIMOU HUANG', s:['<>'], q: ''},
+                                ]; 
+                                let buttons = document.querySelectorAll('.filter');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        let symbol = this.innerText;
+        let filteredStudents = filterBySymbol(symbol);
+        displayStudents(filteredStudents);
+    });
+});
+
+function filterBySymbol(symbol) {
+    let filteredStudents = students.filter(student => student.s.includes(symbol));
+    return filteredStudents;
+}
+
+function displayStudents(students) {
+    let container = document.getElementById('students-container');
+    // Clear the container
+    container.innerHTML = '';
+    // Add the filtered students
+    console.log('Displaying students:', students);
+    students.forEach(student => {
+        let sD = document.createElement('div');
+        sD.className = 'student';
+        sD.id = student.n.replace(/ /g, '');
+        let a = document.createElement('a');
+        a.href = '/' + sD.id + '.html';
+        a.appendChild(sD);
+        let n = document.createElement('div');
+        n.className = 'name';
+        let nameH1 = document.createElement('h1');
+        let symbols = student.s.join(' ');
+        nameH1.innerHTML = symbols + "<br>" + student.n;
+        n.appendChild(nameH1);
+        let q = document.createElement('div');
+        q.className = 'quote';
+        let quoteH1 = document.createElement('h1');
+        quoteH1.innerHTML = '"' + student.q + '"';
+        q.appendChild(quoteH1);
+        sD.appendChild(n);
+        sD.appendChild(q);
+        container.appendChild(a);
+    });
+}
+displayStudents(students);
+                            </script>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+    <script defer src="script.js"></script>
 </html>
