@@ -9,10 +9,6 @@ font-family: 'space-mono';
 src:url("fonts/space-mono.woff2") format("woff2");
 font-style:normal;font-weight:500;font-stretch:normal;font-display: swap}
 
-.tk-space-mono {font-family: "space-mono", monospace}
-.tk-owners {font-family: "owners", sans-serif}
-
-
 * {text-decoration: none;}
 body {margin: 0px 0px 0px 0px}
 html {scroll-behavior: smooth; --black: #121212; --yellow: #DDDC26; --white: #F3F2EB;}
@@ -269,7 +265,9 @@ ul {list-style-type: none}
 }
 
 .filter:hover {border-color: var(--white);}
+.filter:active {border-color: var(--white) !important;background-color: var(--white) !important;color: var(--black);}
 .filter.active {border-color: var(--yellow);background-color: var(--yellow);color: var(--black);}
+/* .filter.active:active {border-color: var(--white);background-color: var(--white);color: var(--black);} */
 
 .filter > h1 {font-size: 18px; margin-block-start: 1px; margin-block-end: 0; line-height: 0;}
 .filter > symbol {font-size: 26px; margin-block-start: 0; margin-block-end: 0; line-height: 0;}
@@ -278,7 +276,12 @@ ul {list-style-type: none}
 
 .name {display: flex;
     flex-direction: column-reverse;
-    background: linear-gradient(0turn, #000000 0%, #00000000 50%)}
+    background: linear-gradient(0turn, #000000d2 0%, #00000037 30%, #00000000 60%)}
+
+.name .symbol {color: var(--white); font-size: 42px;font-family: "space-mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+line-height: 45px;}
 
 .quote {
     color: var(--black);
@@ -301,10 +304,12 @@ ul {list-style-type: none}
 }
 
 .topnav {
+    width: 100%;
 	padding: 15px;
 	padding-left: 30px;
     position: fixed;
     overflow: hidden;
+    background: linear-gradient(0.5turn, #121212 0%, #121212c7 20%, #1212127a 40%, #1212124a 60%, #12121222 75%, #1212120a 90%, #12121200 100%)
 }
 
 .topnav h1 {
@@ -588,8 +593,20 @@ div.sticky {
 
 
 
-.student {background-size: 10250px !important; background: url('s.webp')}
 
+
+
+
+
+
+
+
+
+
+
+
+
+.student {background-size: 10250px !important; background: url('s.webp')}
 #DANYALAHMED {background-position: -0 -0;}
 #EVANGELOSANGELOU {background-position: -250px -0}
 #SARAANSTEE {background-position: -500px -0}

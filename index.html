@@ -122,13 +122,13 @@
                             <div class="directions-grid directions-grid-right filters">
                                 <button class="filter"><symbol>!</symbol><h1>BRANDING</h1></button>
                                 <button class="filter"><symbol>&</symbol><h1>TYPOGRAPHY</h1></button>
-                                <button class="filter"><symbol><</symbol><h1>WEB/UI/UX</h1></button>
+                                <button class="filter"><symbol>&lt;</symbol><h1>WEB/UI/UX</h1></button>
                                 <button class="filter"><symbol>~</symbol><h1>ILLUSTRATION</h1></button>
-                                <button class="filter"><symbol>&#x2192;</symbol><h2>EXHIBITION</h2></button>
-                                <button class="filter"><symbol>?</symbol><h2>EDITORIAL</h2></button>
-                                <button class="filter"><symbol>+</symbol><h2>INFORMATION</h2></button>
-                                <button class="filter"><symbol>*</symbol><h2>PACKAGING</h2></button>
-                                <button class="filter"><symbol>></symbol><h2>ANIMATION/MOTION</h2></button>
+                                <button class="filter"><symbol>&#x2192;</symbol><h1>EXHIBITION</h1></button>
+                                <button class="filter"><symbol>?</symbol><h1>EDITORIAL</h1></button>
+                                <button class="filter"><symbol>+</symbol><h1>INFORMATION</h1></button>
+                                <button class="filter"><symbol>*</symbol><h1>PACKAGING</h1></button>
+                                <button class="filter"><symbol>&gt;</symbol><h1>ANIMATION/MOTION</h1></button>
                             </div>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                                 {n: 'ZHANWEN WU', s:['<'], q: ''},
                                 {n: 'KSAWIER WYDRA', s:['<'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
                                 {n: 'SIFAN XIANG', s:['<'], q: ''},
-                                {n: 'LOKE YEANNE TUNG', s:['<', '!', '&'], q: ''},
+                                {n: 'LOKE YEANNE TUNG', s:['&lt;', '!', '&'], q: ''},
                                 ]; 
                                 let buttons = document.querySelectorAll('.filter');
 
@@ -194,7 +194,6 @@ buttons.forEach(button => {
 
         // Remove the 'active' class from all buttons
         buttons.forEach(btn => btn.classList.remove('active'));
-
         // Add the 'active' class to the clicked button
         this.classList.add('active');
 
@@ -208,7 +207,6 @@ function filterBySymbol(symbol) {
     let filteredStudents = students.filter(student => student.s.indexOf(symbol) !== -1);
     return filteredStudents;
 }
-
 
 function displayStudents(students) {
     let container = document.getElementById('students-container');
@@ -225,10 +223,13 @@ function displayStudents(students) {
         a.appendChild(sD);
         let n = document.createElement('div');
         n.className = 'name';
+        let symbolDiv = document.createElement('div');
+        symbolDiv.className = 'symbol'; // Use your existing CSS class
+        symbolDiv.innerHTML = student.s.join('');
         let nameH1 = document.createElement('h1');
-        let symbols = student.s.join(' ');
-        nameH1.innerHTML = symbols + "<br>" + student.n;
+        nameH1.innerHTML = student.n;
         n.appendChild(nameH1);
+        n.appendChild(symbolDiv); // Append the symbol div before the name
         let q = document.createElement('div');
         q.className = 'quote';
         let quoteH1 = document.createElement('h1');
@@ -239,6 +240,7 @@ function displayStudents(students) {
         container.appendChild(a);
     });
 }
+
 displayStudents(students);
                             </script>
                         </div>
