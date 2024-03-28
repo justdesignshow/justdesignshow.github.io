@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="style.css">
@@ -116,14 +116,19 @@
                         display: flex;
                         flex-direction: row;
                         width: 100vw;
-                        height: 7vh;">
+                        height: 70px;">
                             <div class="directions-grid directions-grid-left" style="border-width: 1px 0px 0px 0px">
                             </div>
                             <div class="directions-grid directions-grid-right filters">
-                                <button class="filter"><h1><></h1></button>
-                                <button class="filter"><h1>?</h1></button>
-                                <button class="filter"><h1>!</h1></button>
-                                <button class="filter"><h1>*</h1></button>
+                                <button class="filter"><symbol>!</symbol><h1>BRANDING</h1></button>
+                                <button class="filter"><symbol>&</symbol><h1>TYPOGRAPHY</h1></button>
+                                <button class="filter"><symbol><</symbol><h1>WEB/UI/UX</h1></button>
+                                <button class="filter"><symbol>~</symbol><h1>ILLUSTRATION</h1></button>
+                                <button class="filter"><symbol>&#x2192;</symbol><h2>EXHIBITION</h2></button>
+                                <button class="filter"><symbol>?</symbol><h2>EDITORIAL</h2></button>
+                                <button class="filter"><symbol>+</symbol><h2>INFORMATION</h2></button>
+                                <button class="filter"><symbol>*</symbol><h2>PACKAGING</h2></button>
+                                <button class="filter"><symbol>></symbol><h2>ANIMATION/MOTION</h2></button>
                             </div>
                         </div>
                     </div>
@@ -134,63 +139,76 @@
                         <div class="directions-grid students-grid-right" id="students-container" style="border-width: 0px 0px 0px 2px;">
                             <script>
                                 let students = [
-                                {n: 'DANYAL AHMED', s:['<>'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
-                                {n: 'EVANGELOS ANGELOU', s:['<>'], q: ''},
-                                {n: 'SARA ANSTEE', s:['<>'], q: ''},
-                                {n: 'JADE BEARD', s:['<>'], q: ''},
-                                {n: 'FARZANA NOOR', s:['<>'], q: ''},
-                                {n: 'KAI BURLEY', s:['<>'], q: 'SO YOU JUST TAKE PRETTY PICS?'},
-                                {n: 'XIYU CAI', s:['<>'], q: ''},
-                                {n: 'KEYI CHEN', s:['<>'], q: ''},
-                                {n: 'DORI DASHTI', s:['<>'], q: ''},
-                                {n: 'ADRIAN DELGADO', s:['<>'], q: ''},
-                                {n: 'JAI DHALIWAL', s:['<>'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
-                                {n: 'BOBBIE DIKE', s:['<>'], q: ''},
-                                {n: 'CHARLIE FIRZPATRICK', s:['<>'], q: ''},
-                                {n: 'SAMUEL GREEN', s:['<>'], q: ''},
-                                {n: 'ZIMOU HUANG', s:['<>'], q: ''},
-                                {n: 'RUICHEN HUANG', s:['<>'], q: ''},
-                                {n: 'ZHE HUANG', s:['<>'], q: ''},
-                                {n: 'REHEEM IFILL', s:['<>'], q: ''},
+                                {n: 'DANYAL AHMED', s:['<'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'EVANGELOS ANGELOU', s:['<'], q: ''},
+                                {n: 'SARA ANSTEE', s:['<'], q: ''},
+                                {n: 'JADE BEARD', s:['<'], q: ''},
+                                {n: 'FARZANA NOOR', s:['~', '<'], q: ''},
+                                {n: 'KAI BURLEY', s:['!', '>'], q: 'SO YOU JUST TAKE PRETTY PICS?'},
+                                {n: 'XIYU CAI', s:['<'], q: ''},
+                                {n: 'KEYI CHEN', s:['<'], q: ''},
+                                {n: 'DORI DASHTI', s:['<'], q: ''},
+                                {n: 'ADRIAN DELGADO', s:['<'], q: ''},
+                                {n: 'JAI DHALIWAL', s:['<'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'BOBBIE DIKE', s:['<'], q: ''},
+                                {n: 'CHARLIE FIRZPATRICK', s:['<'], q: ''},
+                                {n: 'SAMUEL GREEN', s:['<'], q: ''},
+                                {n: 'ZIMOU HUANG', s:['<'], q: ''},
+                                {n: 'RUICHEN HUANG', s:['<'], q: ''},
+                                {n: 'ZHE HUANG', s:['<'], q: ''},
+                                {n: 'REHEEM IFILL', s:['<'], q: ''},
                                 {n: 'MIRELA LESNEANU', s:['*'], q: ''},
-                                {n: 'YUJIA LI', s:['<>'], q: ''},
-                                {n: 'YONGLIN LIAO', s:['<>'], q: ''},
-                                {n: 'ALEX LINDON', s:['<>'], q: ''},
-                                {n: 'ZHENLI LIU', s:['<>'], q: ''},
-                                {n: 'CHI HIM LO', s:['<>'], q: ''},
-                                {n: 'ANNA TENZIN LOCKLEY', s:['<>'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
-                                {n: 'GIOVANNI NAMIS DIAZ', s:['<>'], q: ''},
-                                {n: 'ADAOBI OBIOHA', s:['<>'], q: ''},
-                                {n: 'ALEXANDRA PANAYI', s:['<>'], q: ''},
-                                {n: 'ANGELIKA PIORO', s:['<>'], q: ''},
-                                {n: 'SAVINA SALLAN', s:['<>'], q: ''},
-                                {n: 'TOMAS SAMPAIO ROCHA', s:['<>'], q: ''},
-                                {n: 'JACK SARTAN', s:['<>'], q: ''},
-                                {n: 'ELINOR SLACK', s:['<>'], q: ''},
-                                {n: 'MOHAMMED UDDIN', s:['<>'], q: ''},
-                                {n: 'BRITNEY WALLBANK', s:['<>'], q: ''},
-                                {n: 'HO HIN WAN', s:['<>'], q: ''},
-                                {n: 'IZZY WILDE', s:['<>'], q: ''},
-                                {n: 'XIZE WU', s:['<>'], q: ''},
-                                {n: 'ZHANWEN WU', s:['<>'], q: ''},
-                                {n: 'KSAWIER WYDRA', s:['<>'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
-                                {n: 'SIFAN XIANG', s:['<>'], q: ''},
-                                {n: 'LOKE YEANNE TUNG', s:['<>'], q: ''},
+                                {n: 'YUJIA LI', s:['<'], q: ''},
+                                {n: 'YONGLIN LIAO', s:['<'], q: ''},
+                                {n: 'ALEX LINDON', s:['<'], q: ''},
+                                {n: 'ZHENLI LIU', s:['<'], q: ''},
+                                {n: 'CHI HIM LO', s:['<'], q: ''},
+                                {n: 'ANNA TENZIN LOCKLEY', s:['<'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'GIOVANNI NAMIS DIAZ', s:['<'], q: ''},
+                                {n: 'ADAOBI OBIOHA', s:['~'], q: ''},
+                                {n: 'ALEXANDRA PANAYI', s:['<'], q: ''},
+                                {n: 'ANGELIKA PIORO', s:['<'], q: ''},
+                                {n: 'SAVINA SALLAN', s:['<'], q: ''},
+                                {n: 'TOMAS SAMPAIO ROCHA', s:['<'], q: ''},
+                                {n: 'ELINOR SLACK', s:['!', '?', '~'], q: ''},
+                                {n: 'MOHAMMED UDDIN', s:['<'], q: ''},
+                                {n: 'BRITNEY WALLBANK', s:['<'], q: ''},
+                                {n: 'HO HIN WAN', s:['<'], q: ''},
+                                {n: 'IZZY WILDE', s:['<'], q: ''},
+                                {n: 'XIZE WU', s:['<'], q: ''},
+                                {n: 'ZHANWEN WU', s:['<'], q: ''},
+                                {n: 'KSAWIER WYDRA', s:['<'], q: 'SO YOU JUST PICK FONTS AND STUFF?'},
+                                {n: 'SIFAN XIANG', s:['<'], q: ''},
+                                {n: 'LOKE YEANNE TUNG', s:['<', '!', '&'], q: ''},
                                 ]; 
                                 let buttons = document.querySelectorAll('.filter');
 
 buttons.forEach(button => {
     button.addEventListener('click', function() {
-        let symbol = this.innerText;
+        // If the button is already active, remove the 'active' class and display all students
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+            displayStudents(students);
+            return;
+        }
+
+        // Remove the 'active' class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // Add the 'active' class to the clicked button
+        this.classList.add('active');
+
+        let symbol = this.querySelector('symbol').textContent;
         let filteredStudents = filterBySymbol(symbol);
         displayStudents(filteredStudents);
     });
 });
 
 function filterBySymbol(symbol) {
-    let filteredStudents = students.filter(student => student.s.includes(symbol));
+    let filteredStudents = students.filter(student => student.s.indexOf(symbol) !== -1);
     return filteredStudents;
 }
+
 
 function displayStudents(students) {
     let container = document.getElementById('students-container');
