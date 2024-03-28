@@ -10,7 +10,7 @@ setTimeout(function() {
     cursorChar: "I",
     onComplete(instance) {instance.cursor.remove();}
   });
-}, 4000);
+}, 5000);
 
 
 window.onload = function() {
