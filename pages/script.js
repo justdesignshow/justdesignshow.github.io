@@ -9,7 +9,7 @@ fetch('/students.json')
         const student = students[studentId];
 
         // Generate the banner image filename from the student's name
-        const bannerImage = 'banners/' + student.n.replace(/ /g, '').toLowerCase() + '.jpg';
+        const bannerImage = '/images/' + student.n.replace(/ /g, '').toLowerCase() + '.webp';
 
         // Update the page with the student's data
         document.querySelector('.student-banner').style.backgroundImage = `url(${bannerImage})`;
