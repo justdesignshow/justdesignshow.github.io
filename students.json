@@ -2,7 +2,16 @@
     "danyalahmed": {
         "n": "DANYAL AHMED",
         "s": ["<"],
-        "q": "SO YOU JUST PICK FONTS AND STUFF?"
+        "q": "SO YOU JUST PICK FONTS AND STUFF?",
+        "work1t": "",
+        "work1s": "",
+        "work1d": "",
+        "work2t": "",
+        "work2s": "",
+        "work2d": "",
+        "work3t": "",
+        "work3s": "",
+        "work3d": ""
     },
     "evangelosangelou": {
         "n": "EVANGELOS ANGELOU",
@@ -39,12 +48,12 @@
         "s": ["<"],
         "q": ""
     },
-    "DORIDASHTI": {
+    "doridashti": {
         "n": "DORI DASHTI",
         "s": ["<"],
         "q": ""
     },
-    "ADRIANDELGADO": {
+    "adriandelgado": {
         "n": "ADRIAN DELGADO",
         "s": ["<"],
         "q": ""
@@ -52,7 +61,16 @@
     "jaidhaliwal": {
         "n": "JAI DHALIWAL",
         "s": ["<"],
-        "q": "SO YOU JUST PICK FONTS AND STUFF?"
+        "q": "SO YOU JUST PICK FONTS AND STUFF?",
+        "work1t": "ANIME-ESC POND",
+        "work1s": ">",
+        "work1d": "I was inspired by Zelda Breath of the Wild to make this. ",
+        "work2t": "LAYERED LANDSCAPE",
+        "work2s": "~",
+        "work2d": "I was bored one day. ",
+        "work3t": "SUNSET",
+        "work3s": ">",
+        "work3d": "This was my first Blender project. "
     },
     "bobbiedike": {
         "n": "BOBBIE DIKE",
@@ -201,7 +219,7 @@
     },
     "lokeyeannetung": {
         "n": "LOKE YEANNE TUNG",
-        "s": ["&lt;", "!", "&"],
+        "s": ["<", "!", "&"],
         "q": ""
     }
 }

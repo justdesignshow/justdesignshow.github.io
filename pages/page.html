@@ -30,6 +30,52 @@
         </div>
     </head>
     <body>
+        <!-- ABOUT WORK PAGE FOR WORK 1 -->
+        <div class="work-page" id="work1-page">
+            <div id="work1-about" class="work-page-image"></div>
+            <div class="work-page-info">
+                <div style="display: flex; justify-content: space-between;">
+                    <h1><span id="w1t"></span></h1>
+                    <button onclick="hideDiv('work1-page')" class="close">X</button>
+                </div>
+                <div class="category">
+                    <symbol style="font-size: 24px;"><span id="w1s-about"></span></symbol><h1><span id="w1s-label"></h1>
+                </div>
+                <h2><span id="w1d"></span></h2>
+            </div>
+        </div>
+
+        <!-- ABOUT WORK PAGE FOR WORK 2 -->
+        <div class="work-page" id="work2-page">
+            <div id="work2-about" class="work-page-image"></div>
+            <div class="work-page-info">
+                <div style="display: flex; justify-content: space-between;">
+                    <h1><span id="w2t"></span></h1>
+                    <button onclick="hideDiv('work2-page')" class="close">X</button>
+                </div>
+                <div class="category">
+                    <symbol style="font-size: 24px;"><span id="w2s-about"></span></symbol><h1><span id="w2s-label"></h1>
+                </div>
+                <h2><span id="w2d"></span></h2>
+            </div>
+        </div>
+
+        <!-- ABOUT WORK PAGE FOR WORK 3 -->
+        <div class="work-page" id="work3-page">
+            <div id="work3-about" class="work-page-image"></div>
+            <div class="work-page-info">
+                <div style="display: flex; justify-content: space-between;">
+                    <h1><span id="w3t"></span></h1>
+                    <button onclick="hideDiv('work3-page')" class="close">X</button>
+                </div>
+                <div class="category">
+                    <symbol style="font-size: 24px;"><span id="w3s-about"></span></symbol><h1><span id="w3s-label"></h1>
+                </div>
+                <h2><span id="w3d"></span></h2>
+            </div>
+        </div>
+
+        <!-- TOP BANNER -->
         <div class="student-banner"><div class="fill"></div></div>
         <div class="student-banner2">
             <div class="student-banner-container">
@@ -40,14 +86,35 @@
                 <h1><span class="student-banner-name"></span></h1>
             </div>
         </div>
+
+        <!-- ALL STUDENT WORK -->
         <div class="student-work">
-            <div class="work">
+            <!-- WORK 1 -->
+            <div class="work" id="work1" onclick="displayWork('work1-page')">
+                <div class="work-hover" onclick="displayWork('work1-page')">
+                    <symbol><span id="w1s"></span></symbol>
+                </div>
             </div>
-            <div class="work2">
+            <!-- WORK 2 -->
+            <div class="work" id="work2" onclick="displayWork('work2-page')">
+                <div class="work-hover" onclick="displayWork('work2-page')">
+                    <symbol><span id="w2s"></span></symbol>
+                </div>
             </div>
-            <div class="work3">
+            <!-- WORK 3 -->
+            <div class="work" id="work3" onclick="displayWork('work3-page')">
+                <div class="work-hover" onclick="displayWork('work3-page')">
+                    <symbol><span id="w3s"></span></symbol>
+                </div>
             </div>
         </div>
     </body>
     <script defer src="script.js"></script>
+    <script>
+        function displayWork(div) {
+          var x = document.getElementById(div); x.style.display = "flex"}
+        function hideDiv(id) {var x = document.getElementById(id); x.style.display = "none"}
+
+
+    </script>
 </html>

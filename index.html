@@ -180,7 +180,7 @@
                 n.className = 'name';
                 let symbolDiv = document.createElement('div');
                 symbolDiv.className = 'symbol';
-                symbolDiv.innerHTML = student.s.join('');
+                symbolDiv.textContent = student.s.join('');
                 let nameH1 = document.createElement('h1');
                 nameH1.innerHTML = student.n;
                 n.appendChild(nameH1);
@@ -188,7 +188,7 @@
                 let q = document.createElement('div');
                 q.className = 'quote';
                 let quoteH1 = document.createElement('h1');
-                quoteH1.innerHTML = '"' + student.q + '"';
+                quoteH1.textContent = '"' + student.q + '"';
                 q.appendChild(quoteH1);
                 sD.appendChild(n);
                 sD.appendChild(q);
