@@ -328,8 +328,6 @@ line-height: 45px;}
     width: 100%; /* Ensure full width */
     z-index: 1000; /* High z-index to stay on top */
   }
-  
-  
 
 .animate{
     transition: 100ms ease-in-out;
@@ -351,7 +349,31 @@ line-height: 45px;}
 }
 
 .student-banner {
-    height: 100vh;
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.student-banner::before {
+    content: " ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    background-attachment: fixed;
+    filter: brightness(0.3);
+}
+
+.student-banner2 {
+    
+    position: sticky; top: 0;
+    height: 30vh;
     width: 100vw;
     background-size: cover;
     background-position: center;
@@ -370,11 +392,6 @@ line-height: 45px;}
     color: var(--white);
     box-sizing: border-box;
     line-height: 45px;
-}
-
-.student-banner.shrink {
-    position: fixed;
-    height: 250px;
 }
 
 .student-quote-container {
@@ -400,27 +417,21 @@ line-height: 45px;}
     flex-direction: row; 
     flex-wrap: wrap;
     background-color: var(--black);}
-
-.sticky {
-        position: fixed;
-        top: 0;
-    }
     
-
 .work {height: 800px;
     min-width: 400px;
     flex: 1;
-background-color: aqua;}
+    background-color: aqua;}
 
 .work2 {height: 800px;
     min-width: 400px;
     flex: 1;
-background-color: rgb(255, 0, 0);}
+    background-color: rgb(255, 0, 0);}
 
 .work3 {height: 800px;
     min-width: 400px;
     flex: 1;
-background-color: rgb(68, 255, 0);}
+    background-color: rgb(68, 255, 0);}
 
 div.sticky {
     position: -webkit-sticky;
