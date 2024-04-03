@@ -59,8 +59,7 @@
     },
     "jaidhaliwal": {
         "n": "JAI DHALIWAL",
-        "s": ["<"],
-        "q": "SO YOU JUST PICK FONTS AND STUFF?",
+        "q": "SO YOU JUST CENTRE THE DIV?",
         "work1t": "ANIME-ESC POND",
         "work1s": ">",
         "work1d": "I was inspired by Zelda Breath of the Wild to make this. ",
@@ -125,7 +124,7 @@
     },
     "annatenzinlockley": {
         "n": "ANNA TENZIN LOCKLEY",
-        "q": "SO YOU JUST PICK FONTS AND STUFF?"
+        "q": ""
     },
     "giovanninamisdiaz": {
         "n": "GIOVANNI NAMIS DIAZ",
@@ -133,7 +132,16 @@
     },
     "adaobiobioha": {
         "n": "ADAOBI OBIOHA",
-        "q": ""
+        "q": "",
+        "work1t": "DUREX PACKAGING",
+        "work1s": "~",
+        "work1d": "Development of a gender-neutral brailled condom packaging for a broad target audience (aim: inclusivity).  ",
+        "work2t": "UNNAMED",
+        "work2s": "~",
+        "work2d": "description. ",
+        "work3t": "",
+        "work3s": "",
+        "work3d": ""
     },
     "alexandrapanayi": {
         "n": "ALEXANDRA PANAYI",
@@ -143,7 +151,7 @@
         "n": "ANGELIKA PIORO",
         "q": ""
     },
-    "sabinasallan": {
+    "savinasallan": {
         "n": "SAVINA SALLAN",
         "q": ""
     },
