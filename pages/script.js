@@ -51,7 +51,7 @@ fetch('/students.json')
         } else {
             const w1 = '/images/' + student.n.replace(/ /g, '').toLowerCase() + 'w1.webp';
             document.querySelector('#work1').style.backgroundImage = `url(${w1})`;
-            document.querySelector('#work1-about').style.backgroundImage = `url(${w1})`;
+            document.querySelector('#work1-about').src = `${w1}`;
             document.querySelector('#w1s').textContent = student.work1s;
             document.querySelector('#w1s-about').textContent = student.work1s;
             document.querySelector('#w1t').textContent = student.work1t;
@@ -64,7 +64,7 @@ fetch('/students.json')
         } else {
             const w2 = '/images/' + student.n.replace(/ /g, '').toLowerCase() + 'w2.webp';
             document.querySelector('#work2').style.backgroundImage = `url(${w2})`;
-            document.querySelector('#work2-about').style.backgroundImage = `url(${w2})`;
+            document.querySelector('#work2-about').src = `${w2}`;
             document.querySelector('#w2s').textContent = student.work2s;
             document.querySelector('#w2s-about').textContent = student.work2s;
             document.querySelector('#w2t').textContent = student.work2t;
@@ -77,7 +77,7 @@ fetch('/students.json')
         } else {
             const w3 = '/images/' + student.n.replace(/ /g, '').toLowerCase() + 'w3.webp';
             document.querySelector('#work3').style.backgroundImage = `url(${w3})`;
-            document.querySelector('#work3-about').style.backgroundImage = `url(${w3})`;
+            document.querySelector('#work3-about').src = `${w3}`;
             document.querySelector('#w3s').textContent = student.work3s;
             document.querySelector('#w3s-about').textContent = student.work3s;
             document.querySelector('#w3t').textContent = student.work3t;
