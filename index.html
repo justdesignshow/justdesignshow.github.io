@@ -161,7 +161,11 @@
         });
 
         function filterBySymbol(symbol, students) {
-            let filteredStudents = students.filter(student => student.s.indexOf(symbol) !== -1);
+            let filteredStudents = students.filter(student => 
+                student.work1s === symbol || 
+                student.work2s === symbol || 
+                student.work3s === symbol
+            );
             return filteredStudents;
         }
 
@@ -180,7 +184,7 @@
                 n.className = 'name';
                 let symbolDiv = document.createElement('div');
                 symbolDiv.className = 'symbol';
-                symbolDiv.textContent = student.s.join('');
+                symbolDiv.textContent = student.work1s + student.work2s + student.work3s;
                 let nameH1 = document.createElement('h1');
                 nameH1.innerHTML = student.n;
                 n.appendChild(nameH1);
