@@ -82,12 +82,8 @@ html {scroll-behavior: smooth}
     line-height: 30px;
 }
 
-.pagecontainer {
-    display: flex;
-    justify-content: center
-}
-
 .student-work {
+    margin: auto;
     justify-items: center;
     max-width: 1200px;
     width: 100vw;
@@ -341,14 +337,13 @@ ul {list-style-type: none}
     .student-quote-container {
         padding: 20px 20px 20px calc(100% - 200px);
         max-height: 500px;
-        transition: 500ms;
-        -webkit-transition: 500ms;
-        -moz-transition: 500ms;
+        transition: 300ms;
+        -webkit-transition: 300ms;
+        -moz-transition: 300ms;
     }
 
-    /* When the user scrolls down, hide the container */
     body.user-is-scrolling .student-quote-container {
-        max-height: 0; /* Animate to max-height 0 */
+        max-height: 0;
         padding: 0 20px 0 calc(100% - 200px);
         overflow: hidden;
     }
@@ -373,9 +368,9 @@ ul {list-style-type: none}
     }
     .student-banner-name, .student-banner-symbol {
         font-size: 34px;
-        transition: 1500ms ease-out;
-        -webkit-transition: 1500ms ease-out;
-        -moz-transition: 1500ms ease-out;
+        transition: 700ms;
+        -webkit-transition: 700ms;
+        -moz-transition: 700ms;
     }
     body.user-is-scrolling .student-banner-container {
         padding: 11px 20px 12px 75px; 
