@@ -33,9 +33,6 @@ html {scroll-behavior: smooth}
 
 .student-banner {
     height: 70vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
 }
 
 .fill {height: 100%; width:100%; background-color: rgba(0, 0, 0, 0.7)}
@@ -45,16 +42,18 @@ html {scroll-behavior: smooth}
     position: sticky;
     top: 0;
     height: 30vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
 }
 
 .student-banner, .student-banner2 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;}
+    background-attachment: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
 
 .student-banner-container {
     flex: 2;
@@ -85,7 +84,7 @@ html {scroll-behavior: smooth}
 
 .pagecontainer {
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 .student-work {
@@ -98,7 +97,7 @@ html {scroll-behavior: smooth}
     gap: 25px; 
     flex-direction: row; 
     flex-wrap: wrap;
-    background-color: var(--black);
+    background-color: var(--black)
 }
 
 .work {
@@ -107,7 +106,8 @@ html {scroll-behavior: smooth}
     flex: 1;
     background-color: var(--yellow);
     background-size: cover;
-    background-position: center;}
+    background-position: center
+}
 
 #menuToggle {
     display: block;
@@ -116,8 +116,8 @@ html {scroll-behavior: smooth}
     left: 20px;
     height: 0;
     width: 0;
-    z-index: 1;
-    user-select: none;
+    z-index: 999;
+    user-select: none
 }
 
 a {text-decoration: none}
@@ -132,8 +132,8 @@ ul {list-style-type: none}
     left: -5px;
     cursor: pointer;
     opacity: 0;
-    z-index: 2;
-    -webkit-touch-callout: none;
+    z-index: 999;
+    -webkit-touch-callout: none
 }
 
 #menuToggle span {
@@ -149,7 +149,7 @@ ul {list-style-type: none}
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
+                opacity 0.55s ease
 }
 
 #menuToggle span:first-child {transform-origin: 0% 0%;}
@@ -175,11 +175,12 @@ ul {list-style-type: none}
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     display: flex;
     gap: 25px 0;
-    flex-direction: column}
+    flex-direction: column
+}
 
 #menuToggle input:checked ~ ul {transform: none}
 
-.nav1 {display: none;}
+.nav1 {display: none}
 
 .topnav {
     width: 100%;
@@ -265,8 +266,10 @@ ul {list-style-type: none}
         max-height: fit-content;
         min-width: 50px;
         max-width: 300px;
+        margin-top: 100px;
     }
-    .work-page-info {width: 300px; overflow: scroll;}
+    .work-page-info {width: 300px}
+    .work-page-info h2 {overflow: scroll}
     .student-banner, .student-banner2 {
         background-size: cover;
         background-repeat: no-repeat;
@@ -381,5 +384,10 @@ ul {list-style-type: none}
 
 .work-hover symbol {font-size: 128px;}
 
-.work-hover:hover {opacity: 1}
+.work-hover:hover {opacity: 1; z-index: 1;}
 
+.animate{
+    transition: 250ms ease-in-out;
+    -webkit-transition: 250ms ease-in-out;
+    -moz-transition: 250ms ease-in-out;
+}

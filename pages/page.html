@@ -31,7 +31,7 @@
         <div class="student-banner"><div class="fill"></div></div>
         <div class="student-banner2">
             <div class="student-banner-container">
-                <h1 id="name"><span class="student-banner-name"></span></h1>
+                <h1 id="name"><span class="student-banner-name animate"></span></h1>
                 <symbol><span class="student-banner-symbol"></span></symbol>
             </div>
             <div class="student-quote-container">
@@ -44,19 +44,19 @@
             <div class="student-work">
                 <!-- WORK 1 -->
                 <div class="work" id="work1" onclick="displayWork('work1-page')">
-                    <div class="work-hover" onclick="displayWork('work1-page')">
+                    <div class="work-hover animate" onclick="displayWork('work1-page')">
                         <symbol><span id="w1s"></span></symbol>
                     </div>
                 </div>
                 <!-- WORK 2 -->
                 <div class="work" id="work2" onclick="displayWork('work2-page')">
-                    <div class="work-hover" onclick="displayWork('work2-page')">
+                    <div class="work-hover animate" onclick="displayWork('work2-page')">
                         <symbol><span id="w2s"></span></symbol>
                     </div>
                 </div>
                 <!-- WORK 3 -->
                 <div class="work" id="work3" onclick="displayWork('work3-page')">
-                    <div class="work-hover" onclick="displayWork('work3-page')">
+                    <div class="work-hover animate" onclick="displayWork('work3-page')">
                         <symbol><span id="w3s"></span></symbol>
                     </div>
                 </div>
@@ -116,8 +116,8 @@
         function hideDiv(id) {var x = document.getElementById(id); x.style.display = "none"}
         // JavaScript to toggle a class on the body when the user scrolls
         document.addEventListener('scroll', function() {
-        // Check if the page is scrolled more than 50 pixels
-        if (window.scrollY > 50) {
+        // Check if the page is scrolled more than 100 pixels
+        if (window.scrollY > 100) {
             document.body.classList.add('user-is-scrolling');
         } else {
             document.body.classList.remove('user-is-scrolling');
