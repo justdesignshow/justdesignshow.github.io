@@ -68,7 +68,7 @@ html {scroll-behavior: smooth}
 }
 
 .student-quote-container {
-    width: 400px;
+    width: 300px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
@@ -79,7 +79,7 @@ html {scroll-behavior: smooth}
     justify-content: flex-end;
     align-items: flex-end;
     text-align: end;
-    line-height: 45px;
+    line-height: 30px;
 }
 
 .pagecontainer {
@@ -97,12 +97,14 @@ html {scroll-behavior: smooth}
     gap: 25px; 
     flex-direction: row; 
     flex-wrap: wrap;
+    justify-content: center;
     background-color: var(--black)
 }
 
 .work {
     height: 500px;
     min-width: 500px;
+    max-width: 700px;
     flex: 1;
     background-color: var(--yellow);
     background-size: cover;
@@ -294,17 +296,15 @@ ul {list-style-type: none}
     }
     .student-quote-container {
         width: 100%;
-        height: 100%;
+        max-height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding: 50px;
         color: var(--white);
         box-sizing: border-box;
-        justify-content: flex-end;
-        align-items: flex-end;
         text-align: end;
-        line-height: 45px;
+        padding: 100px 50px 50px calc(100% - 250px)
     }
     .student-work {max-width: 100vw;}
 }
@@ -316,11 +316,11 @@ ul {list-style-type: none}
         min-width: 50px;
     }
     .work-page-info {width: 90%; overflow: scroll;}
-
     .work {
         height: 400px;
         min-width: 90%;}
     .student-work {max-width: 500px;}
+    
 }
 
 @media only screen and (max-width: 600px) {
@@ -338,12 +338,30 @@ ul {list-style-type: none}
         min-width: 50px;
     }
 
+    .student-quote-container {
+        padding: 20px 20px 20px calc(100% - 200px);
+        max-height: 500px;
+        transition: 500ms;
+        -webkit-transition: 500ms;
+        -moz-transition: 500ms;
+    }
+
     /* When the user scrolls down, hide the container */
     body.user-is-scrolling .student-quote-container {
-        display: none;
+        max-height: 0; /* Animate to max-height 0 */
+        padding: 0 20px 0 calc(100% - 200px);
+        overflow: hidden;
     }
-    body.user-is-scrolling .student-banner-symbol {
-        display: none;
+
+    .student-banner-container symbol {
+        max-height: 200px;
+        overflow: hidden;
+        padding: 0;
+        opacity: 1;
+    }
+    body.user-is-scrolling .student-banner-container symbol {
+        opacity: 0;
+        max-height: 0;
     }
     .student-banner-container {
         display: flex;
@@ -353,7 +371,18 @@ ul {list-style-type: none}
         box-sizing: border-box;
         line-height: 45px;
     }
-    body.user-is-scrolling .student-banner-container {padding: 11px 20px 12px 75px;}
+    .student-banner-name, .student-banner-symbol {
+        font-size: 34px;
+        transition: 1500ms ease-out;
+        -webkit-transition: 1500ms ease-out;
+        -moz-transition: 1500ms ease-out;
+    }
+    body.user-is-scrolling .student-banner-container {
+        padding: 11px 20px 12px 75px; 
+        transition: 500ms;
+        -webkit-transition: 500ms;
+        -moz-transition: 500ms;}
+
     body.user-is-scrolling .student-banner-name {font-size: 22px}
 }
 
@@ -387,7 +416,7 @@ ul {list-style-type: none}
 .work-hover:hover {opacity: 1; z-index: 1;}
 
 .animate{
-    transition: 250ms ease-in-out;
-    -webkit-transition: 250ms ease-in-out;
-    -moz-transition: 250ms ease-in-out;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
 }

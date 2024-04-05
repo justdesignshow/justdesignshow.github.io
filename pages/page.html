@@ -30,8 +30,8 @@
         <!-- TOP BANNER -->
         <div class="student-banner"><div class="fill"></div></div>
         <div class="student-banner2">
-            <div class="student-banner-container">
-                <h1 id="name"><span class="student-banner-name animate"></span></h1>
+            <div class="student-banner-container animate">
+                <h1 id="name"><span class="student-banner-name"></span></h1>
                 <symbol><span class="student-banner-symbol"></span></symbol>
             </div>
             <div class="student-quote-container">
@@ -117,7 +117,7 @@
         // JavaScript to toggle a class on the body when the user scrolls
         document.addEventListener('scroll', function() {
         // Check if the page is scrolled more than 100 pixels
-        if (window.scrollY > 100) {
+        if (window.scrollY > 0) {
             document.body.classList.add('user-is-scrolling');
         } else {
             document.body.classList.remove('user-is-scrolling');
