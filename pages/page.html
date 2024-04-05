@@ -39,24 +39,26 @@
             </div>
         </div>
 
-        <!-- ALL STUDENT WORK -->
-        <div class="student-work">
-            <!-- WORK 1 -->
-            <div class="work" id="work1" onclick="displayWork('work1-page')">
-                <div class="work-hover" onclick="displayWork('work1-page')">
-                    <symbol><span id="w1s"></span></symbol>
+        <div class="pagecontainer">
+            <!-- ALL STUDENT WORK -->
+            <div class="student-work">
+                <!-- WORK 1 -->
+                <div class="work" id="work1" onclick="displayWork('work1-page')">
+                    <div class="work-hover" onclick="displayWork('work1-page')">
+                        <symbol><span id="w1s"></span></symbol>
+                    </div>
                 </div>
-            </div>
-            <!-- WORK 2 -->
-            <div class="work" id="work2" onclick="displayWork('work2-page')">
-                <div class="work-hover" onclick="displayWork('work2-page')">
-                    <symbol><span id="w2s"></span></symbol>
+                <!-- WORK 2 -->
+                <div class="work" id="work2" onclick="displayWork('work2-page')">
+                    <div class="work-hover" onclick="displayWork('work2-page')">
+                        <symbol><span id="w2s"></span></symbol>
+                    </div>
                 </div>
-            </div>
-            <!-- WORK 3 -->
-            <div class="work" id="work3" onclick="displayWork('work3-page')">
-                <div class="work-hover" onclick="displayWork('work3-page')">
-                    <symbol><span id="w3s"></span></symbol>
+                <!-- WORK 3 -->
+                <div class="work" id="work3" onclick="displayWork('work3-page')">
+                    <div class="work-hover" onclick="displayWork('work3-page')">
+                        <symbol><span id="w3s"></span></symbol>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,5 +114,14 @@
         function displayWork(div) {
           var x = document.getElementById(div); x.style.display = "flex"}
         function hideDiv(id) {var x = document.getElementById(id); x.style.display = "none"}
+        // JavaScript to toggle a class on the body when the user scrolls
+        document.addEventListener('scroll', function() {
+        // Check if the page is scrolled more than 50 pixels
+        if (window.scrollY > 50) {
+            document.body.classList.add('user-is-scrolling');
+        } else {
+            document.body.classList.remove('user-is-scrolling');
+        }
+        });
     </script>
 </html>

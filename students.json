@@ -80,7 +80,16 @@
     },
     "samuelgreen": {
         "n": "SAMUEL GREEN",
-        "q": ""
+        "q": "",
+        "work1t": "NANDOS",
+        "work1s": "!",
+        "work1d": "Put description here",
+        "work2t": "PUT TITLE HERE",
+        "work2s": "~",
+        "work2d": "Put description here",
+        "work3t": "",
+        "work3s": "",
+        "work3d": ""
     },
     "zimouhuang": {
         "n": "ZIMOU HUANG",
@@ -92,7 +101,7 @@
     },
     "zhehuang": {
         "n": "ZHE HUANG",
-        "q": ""
+        "q": "SO YOU JUST COMPOSE TYPE?"
     },
     "reheemifill": {
         "n": "REHEEM IFILL",
@@ -136,9 +145,9 @@
         "work1t": "DUREX PACKAGING",
         "work1s": "~",
         "work1d": "Development of a gender-neutral brailled condom packaging for a broad target audience (aim: inclusivity).  ",
-        "work2t": "UNNAMED",
+        "work2t": "THE SURGEON",
         "work2s": "~",
-        "work2d": "description. ",
+        "work2d": "Redesigning of an existing book cover. I chose the thriller genre and worked at redesigning the book 'Surgeon' by Leslie Wolfe. Originally, the cover used a photo-realistic image of a doctor in a hospital, so I tried to convey information about the novel's contents. I wanted to rectify this by creating a more simplistic and eye-catching illustration for the front cover, using a two-tone colour palette (red and black), to symbolise the possibility of danger and death that is also associated with the thriller/horror bracket. My intention was to have the reader be able to tell what kind of book it is by just looking at it, and desire to know the mystery within.",
         "work3t": "",
         "work3s": "",
         "work3d": ""
