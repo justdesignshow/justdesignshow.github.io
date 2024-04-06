@@ -55,27 +55,25 @@ html {scroll-behavior: smooth}
     z-index: 2;
 }
 
-.student-banner-container {
-    flex: 2;
+.student-banner-container, .student-quote-container {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
-    flex-direction: column-reverse;
-    padding: 50px;
     color: var(--white);
     box-sizing: border-box;
+}
+
+.student-banner-container {
+    flex: 2;
+    flex-direction: column-reverse;
+    padding: 50px;
     line-height: 45px;
 }
 
 .student-quote-container {
     width: 300px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
     flex-direction: column;
     padding: 50px;
-    color: var(--white);
-    box-sizing: border-box;
     justify-content: flex-end;
     align-items: flex-end;
     text-align: end;
@@ -276,11 +274,7 @@ ul {list-style-type: none}
 
     .work {
         height: none;
-        min-width: 90%;
-        flex: 1;
-        background-color: var(--yellow);
-        background-size: cover;
-        background-position: center;}
+        min-width: 90%;}
     .student-banner2 {
         height: fit-content;
         width: 100vw;
@@ -293,13 +287,7 @@ ul {list-style-type: none}
     .student-quote-container {
         width: 100%;
         max-height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: flex;
         flex-direction: row;
-        padding: 50px;
-        color: var(--white);
-        box-sizing: border-box;
-        text-align: end;
         padding: 100px 50px 50px calc(100% - 250px)
     }
     .student-work {max-width: 100vw;}
@@ -313,8 +301,7 @@ ul {list-style-type: none}
     }
     .work-page-info {width: 90%; overflow: scroll;}
     .work {
-        height: 400px;
-        min-width: 90%;}
+        height: 400px;}
     .student-work {max-width: 500px;}
     
 }
@@ -334,6 +321,8 @@ ul {list-style-type: none}
         min-width: 50px;
     }
 
+    .student-banner2 {min-height: 300px;}
+    body.user-is-scrolling .student-banner2 {min-height: 0;}
     .student-quote-container {
         padding: 20px 20px 20px calc(100% - 200px);
         max-height: 500px;
@@ -362,9 +351,6 @@ ul {list-style-type: none}
         display: flex;
         flex-direction: column-reverse;
         padding: 20px;
-        color: var(--white);
-        box-sizing: border-box;
-        line-height: 45px;
     }
     .student-banner-name, .student-banner-symbol {
         font-size: 34px;
@@ -373,6 +359,7 @@ ul {list-style-type: none}
         -moz-transition: 700ms;
     }
     body.user-is-scrolling .student-banner-container {
+        min-height: 0;
         padding: 11px 20px 12px 75px; 
         transition: 500ms;
         -webkit-transition: 500ms;
@@ -387,8 +374,7 @@ ul {list-style-type: none}
         max-width: 90%;
     }
     .work {
-        height: 300px;
-        min-width: 90%;}
+        height: 300px;}
 }
 
 .work-hover {

@@ -7,28 +7,13 @@ fetch('/students.json')
     .then(response => response.json())
     .then(students => {
         const student = students[studentId];
-        const lowResImage = '/images/' + student.n.replace(/ /g, '').toLowerCase() + '/banner-lq.webp';
-        const highResImage = '/images/' + student.n.replace(/ /g, '').toLowerCase() + '/banner.webp';
-        console.log('/images/' + student.n.replace(/ /g, '').toLowerCase() + '/banner-lq.webp');
-        // Set low-res image first
-        document.querySelector('.student-banner').style.backgroundImage = `url(${lowResImage})`;
-        document.querySelector('.student-banner2').style.backgroundImage = `url(${lowResImage})`;
-
-        // Preload high-res image and replace it once loaded
-        const highResImg = new Image();
-        highResImg.onload = () => {
-          document.querySelector('.student-banner').style.backgroundImage = `url(${highResImage})`;
-          document.querySelector('.student-banner2').style.backgroundImage = `url(${highResImage})`;
-        };
-        highResImg.src = highResImage;
 
         // Generate the banner image filename from the student's name
-        // const bannerImage = '/images/' + student.n.replace(/ /g, '').toLowerCase() + '/banner.webp';
+        const bannerImage = '/images/' + student.n.replace(/ /g, '').toLowerCase() + '/banner.webp';
         
-
         // // Update the page with the student's data
-        // document.querySelector('.student-banner').style.backgroundImage = `url(${bannerImage})`;
-        // document.querySelector('.student-banner2').style.backgroundImage = `url(${bannerImage})`;
+        document.querySelector('.student-banner').style.backgroundImage = `url(${bannerImage})`;
+        document.querySelector('.student-banner2').style.backgroundImage = `url(${bannerImage})`;
         document.querySelector('.student-banner-name').textContent = student.n.toUpperCase();
         document.querySelector('.student-banner-symbol').textContent = student.work1s + student.work2s + student.work3s;
         document.querySelector('.student-quote-container h1').textContent = '"' + student.q.toUpperCase() + '"';
