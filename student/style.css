@@ -300,8 +300,7 @@ ul {list-style-type: none}
         min-width: 50px;
     }
     .work-page-info {width: 90%; overflow: scroll;}
-    .work {
-        height: 400px;}
+    .work {height: 400px;}
     .student-work {max-width: 500px;}
     
 }
@@ -310,19 +309,26 @@ ul {list-style-type: none}
     html {--black: #000;} 
     .nav1 {display: block}
     .topnav {display: none}
+
     .close {
         top: 25px;
         right: 25px;
         height: fit-content;
         position: absolute;
     }
-    .work-page-image {
-        max-height: fit-content;
-        min-width: 50px;
-    }
 
-    .student-banner2 {min-height: 300px;}
-    body.user-is-scrolling .student-banner2 {min-height: 0;}
+    .work-page-image {max-height: fit-content;min-width: 50px}
+
+    .student-banner2 {
+        min-height: 300px; 
+        transition: 700ms;
+        -webkit-transition: 700ms;
+        -moz-transition: 700ms;
+        background-position: center;}
+
+    body.user-is-scrolling .student-banner2 {
+        min-height: 0;}
+
     .student-quote-container {
         padding: 20px 20px 20px calc(100% - 200px);
         max-height: 500px;
@@ -343,38 +349,41 @@ ul {list-style-type: none}
         padding: 0;
         opacity: 1;
     }
+
     body.user-is-scrolling .student-banner-container symbol {
         opacity: 0;
         max-height: 0;
     }
+
     .student-banner-container {
         display: flex;
         flex-direction: column-reverse;
         padding: 20px;
     }
+
     .student-banner-name, .student-banner-symbol {
         font-size: 34px;
         transition: 700ms;
         -webkit-transition: 700ms;
         -moz-transition: 700ms;
     }
+
+    body.user-is-scrolling .student-banner-name {font-size: 22px}
+
     body.user-is-scrolling .student-banner-container {
+        min-height: 70px !important;
+        line-height: 21px;
         min-height: 0;
-        padding: 11px 20px 12px 75px; 
+        justify-content: center;
+        padding: 11px 20px 11px 73px; 
         transition: 500ms;
         -webkit-transition: 500ms;
         -moz-transition: 500ms;}
-
-    body.user-is-scrolling .student-banner-name {font-size: 22px}
 }
 
 @media only screen and (max-width: 400px) {
-    .work-page-image {
-        max-height: 300px;
-        max-width: 90%;
-    }
-    .work {
-        height: 300px;}
+    .work-page-image {max-height: 300px; max-width: 90%}
+    .work {height: 300px}
 }
 
 .work-hover {
