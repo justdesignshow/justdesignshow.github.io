@@ -214,6 +214,7 @@ ul {list-style-type: none}
     justify-content: center;
     gap: 50px;
     flex-direction: row;
+    box-sizing: border-box;
 }
 
 .work-page-image {
@@ -262,7 +263,6 @@ ul {list-style-type: none}
         max-height: fit-content;
         min-width: 50px;
         max-width: 300px;
-        margin-top: 100px;
     }
     .work-page-info {width: 300px}
     .work-page-info h2 {overflow: scroll}
@@ -294,10 +294,11 @@ ul {list-style-type: none}
 }
 
 @media only screen and (max-width: 750px) {
-    .work-page {flex-direction: column;}
+    .work-page {flex-direction: column; padding-bottom: 50px}
     .work-page-image {
-        max-height: fit-content;
+        max-height: 300px;
         min-width: 50px;
+        margin-top: 100px;
     }
     .work-page-info {width: 90%; overflow: scroll;}
     .work {height: 400px;}
@@ -317,7 +318,7 @@ ul {list-style-type: none}
         position: absolute;
     }
 
-    .work-page-image {max-height: fit-content;min-width: 50px}
+    .work-page-image {max-height: 400px;min-width: 0; max-width: 80%;}
 
     .student-banner2 {
         min-height: 300px; 

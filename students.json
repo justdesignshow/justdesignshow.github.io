@@ -1,16 +1,7 @@
 {
     "danyalahmed": {
         "n": "DANYAL AHMED",
-        "q": "SO YOU JUST PICK FONTS AND STUFF?",
-        "work1t": "",
-        "work1s": "",
-        "work1d": "",
-        "work2t": "",
-        "work2s": "",
-        "work2d": "",
-        "work3t": "",
-        "work3s": "",
-        "work3d": ""
+        "q": "SO YOU JUST PICK FONTS AND STUFF?"
     },
     "evangelosangelou": {
         "n": "EVANGELOS ANGELOU",
@@ -39,7 +30,16 @@
     },
     "kaiburley": {
         "n": "KAI BURLEY",
-        "q": "SO YOU JUST TAKE PRETTY PICS?"
+        "q": "SO YOU JUST TAKE PRETTY PICS?",
+        "work1t": "GRUNGE IS NOT DEAD",
+        "work1s": ">",
+        "work1d": "An advertisement project promoting the sub-genre of music, grunge, through the from of video, magazine, and poster. ",
+        "work2t": "TECHSAVERS",
+        "work2s": "!",
+        "work2d": "A project that aims to get young people off of their phones, I decided to parody one of specsavers’ most iconic adverts with a twist. ",
+        "work3t": "CREATIIVE STUDIO PHOTOGRAPHY",
+        "work3s": ">",
+        "work3d": "A series of creative studio photography shots to get comfortable with working in a professional atmosphere in preparation for taking the headshots for each student for this degree show."
     },
     "xiyucai": {
         "n": "XIYU CAI",
@@ -61,7 +61,7 @@
         "n": "JAI DHALIWAL",
         "q": "SO YOU JUST CENTRE THE DIV?",
         "work1t": "ANIME-ESC POND",
-        "work1s": ">",
+        "work1s": "~",
         "work1d": "I was inspired by Zelda Breath of the Wild to make this. ",
         "work2t": "LAYERED LANDSCAPE",
         "work2s": "~",
@@ -74,8 +74,8 @@
         "n": "BOBBIE DIKE",
         "q": ""
     },
-    "charliefirzpatrick": {
-        "n": "CHARLIE FIRZPATRICK",
+    "charliefitzpatrick": {
+        "n": "CHARLIE FITZPATRICK",
         "q": ""
     },
     "samuelgreen": {
@@ -198,7 +198,16 @@
     },
     "ksawierwydra": {
         "n": "KSAWIER WYDRA",
-        "q": "THE CLIENT IS ALWAYS RIGHT!"
+        "q": "THE CLIENT IS ALWAYS RIGHT!",
+        "work1t": "GIFFGAFF = REFURBISHED Campaign",
+        "work1s": "!",
+        "work1d": "Creating a campaign to support GIFFGAFF's message of being the go to place for refurbished phonesas well as attempting at changing the stigma and outlook on the refurbished phone scene for the better. ",
+        "work2t": "Swiss Design Inspired Playing Cards",
+        "work2s": "*",
+        "work2d": "A fully fledged set of playing cards created and inspired by the Swiss Design movement centered around simple aesthetics that each have a function. ",
+        "work3t": "Synthwave Inspired Magazine and Merchandise",
+        "work3s": "~",
+        "work3d": "A magazine and set of merchandise created to celebrate and highlight the 80s and 90s inspired music genere synthwave to showcase it's history and aesthetics. "
     },
     "sifanxiang": {
         "n": "SIFAN XIANG",

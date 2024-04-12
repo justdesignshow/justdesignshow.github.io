@@ -18,7 +18,6 @@ fetch('/students.json')
         document.querySelector('.student-banner-symbol').textContent = student.work1s + student.work2s + student.work3s;
         document.querySelector('.student-quote-container h1').textContent = '"' + student.q.toUpperCase() + '"';
         
-
         // Mapping of symbols to labels
         var symbolToLabel = {
             '!': 'BRANDING',
@@ -29,8 +28,10 @@ fetch('/students.json')
             '?': 'EDITORIAL',
             '+': 'INFORMATION',
             '*': 'PACKAGING',
-            '>': 'ANIMATION/MOTION'};
+            '>': 'ANIMATION/MOTION'
+        };
 
+        // Function to check if the file exists
         function updateLabel(about, labelId) {
             // Get the symbol
             var symbol = document.querySelector(about).innerText;
@@ -40,41 +41,63 @@ fetch('/students.json')
             
             // Update the label
             document.querySelector(labelId).innerText = label;
-        }
+        };
 
-        if (student.work1t.trim() == "") {
-            document.querySelector('#work1').style.display = 'none';
-        } else {
-            document.querySelector('#work1').style.backgroundImage = 'url(/images/' + student.n.replace(/ /g, '').toLowerCase() + '/w1.webp)';
-            document.querySelector('#work1-about').src = '/images/' + student.n.replace(/ /g, '').toLowerCase() + '/w1.png';
-            document.querySelector('#w1s').textContent = student.work1s;
-            document.querySelector('#w1s-about').textContent = student.work1s;
-            document.querySelector('#w1t').textContent = student.work1t;
-            document.querySelector('#w1d').textContent = student.work1d;
-            updateLabel('#w1s-about', '#w1s-label');
+        function fileExists(filePath, callback) {
+            fetch(filePath, { method: 'HEAD' })
+                .then(response => {
+                    callback(response.ok);
+                })
+                .catch(() => callback(false));
         }
+        
+        function pngormp4(pngPath, mp4Path, imgElement, videoElement) {
+            fileExists(pngPath, exists => {
+                if (exists) {
+                    imgElement.style.display = 'block';
+                    videoElement.style.display = 'none';
+                    imgElement.src = pngPath;
+                } else {
+                    fileExists(mp4Path, exists => {
+                        if (exists) {
+                            videoElement.style.display = 'block';
+                            imgElement.style.display = 'none';
+                            videoElement.src = mp4Path;
+                        } else {
+                            // Explicitly hide both elements if neither file is found
+                            imgElement.style.display = 'none';
+                            videoElement.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        }
+        
+        function updateWorkPage(workNumber, student) {
+            var workId = '#work' + workNumber;
+            var workPageId = workId + '-page';
+            var workFileName = student.n.replace(/ /g, '').toLowerCase() + '/w' + workNumber;
+            var workFilePath = '/images/' + workFileName;
+            var imgElement = document.querySelector(workPageId + ' img.work-page-image');
+            var videoElement = document.querySelector(workPageId + ' video.work-page-image');
+        
+            if (student['work' + workNumber + 't'].trim() == "") {
+                document.querySelector(workId).style.display = 'none';
+            } else {
+                pngormp4(workFilePath + '.png', workFilePath + '.mp4', imgElement, videoElement);
+                document.querySelector(workId).style.backgroundImage = 'url(' + workFilePath + '.webp)';
+                ['s', 't', 'd'].forEach(suffix => {
+                    var contentId = '#work' + workNumber + suffix;
+                    document.querySelector('' + contentId).textContent = student['work' + workNumber + suffix];
+                });
+                document.querySelector('#w' + workNumber + 's-about').textContent = student['work' + workNumber + 's'];
+                updateLabel('#w' + workNumber + 's-about', '#w' + workNumber + 's-label');
+            }
+        };
+        
+        // Call the function for each work
+        updateWorkPage(1, student);
+        updateWorkPage(2, student);
+        updateWorkPage(3, student);
 
-        if (student.work2t.trim() == "") {
-            document.querySelector('#work2').style.display = 'none';
-        } else {
-            document.querySelector('#work2').style.backgroundImage = 'url(/images/' + student.n.replace(/ /g, '').toLowerCase() + '/w2.webp)';
-            document.querySelector('#work2-about').src = '/images/' + student.n.replace(/ /g, '').toLowerCase() + '/w2.png';
-            document.querySelector('#w2s').textContent = student.work2s;
-            document.querySelector('#w2s-about').textContent = student.work2s;
-            document.querySelector('#w2t').textContent = student.work2t;
-            document.querySelector('#w2d').textContent = student.work2d;
-            updateLabel('#w2s-about', '#w2s-label');
-        }
-
-        if (student.work3t.trim() == "") {
-            document.querySelector('#work3').style.display = 'none';
-        } else {
-            document.querySelector('#work3').style.backgroundImage = 'url(/images/' + student.n.replace(/ /g, '').toLowerCase() + '/w3.webp)';
-            document.querySelector('#work3-about').src = '/images/' + student.n.replace(/ /g, '').toLowerCase() + '/w3.png';
-            document.querySelector('#w3s').textContent = student.work3s;
-            document.querySelector('#w3s-about').textContent = student.work3s;
-            document.querySelector('#w3t').textContent = student.work3t;
-            document.querySelector('#w3d').textContent = student.work3d;
-            updateLabel('#w3s-about', '#w3s-label');
-        }
-    });
+    })
