@@ -170,35 +170,43 @@
         }
 
         function displayStudents(students) {
-            let container = document.getElementById('students-container');
-            container.innerHTML = '';
-            console.log('Displaying students:', students);
-            students.forEach(student => {
-                let sD = document.createElement('div');
-                sD.className = 'student';
-                sD.id = student.n.replace(/ /g, '');
-                let a = document.createElement('a');
-                a.href = '/student?id=' + sD.id.toLowerCase();
-                a.appendChild(sD);
-                let n = document.createElement('div');
-                n.className = 'name';
-                let symbolDiv = document.createElement('div');
-                symbolDiv.className = 'symbol';
-                symbolDiv.textContent = student.work1s + student.work2s + student.work3s;
-                let nameH1 = document.createElement('h1');
-                nameH1.innerHTML = student.n;
-                n.appendChild(nameH1);
-                n.appendChild(symbolDiv);
-                let q = document.createElement('div');
-                q.className = 'quote';
-                let quoteH1 = document.createElement('h1');
-                quoteH1.textContent = '"' + student.q + '"';
-                q.appendChild(quoteH1);
-                sD.appendChild(n);
-                sD.appendChild(q);
-                container.appendChild(a);
-            });
-        }
+    let container = document.getElementById('students-container');
+    container.innerHTML = '';
+    console.log('Displaying students:', students);
+    students.forEach(student => {
+        let sD = document.createElement('div');
+        sD.className = 'student';
+        sD.id = student.n.replace(/ /g, '');
+        let a = document.createElement('a');
+        a.href = '/student?id=' + sD.id.toLowerCase();
+        a.appendChild(sD);
+        let n = document.createElement('div');
+        n.className = 'name';
+        
+        // Create a set of unique symbols
+        const uniqueSymbols = new Set([...student.work1s, ...student.work2s, ...student.work3s]);
+        
+        let symbolDiv = document.createElement('div');
+        symbolDiv.className = 'symbol';
+        
+        // Convert the set back to a string and assign it to textContent
+        symbolDiv.textContent = Array.from(uniqueSymbols).join('');
+        
+        let nameH1 = document.createElement('h1');
+        nameH1.innerHTML = student.n;
+        n.appendChild(nameH1);
+        n.appendChild(symbolDiv);
+        let q = document.createElement('div');
+        q.className = 'quote';
+        let quoteH1 = document.createElement('h1');
+        quoteH1.textContent = '"' + student.q + '"';
+        q.appendChild(quoteH1);
+        sD.appendChild(n);
+        sD.appendChild(q);
+        container.appendChild(a);
+    });
+}
+
         displayStudents(Object.values(students));
     });
 

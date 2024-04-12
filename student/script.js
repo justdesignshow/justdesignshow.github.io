@@ -15,7 +15,8 @@ fetch('/students.json')
         document.querySelector('.student-banner').style.backgroundImage = `url(${bannerImage})`;
         document.querySelector('.student-banner2').style.backgroundImage = `url(${bannerImage})`;
         document.querySelector('.student-banner-name').textContent = student.n.toUpperCase();
-        document.querySelector('.student-banner-symbol').textContent = student.work1s + student.work2s + student.work3s;
+        const symbols = new Set([...student.work1s, ...student.work2s, ...student.work3s]);
+        document.querySelector('.student-banner-symbol').textContent = Array.from(symbols).join('');
         document.querySelector('.student-quote-container h1').textContent = '"' + student.q.toUpperCase() + '"';
         
         // Mapping of symbols to labels
