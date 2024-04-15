@@ -285,7 +285,7 @@ ul {list-style-type: none}
 .footer-column > a > h2 {color: var(--white) !important}
 
 .footer-column {width: 25%; box-sizing: border-box;}
-.footer-logo {width: 100px; height:fit-content; padding: 50px;}
+.footer-logo {width: 100px; height: auto; padding: 50px;}
 .website-end {
     background-color: var(--yellow);
     padding: 0px 100px 0px 100px;
