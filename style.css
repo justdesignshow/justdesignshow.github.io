@@ -10,8 +10,7 @@ src:url("fonts/space-mono.woff2") format("woff2");
 font-style:normal;font-weight:500;font-stretch:normal;font-display: swap}
 
 * {text-decoration: none;}
-body {margin: 0px 0px 0px 0px;
-background: var(--black);}
+body {margin: 0px 0px 0px 0px; background: var(--black)}
 html {scroll-behavior: smooth; --black: #121212; --yellow: #DDDC26; --white: #F3F2EB;}
 
 h1 {font-family: "owners", sans-serif;
@@ -97,6 +96,7 @@ ul {list-style-type: none}
     overflow: hidden;
     will-change: scroll-position;
     width: 100vw;
+    height: 100vh;
 }
 
 #menuToggle span:first-child {transform-origin: 0% 0%;}
@@ -188,6 +188,7 @@ ul {list-style-type: none}
 .directions-grid {
 	border-style: solid; 
 	border-color: var(--white);
+    box-sizing: border-box;
 }
 
 .hero-grid-left {
@@ -205,12 +206,23 @@ ul {list-style-type: none}
 
 #scroll {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: right;
     width: 100vw;
-    height: 78vh;
-    overflow-y: scroll;}
+    height: calc(100vh - 210px);
+    overflow-y: scroll;
+    bottom: 0;}
 
+    .scroll-1 {
+        display: flex;
+        flex-direction: row;
+        align-items: right;
+        width: 100vw;
+        }
+
+.pages::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
 .students-grid-right {
     margin-top: 0;
     align-self: flex-start;
@@ -352,7 +364,7 @@ line-height: 45px;}
 div.sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 0; 
     background-color: yellow;
     padding: 50px;
     font-size: 20px;
@@ -360,6 +372,30 @@ div.sticky {
 
 .student-banner-name {font-size: 50px;}
 .student-banner-symbol {font-size: 50px; color: var(--yellow);}
+
+.footer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #000}
+
+.footer-column > a {padding: 0;}
+.footer-column > h1 {color: var(--yellow)}
+.footer-column > h2 {color: var(--white)}
+.footer-column > a > h2 {color: var(--white) !important}
+
+.footer-column {width: 25%; box-sizing: border-box;}
+.footer-logo {width: 100px; height:auto; padding: 50px;}
+.website-end {
+    background-color: var(--yellow);
+    padding: 0px 100px 0px 100px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center}
 
 @media only screen and (min-width: 1200px) and (max-height: 800px),
        only screen and (min-width: 1400px) and (max-height: 1000px),
@@ -388,10 +424,30 @@ div.sticky {
     div.container>h1 {font-size: 6vw}
 }
 
+@media only screen and (max-width: 850px) {
+    .footer {
+        flex-direction: column;
+        padding-left: 100px;
+        gap: 20px}
+    .footer-column {width: 100%;}
+    .website-end {
+        background-color: var(--yellow);
+        padding: 0px 50px 15px 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-logo {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 50px 100px 50px 50px;
+    }
+}
+
 @media only screen and (max-width: 750px) {
 	.hero-grid-right {width:40px}
     .hero-sub {line-height: 3.9vw} 
-    div.hero-sub>h1 {font-size: 3.5vw}}
+    div.hero-sub>h1 {font-size: 3.5vw}
+}
 
 @media only screen and (max-width: 600px) {
     html {--black: #000;} 
@@ -401,7 +457,7 @@ div.sticky {
     .container{line-height: 11.25vw}
     .design{padding-left: 3.33vw}
     div.container>h1 {font-size: 14.4vw}
-    .pages {flex-direction: column; overflow-y: scroll; width: 100%; overflow-x: hidden;}
+    .pages {flex-direction: column; overflow-y: scroll; width: 100%; overflow-x: hidden; height: auto;}
     
     #about {
         height: fit-content;
@@ -430,12 +486,9 @@ div.sticky {
     }
 
     #scroll {
-        display: flex;
-        flex-direction: row;
         align-items: right;
         height: fit-content;
-        width: auto;
-        overflow-y: hidden;}
+        width: auto;}
     
     .pageheader {
         display: flex;

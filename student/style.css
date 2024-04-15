@@ -267,12 +267,59 @@ ul {list-style-type: none}
     z-index: 9999;
 }
 
+.footer {
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    border-color: var(--white);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #000}
+
+.footer-column > a {padding: 0;}
+.footer-column > h1 {color: var(--yellow)}
+.footer-column > h2 {color: var(--white)}
+.footer-column > a > h2 {color: var(--white) !important}
+
+.footer-column {width: 25%; box-sizing: border-box;}
+.footer-logo {width: 100px; height:fit-content; padding: 50px;}
+.website-end {
+    background-color: var(--yellow);
+    padding: 0px 100px 0px 100px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center}
+
 @media only screen and (max-width: 1074px) {
     .work {
         height: 700px;
         min-width: 500px;
     }
     .student-work {max-width: 700px;}
+}
+
+@media only screen and (max-width: 850px) {
+    .footer {
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px}
+    .footer-column {width: 100%;}
+    .website-end {
+        background-color: var(--yellow);
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-logo {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
 }
 
 @media only screen and (max-width: 950px) {

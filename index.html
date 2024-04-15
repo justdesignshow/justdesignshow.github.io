@@ -133,84 +133,112 @@
                         </div>
                     </div>
                     <div id="scroll">
-                        <div class="directions-grid directions-grid-left" style="color: #ffffff; border-width: 0px 0px 0px 0px">
-                            <h1></h1>
+                        <div class="scroll-1">
+                            <div class="directions-grid directions-grid-left" style="color: #ffffff; border-width: 0px 0px 0px 0px">
+                                <h1></h1>
+                            </div>
+                            <div class="directions-grid students-grid-right" id="students-container" style="border-width: 0px 0px 0px 2px;">
+                                <script>
+                                    fetch('students.json')
+                                    .then(response => response.json())
+                                    .then(students => {
+                                        let buttons = document.querySelectorAll('.filter');
+
+                                        buttons.forEach(button => {
+                                            button.addEventListener('click', function() {
+                                                if (this.classList.contains('active')) {
+                                                    this.classList.remove('active');
+                                                    displayStudents(Object.values(students));
+                                                    return;
+                                                }
+
+                                                buttons.forEach(btn => btn.classList.remove('active'));
+                                                this.classList.add('active');
+
+                                                let symbol = this.querySelector('symbol').textContent;
+                                                let filteredStudents = filterBySymbol(symbol, Object.values(students));
+                                                displayStudents(filteredStudents);
+                                            });
+                                        });
+
+                                        function filterBySymbol(symbol, students) {
+                                            let filteredStudents = students.filter(student => 
+                                                student.work1s === symbol || 
+                                                student.work2s === symbol || 
+                                                student.work3s === symbol
+                                            );
+                                            return filteredStudents;
+                                        }
+
+                                        function displayStudents(students) {
+                                        let container = document.getElementById('students-container');
+                                        container.innerHTML = '';
+                                        console.log('Displaying students:', students);
+                                        students.forEach(student => {
+                                            let sD = document.createElement('div');
+                                            sD.className = 'student';
+                                            sD.id = student.n.replace(/ /g, '');
+                                            let a = document.createElement('a');
+                                            a.href = '/student?id=' + sD.id.toLowerCase();
+                                            a.appendChild(sD);
+                                            let n = document.createElement('div');
+                                            n.className = 'name';
+                                            
+                                            // Create a set of unique symbols
+                                            const uniqueSymbols = new Set([...student.work1s, ...student.work2s, ...student.work3s]);
+                                            
+                                            let symbolDiv = document.createElement('div');
+                                            symbolDiv.className = 'symbol';
+                                            
+                                            // Convert the set back to a string and assign it to textContent
+                                            symbolDiv.textContent = Array.from(uniqueSymbols).join('');
+                                            
+                                            let nameH1 = document.createElement('h1');
+                                            nameH1.innerHTML = student.n;
+                                            n.appendChild(nameH1);
+                                            n.appendChild(symbolDiv);
+                                            let q = document.createElement('div');
+                                            q.className = 'quote';
+                                            let quoteH1 = document.createElement('h1');
+                                            quoteH1.textContent = '"' + student.q + '"';
+                                            q.appendChild(quoteH1);
+                                            sD.appendChild(n);
+                                            sD.appendChild(q);
+                                            container.appendChild(a);
+                                        });
+                                    }
+
+                                        displayStudents(Object.values(students));
+                                    });
+
+                                </script>
+                            </div>
                         </div>
-                        <div class="directions-grid students-grid-right" id="students-container" style="border-width: 0px 0px 0px 2px;">
-                            <script>
-                                fetch('students.json')
-    .then(response => response.json())
-    .then(students => {
-        let buttons = document.querySelectorAll('.filter');
+                        <div class="footer">
+                            <div class="f1 footer-column">
+                                <img src="/logo.webp" class="footer-logo">
 
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                if (this.classList.contains('active')) {
-                    this.classList.remove('active');
-                    displayStudents(Object.values(students));
-                    return;
-                }
-
-                buttons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-
-                let symbol = this.querySelector('symbol').textContent;
-                let filteredStudents = filterBySymbol(symbol, Object.values(students));
-                displayStudents(filteredStudents);
-            });
-        });
-
-        function filterBySymbol(symbol, students) {
-            let filteredStudents = students.filter(student => 
-                student.work1s === symbol || 
-                student.work2s === symbol || 
-                student.work3s === symbol
-            );
-            return filteredStudents;
-        }
-
-        function displayStudents(students) {
-    let container = document.getElementById('students-container');
-    container.innerHTML = '';
-    console.log('Displaying students:', students);
-    students.forEach(student => {
-        let sD = document.createElement('div');
-        sD.className = 'student';
-        sD.id = student.n.replace(/ /g, '');
-        let a = document.createElement('a');
-        a.href = '/student?id=' + sD.id.toLowerCase();
-        a.appendChild(sD);
-        let n = document.createElement('div');
-        n.className = 'name';
-        
-        // Create a set of unique symbols
-        const uniqueSymbols = new Set([...student.work1s, ...student.work2s, ...student.work3s]);
-        
-        let symbolDiv = document.createElement('div');
-        symbolDiv.className = 'symbol';
-        
-        // Convert the set back to a string and assign it to textContent
-        symbolDiv.textContent = Array.from(uniqueSymbols).join('');
-        
-        let nameH1 = document.createElement('h1');
-        nameH1.innerHTML = student.n;
-        n.appendChild(nameH1);
-        n.appendChild(symbolDiv);
-        let q = document.createElement('div');
-        q.className = 'quote';
-        let quoteH1 = document.createElement('h1');
-        quoteH1.textContent = '"' + student.q + '"';
-        q.appendChild(quoteH1);
-        sD.appendChild(n);
-        sD.appendChild(q);
-        container.appendChild(a);
-    });
-}
-
-        displayStudents(Object.values(students));
-    });
-
-                            </script>
+                            </div>
+                            <div class="f2 footer-column">
+                                <h1>LOCATION</h1>
+                                <h2>Coventry University<br>
+                                    Delia Derbyshire<br>
+                                    Cox Street<br>
+                                    Coventry<br>
+                                    CV1 5PH</h2>
+                            </div>
+                            <div class="f3 footer-column">
+                                <h1>CONTACT</h1>
+                                <h2>example@example.com</h2>
+                            </div>
+                            <div class="f4 footer-column">
+                                <h1>CONNECT</h1>
+                                <a><h2>Instagram</h2></a>
+                                <a><h2>TikTok</h2></a>
+                            </div>
+                        </div>
+                        <div class="website-end">
+                            <h2>Made with love by the website team (Jai, Loke, Keyi, Giovanni, Zhenli)<br>coded by Jai</h2>
                         </div>
                     </div>
                 </section>
