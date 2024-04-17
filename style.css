@@ -515,6 +515,8 @@ div.sticky {
     div.hero-sub>h1 {font-size: 2.8vw;}
 }
 
+.website-end a {text-decoration: underline}
+
 .student {background-size: 10250px !important; background: url('s.webp')}
 #DANYALAHMED {background-position: -0 -0;}
 #EVANGELOSANGELOU {background-position: -250px -0}

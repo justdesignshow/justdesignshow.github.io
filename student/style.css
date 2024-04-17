@@ -108,7 +108,8 @@ html {scroll-behavior: smooth}
     flex: 1;
     background-color: var(--yellow);
     background-size: cover;
-    background-position: center
+    background-position: center;
+    cursor: pointer;
 }
 
 #menuToggle {
@@ -467,6 +468,8 @@ ul {list-style-type: none}
     -webkit-transition: 500ms;
     -moz-transition: 500ms;
 }
+
+.website-end a {text-decoration: underline}
 
 @font-face {font-family:"owners";
 src:url("/fonts/owners-bold.woff2") format("woff2");
