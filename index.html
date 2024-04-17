@@ -1,71 +1,89 @@
-<!doctypehtml><html lang=en><meta content="text/html; charset=utf-16"http-equiv=Content-Type><meta content="width=device-width,initial-scale=1"name=viewport><link href=style.css rel=preload as=style onload='this.onload=null,this.rel="stylesheet"'><link href=style.css rel=stylesheet><title>JUST DESIGN DEGREE SHOW</title><meta content="The degree show for Graphic Design BA Hons, Coventry University"name=description><head ontouchstart=""><nav class=nav1 role=navigation><div id=menuToggle><input aria-label="Hamburger Menu"id=Toggle type=checkbox> <span></span><span></span><span></span><ul class=menu><li><a href=#home><h1>HOME</h1></a><li><a href=#about><h1>ABOUT</h1></a><li><a href=#directions><h1>DIRECTIONS</h1></a><li><a href=#students><h1>STUDENTS</h1></a></ul></div></nav><div class=topnav style=align-self:flex-start;z-index:9999><a href=#home><h1>HOME</h1></a><a href=#about><h1>ABOUT</h1></a><a href=#directions><h1>DIRECTIONS</h1></a><a href=#students><h1>STUDENTS</h1></a></div><div class=pages id=scrollableElement><div style=width:100vw;height:100vh><section id=home><div class=hero style=position:fixed><div style=display:flex;flex-direction:row;align-items:right;width:100%;height:70vh><div class="hero-grid hero-grid-left"style="border-width:0 1px 1px 0;display:flex;flex-direction:column-reverse;align-items:flex-end;padding-right:20px"><div class=container id=helo><h1><span class=auto-type>JUST</span><br><span class=design>DESIGN.</span></h1></div><h2><span class=animate id=logo>font-family: "owners", sans-serif;<br>letter-spacing: 1pt;<br>line-height: 12.5vw;<br>margin: 0;<br>color: #F3F2EB;</span></h2></div><div class="hero-grid hero-grid-right"style="border-width:0 0 1px 1px"></div></div><div style=display:flex;flex-direction:row;align-items:right;width:100%;height:30vh><div class="hero-grid hero-grid-left hero-sub"style="color:#f3f2eb;border-width:1px 1px 0 0;text-align:right;padding-right:20px;padding-top:20px"><h1>GRAPHIC DESIGN BA (HONS)<br>DEGREE SHOW<br>XX - XX MAY 2024</h1></div><div class="hero-grid hero-grid-right bottom-right"style="border-width:1px 0 0 1px"></div></div></div></section></div><section id=about><div class=about-column><h1>EXAMPLE</h1><h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2></div><div class=about-column><h1>EXAMPLE</h1><h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2></div><div class=about-column><h1>FOLLOW OUR SOCIALS</h1><h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2></div></section><div class=directions><section id=directions><div class=pageheader><div class="directions-grid directions-grid-left"style="border-width:0 1px 1px 0"></div><div class="directions-grid directions-grid-right"style="color:#fff;border-width:0 0 1px 1px;text-align:left;padding-left:20px;padding-bottom:10px;display:flex;flex-direction:column-reverse;align-items:flex-start"><h1>DIRECTIONS</h1></div></div><div style=display:flex;flex-direction:row;align-items:right;width:100vw;height:85vh><div class="directions-grid directions-grid-left"style="color:#fff;border-width:1px 1px 0 0"><h1></h1></div><div class="directions-grid directions-grid-right bottom-right"style="border-width:1px 0 0 1px"></div></div></section></div><div class=directions><section id=students><div class=students-top><div class=pageheader><div class="directions-grid directions-grid-left"style="border-width:0 0 1px 0"></div><div class="directions-grid directions-grid-right"style="color:#fff;border-width:0 0 1px 2px;text-align:left;padding-left:20px;padding-bottom:10px;display:flex;flex-direction:column-reverse;align-items:flex-start"><h1>STUDENTS</h1></div></div><div style=display:flex;flex-direction:row;width:100vw;height:70px><div class="directions-grid directions-grid-left"style="border-width:1px 0 0 0"></div><div class="directions-grid directions-grid-right filters"><button class=filter><symbol>!</symbol><h1>BRANDING</h1></button> <button class=filter><symbol>&</symbol><h1>TYPOGRAPHY</h1></button> <button class=filter><symbol>&lt;</symbol><h1>WEB/UI/UX</h1></button> <button class=filter><symbol>~</symbol><h1>ILLUSTRATION</h1></button> <button class=filter><symbol>→</symbol><h1>EXHIBITION</h1></button> <button class=filter><symbol>?</symbol><h1>EDITORIAL</h1></button> <button class=filter><symbol>+</symbol><h1>INFORMATION</h1></button> <button class=filter><symbol>*</symbol><h1>PACKAGING</h1></button> <button class=filter><symbol>></symbol><h1>ANIMATION/MOTION</h1></button></div></div></div><div id=scroll><div class=scroll-1><div class="directions-grid directions-grid-left"style=color:#fff;border-width:0><h1></h1></div><div class="directions-grid students-grid-right"style="border-width:0 0 0 2px"id=students-container><script>fetch('students.json')
-                                    .then(response => response.json())
-                                    .then(students => {
-                                        let buttons = document.querySelectorAll('.filter');
-
-                                        buttons.forEach(button => {
-                                            button.addEventListener('click', function() {
-                                                if (this.classList.contains('active')) {
-                                                    this.classList.remove('active');
-                                                    displayStudents(Object.values(students));
-                                                    return;
-                                                }
-
-                                                buttons.forEach(btn => btn.classList.remove('active'));
-                                                this.classList.add('active');
-
-                                                let symbol = this.querySelector('symbol').textContent;
-                                                let filteredStudents = filterBySymbol(symbol, Object.values(students));
-                                                displayStudents(filteredStudents);
-                                            });
-                                        });
-
-                                        function filterBySymbol(symbol, students) {
-                                            let filteredStudents = students.filter(student => 
-                                                student.work1s === symbol || 
-                                                student.work2s === symbol || 
-                                                student.work3s === symbol
-                                            );
-                                            return filteredStudents;
-                                        }
-
-                                        function displayStudents(students) {
-                                        let container = document.getElementById('students-container');
-                                        container.innerHTML = '';
-                                        console.log('Displaying students:', students);
-                                        students.forEach(student => {
-                                            let sD = document.createElement('div');
-                                            sD.className = 'student';
-                                            sD.id = student.n.replace(/ /g, '');
-                                            let a = document.createElement('a');
-                                            a.href = '/student?id=' + sD.id.toLowerCase();
-                                            a.appendChild(sD);
-                                            let n = document.createElement('div');
-                                            n.className = 'name';
-                                            
-                                            // Create a set of unique symbols
-                                            const uniqueSymbols = new Set([...student.work1s, ...student.work2s, ...student.work3s]);
-                                            
-                                            let symbolDiv = document.createElement('div');
-                                            symbolDiv.className = 'symbol';
-                                            
-                                            // Convert the set back to a string and assign it to textContent
-                                            symbolDiv.textContent = Array.from(uniqueSymbols).join('');
-                                            
-                                            let nameH1 = document.createElement('h1');
-                                            nameH1.innerHTML = student.n;
-                                            n.appendChild(nameH1);
-                                            n.appendChild(symbolDiv);
-                                            let q = document.createElement('div');
-                                            q.className = 'quote';
-                                            let quoteH1 = document.createElement('h1');
-                                            quoteH1.textContent = '"' + student.q + '"';
-                                            q.appendChild(quoteH1);
-                                            sD.appendChild(n);
-                                            sD.appendChild(q);
-                                            container.appendChild(a);
-                                        });
-                                    }
-
-                                        displayStudents(Object.values(students));
-                                    });</script></div></div><div class=footer><div class="footer-column f1"><img class=footer-logo src=/logo.webp></div><div class="footer-column f2"><h1>LOCATION</h1><h2>Coventry University<br>Delia Derbyshire<br>Cox Street<br>Coventry<br>CV1 5PH</h2></div><div class="footer-column f3"><h1>CONTACT</h1><h2>example@example.com</h2></div><div class="footer-column f4"><h1>CONNECT</h1><a><h2>Instagram</h2></a><a><h2>TikTok</h2></a></div></div><div class=website-end><h2>Made with love by the website team (Jai, Loke, Keyi, Giovanni, Zhenli)<br>coded by Jai</h2></div></div></section></div></div><script defer src=script.js></script><script>!function(t,e,n,c,a,r,s){t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},(r=e.createElement(c)).async=1,r.src="https://www.clarity.ms/tag/lscab6tprj",(s=e.getElementsByTagName(c)[0]).parentNode.insertBefore(r,s)}(window,document,"clarity","script")</script>
+<!DOCTYPE html>
+<html lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("May 4, 2024 10:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+            // Get today's date and time
+            var now = new Date().getTime();
+            
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+            
+            // Time calculations for days
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            
+            // Output the result in an element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + " DAYS LEFT";
+            
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "The event has started!";
+            }
+        }, 0);
+    </script>
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>JUST DESIGN DEGREE SHOW</title>
+    <meta name="description" content="The degree show for Graphic Design BA Hons, Coventry University">
+    <head ontouchstart="">
+    </head>
+    <body>
+        <div class="pages" id="scrollableElement">
+            <div style="width: 100vw; height: 100vh">
+                <section id="home">
+                    <div class="hero" style="position: fixed; background: linear-gradient(0.75turn, #ffffb1 0%, var(--yellow) 100%);">
+                        <div style="
+                        display: flex;
+                        flex-direction: row;
+                        align-items: right;
+                        width: 100%;
+                        height: 70vh;">
+                            <div class="hero-grid hero-grid-left" style="border-width: 0px 1px 1px 0px; display: flex; flex-direction: column-reverse; align-items: flex-end; padding-right: 20px; border-color: #000;">
+                                <div class="container" id="helo" style="color:#000; opacity:0.5"">
+                                    <h1><span class="auto-type">JUST</span><br><span class="design">DESIGN.</span></h1>
+                                </div>
+                                <h2><span id="logo" class="animate" style="color:#000">font-family: "owners", sans-serif;<br>
+                                    letter-spacing: 1pt;<br>
+                                    line-height: 12.5vw;<br>
+                                    margin: 0;<br>
+                                    color: #F3F2EB;</span></h2>
+                            </div>
+                            <div class="hero-grid hero-grid-right" style="border-width: 0px 0px 1px 1px; border-color: #000;"></div>
+                        </div>
+                        <div style="
+                        display: flex;
+                        flex-direction: row;
+                        align-items: right;
+                        width: 100%;
+                        height: 30vh;">
+                            <div class="hero-grid hero-grid-left hero-sub" style="color: #000000; border-width: 1px 1px 0px 0px; text-align: right;padding-right:20px;padding-top:20px; border-color: #000;">
+                                <h1>GRAPHIC DESIGN BA (HONS)<br>
+                                    DEGREE SHOW<br>
+                                    4 - 16 MAY 2024<br>
+                                    <span id="countdown"></span>
+                                </h1>
+                            </div>
+                            <div class="hero-grid hero-grid-right bottom-right" style="border-width: 1px 0px 0px 1px; border-color: #000;"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+    <script defer src="script.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "lscab6tprj");
+    </script>
+</html>
