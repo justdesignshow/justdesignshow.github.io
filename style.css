@@ -11,7 +11,7 @@ font-style:normal;font-weight:500;font-stretch:normal;font-display: swap}
 
 * {text-decoration: none;}
 body {margin: 0px 0px 0px 0px; background: var(--black)}
-html {scroll-behavior: smooth; --black: #121212; --yellow: #DDDC26; --white: #F3F2EB;}
+html {scroll-behavior: smooth; --black: #121212; --yellow: rgb(230, 245, 0); --white: #F3F2EB;}
 
 h1 {font-family: "owners", sans-serif;
     letter-spacing: 1pt;

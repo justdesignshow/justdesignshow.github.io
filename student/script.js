@@ -23,16 +23,16 @@ fetch('/students.json')
         const instagramLink = document.querySelector('.instagram');
         const emailLink = document.querySelector('.email');
 
-        portfolioLink.style.display = student.portfolio ? "flex" : "none";
-        linkedinLink.style.display = student.linkedin ? "flex" : "none";
-        instagramLink.style.display = student.instagram ? "flex" : "none";
-        emailLink.style.display = student.email ? "flex" : "none";
+        portfolioLink.style.display = student.p ? "flex" : "none";
+        linkedinLink.style.display = student.l ? "flex" : "none";
+        instagramLink.style.display = student.i ? "flex" : "none";
+        emailLink.style.display = student.e ? "flex" : "none";
 
-        if (student.portfolio) portfolioLink.href = student.portfolio;
-        if (student.linkedin) linkedinLink.href = student.linkedin;
-        if (student.instagram) instagramLink.href = student.instagram;
-        if (student.email) emailLink.href = student.email;
-        if (student.email) document.querySelector('.emaila').textContent = student.email.toUpperCase();
+        if (student.p) portfolioLink.href = student.p;
+        if (student.l) linkedinLink.href = 'https://www.linkedin.com/in/' + student.l;
+        if (student.i) instagramLink.href = 'https://www.instagram.com/' + student.i;
+        if (student.e) emailLink.href = student.e;
+        if (student.e) document.querySelector('.emaila').textContent = student.e.toUpperCase();
 
         // Function to copy text to clipboard
         function copyToClipboard(text) {
