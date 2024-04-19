@@ -398,6 +398,7 @@ div.sticky {
 .student-banner-symbol {font-size: 50px; color: var(--yellow);}
 
 .footer {
+    z-index: 9999;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -414,6 +415,7 @@ div.sticky {
 .footer-column {width: 25%; box-sizing: border-box;}
 .footer-logo {width: 100px; height:auto; padding: 50px;}
 .website-end {
+    z-index: 9999;
     background-color: var(--yellow);
     padding: 0px 100px 0px 100px;
     display: flex;
@@ -451,20 +453,23 @@ div.sticky {
 @media only screen and (max-width: 850px) {
     .footer {
         flex-direction: column;
-        padding-left: 100px;
+        padding: 25px;
         gap: 20px}
     .footer-column {width: 100%;}
     .website-end {
         background-color: var(--yellow);
-        padding: 0px 50px 15px 100px;
+        padding: 0px 10px 10px 10px;
         display: flex;
         justify-content: center;
     }
     .footer-logo {
         box-sizing: border-box;
-        width: 100%;
-        padding: 50px 100px 50px 50px;
+        width: 50%;
+        height: auto;
+        padding: 20px;
     }
+    .footer h1 {font-size: 16px}
+    .footer h2 {font-size: 14px}
 }
 
 @media only screen and (max-width: 750px) {
