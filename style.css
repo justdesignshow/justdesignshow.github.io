@@ -54,7 +54,7 @@ html {scroll-behavior: smooth}
     left: 20px;
     height: 0;
     width: 0;
-    z-index: 1;
+    z-index: 999;
     user-select: none;
 }
 
@@ -62,6 +62,7 @@ a {text-decoration: none}
 ul {list-style-type: none}
  
 #menuToggle input {
+    z-index: 999999;
     display: block;
     width: 40px;
     height: 32px;
@@ -70,11 +71,11 @@ ul {list-style-type: none}
     left: -5px;
     cursor: pointer;
     opacity: 0;
-    z-index: 2;
     -webkit-touch-callout: none;
 }
 
 #menuToggle span {
+    z-index: 999999;
     display: block;
     width: 33px;
     height: 4px;
@@ -108,7 +109,7 @@ ul {list-style-type: none}
 #menuToggle input:checked ~ span:nth-last-child(2) {transform: rotate(-45deg) translate(0, -1px)}
 
 .menu {
-    z-index: 10;
+    z-index: 999999;
     height: 100vh;
     width: 100vw;
     margin: -100px 0 0 -60px;
@@ -267,7 +268,7 @@ ul {list-style-type: none}
 .students-top {
     position:relative;
     height: 140px;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .student {
