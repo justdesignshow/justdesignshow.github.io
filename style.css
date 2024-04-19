@@ -20,7 +20,7 @@ h1 {font-family: "owners", sans-serif;
 h2 {font-family: "space-mono", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 14px;}
+    font-size: 16px;}
 
 symbol {font-family: "space-mono", monospace;
     font-weight: 700;
@@ -108,6 +108,7 @@ ul {list-style-type: none}
 #menuToggle input:checked ~ span:nth-last-child(2) {transform: rotate(-45deg) translate(0, -1px)}
 
 .menu {
+    z-index: 10;
     height: 100vh;
     width: 100vw;
     margin: -100px 0 0 -60px;
@@ -200,9 +201,31 @@ ul {list-style-type: none}
 
 .directions-grid-left {width: 100px}
 
-.directions-grid-right {flex: 1; min-width: 80vw}
+.directions-grid-right {flex: 1; min-width: 80vw; background-color: var(--black)}
 
 .hero-sub {line-height: 34px;}
+
+.directions-container {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    color: var(--white);
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.directions-image {
+    max-width: 300px;
+}
+
+.directions-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 #scroll {
     display: flex;
@@ -211,14 +234,15 @@ ul {list-style-type: none}
     width: 100vw;
     height: calc(100vh - 210px);
     overflow-y: scroll;
-    bottom: 0;}
+    bottom: 0;
+}
 
-    .scroll-1 {
-        display: flex;
-        flex-direction: row;
-        align-items: right;
-        width: 100vw;
-        }
+.scroll-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    width: 100vw;
+    }
 
 .pages::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
@@ -234,11 +258,15 @@ ul {list-style-type: none}
     flex-direction: row;
     z-index: 1;
     box-sizing: border-box;
+    background-color: var(--black);
 }
 
+
 .students-top {
-    z-index: 999;
-    background-color: var(--black);}
+    position:relative;
+    height: 140px;
+    z-index: 1000;
+}
 
 .student {
     height: 250px;
@@ -335,13 +363,8 @@ line-height: 45px;}
     font-size: 16px;
 }
 
-/* CSS to style the element when it's sticky */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%; /* Ensure full width */
-    z-index: 1000; /* High z-index to stay on top */
-  }
+
+
 
 .animate{
     transition: 100ms ease-in-out;
@@ -475,6 +498,31 @@ div.sticky {
         width: auto;
     }
 
+    .directions-container {
+        height: fit-content;
+        gap: 50px;
+        width: 100%;
+        color: var(--white);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .directions-image {
+        margin: auto;
+        display: block;
+        max-width: 80%;
+    }
+    
+    .directions-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .students-grid-right {
         margin-top: 0;
         align-self: flex-start;
@@ -498,8 +546,8 @@ div.sticky {
         height: 70px;
     }
 
-    .students-top {position: sticky; top: 0; align-self: flex-start;}
-    .directions-grid-left {width: 75px; min-width: 75px;}
+    /* .students-top {position: sticky; top: 0; align-self: flex-start;} */
+    .directions-grid-left {width: 75px; min-width: 75px; border: none;}
 }
 
 @media only screen and (max-width: 470px) {
