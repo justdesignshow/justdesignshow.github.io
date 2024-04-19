@@ -11,7 +11,7 @@ font-style:normal;font-weight:500;font-stretch:normal;font-display: swap}
 
 * {text-decoration: none;}
 body {margin: 0px 0px 0px 0px; background: var(--black)}
-html {scroll-behavior: smooth; --black: #121212; --yellow: rgb(230, 245, 0); --white: #F3F2EB;}
+html {scroll-behavior: smooth; --black: #121212; --yellow: rgb(230, 245, 0); --white: #F3F2EB; cursor: crosshair;}
 
 h1 {font-family: "owners", sans-serif;
     letter-spacing: 1pt;
@@ -20,7 +20,7 @@ h1 {font-family: "owners", sans-serif;
 h2 {font-family: "space-mono", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;}
+    font-size: 14px;}
 
 symbol {font-family: "space-mono", monospace;
     font-weight: 700;
@@ -114,7 +114,7 @@ ul {list-style-type: none}
     padding: 75px;
     padding-top: 125px;
     background-attachment: fixed;
-    background: linear-gradient(0.75turn, var(--yellow) 1%, #ffff8dce 10%);
+    background: linear-gradient(0.75turn, var(--yellow) 1%, #f2ff009a 10%);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     transform-origin: 0% 0%;
@@ -149,7 +149,7 @@ ul {list-style-type: none}
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background: linear-gradient(0.75turn, var(--yellow) 0%, #ffff8d9a 100%);
+    background: linear-gradient(0.75turn, var(--yellow) 0%, #f3ff0f9a 100%);
     -moz-backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
@@ -275,6 +275,7 @@ ul {list-style-type: none}
     display: flex;
     align-items: center;
     gap: 15px;
+    cursor: pointer;
 }
 
 .filter:hover {border-color: var(--white);}

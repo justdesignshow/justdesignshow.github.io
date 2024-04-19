@@ -36,12 +36,31 @@ fetch('/students.json')
 
         // Function to copy text to clipboard
         function copyToClipboard(text) {
-            const tempInput = document.createElement('input');
-            document.body.appendChild(tempInput);
-            tempInput.value = text;
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
+            if (navigator.clipboard && window.isSecureContext) {
+                // Navigator clipboard api method'
+                return navigator.clipboard.writeText(text);
+            } else {
+                // Fallback method
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) {
+                        console.log("Fallback: Copying text command was successful");
+                    } else {
+                        console.error("Fallback: Copying text command was unsuccessful");
+                    }
+                } catch (err) {
+                    console.error("Fallback: Oops, unable to copy", err);
+                }
+
+                document.body.removeChild(textArea);
+            }
         }
 
         // Function to temporarily change the button text
@@ -55,7 +74,7 @@ fetch('/students.json')
         // Event listener for the email link
         emailLink.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent the default link behavior
-            const email = student.email;
+            const email = student.e;
             if (email) {
                 copyToClipboard(email);
                 temporaryButtonTextChange(document.querySelector('.emaila'), 'COPIED!', email.toUpperCase());
