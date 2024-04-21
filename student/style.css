@@ -303,7 +303,7 @@ ul {list-style-type: none}
     .footer-column {width: 100%;}
     .website-end {
         background-color: var(--yellow);
-        padding: 0px;
+        padding: 0px 10px 0px 10px;
         display: flex;
         justify-content: center;
     }
