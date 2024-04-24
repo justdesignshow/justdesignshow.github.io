@@ -104,30 +104,7 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
-
 sections.forEach(section => {observer.observe(section);});
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     if (document.documentElement.clientWidth < 600) {
-//         var studentsTop = document.querySelector('.students-top');
-//         if (studentsTop) {
-//             var studentsTopInitialOffset = studentsTop.getBoundingClientRect().top + window.scrollY;
-
-//             window.addEventListener('scroll', function() {
-//                 if (window.scrollY >= studentsTopInitialOffset) {
-//                     studentsTop.style.position = 'fixed';
-//                     studentsTop.style.top = '0';
-//                     studentsTop.style.width = '100%';
-//                 } else {
-//                     studentsTop.style.position = '';
-//                 }
-//             });
-//         } else {
-//             console.error('');
-//         }
-//     }
-// });
-
 
 document.addEventListener('DOMContentLoaded', function() {
     var studentsTop = document.querySelector('.students-top');
