@@ -578,7 +578,7 @@ ul {list-style-type: none}
     div.hero-sub>h1 {font-size: 2.8vw}
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 330px) {
     .student {transform: scale(0.8) translate(-10px, 0)}
     .students-grid-right {padding: 0px; gap: 0px}
 }
