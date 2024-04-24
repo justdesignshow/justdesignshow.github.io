@@ -26,7 +26,7 @@ symbol {font-family: "space-mono", monospace;
     font-size: 16px
 }
 
-* {text-decoration: none;}
+* {text-decoration: none}
 body {margin: 0px 0px 0px 0px; background: var(--black)}
 html {scroll-behavior: smooth; --black: #121212; --yellow: rgb(230, 245, 0); --white: #F3F2EB; cursor: crosshair;}
 
@@ -35,7 +35,8 @@ html {scroll-behavior: smooth; --black: #121212; --yellow: rgb(230, 245, 0); --w
 a {color: inherit}
 
 .d-f {display: flex}
-.f-r {flex-direction: row;}
+.f-r {flex-direction: row}
+.f-c {flex-direction: column}
 
 .container{
     display: flex;
@@ -125,8 +126,8 @@ ul {list-style-type: none}
     transform-origin: 0% 0%;
     transform: translate(calc(-100% + 115px), 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    gap: 25px 0;
-    flex-direction: column}
+    gap: 25px 0
+}
 
 #menuToggle input:checked ~ ul {transform: none}
 
@@ -134,9 +135,7 @@ ul {list-style-type: none}
 
 .nav1 {display: none;}
 
-.hero {
-    display: flex;
-    flex-direction: column;
+#home {
     position: fixed;
     align-items: right;
     width: 100vw;
@@ -144,8 +143,6 @@ ul {list-style-type: none}
 }
 
 .pageheader {
-    display: flex;
-    flex-direction: row;
     width: 100vw;
     height: 140px;
     overflow-x: hidden;
@@ -162,7 +159,6 @@ ul {list-style-type: none}
 
 #about {
     height: 100vh;
-    display: flex;
     flex-direction: row;
     background: linear-gradient(0.75turn, var(--yellow) 0%, #f3ff0f9a 100%);
     -moz-backdrop-filter: blur(12px);
@@ -180,14 +176,12 @@ ul {list-style-type: none}
     width: 400px;
 }
 
-.directions {
-    display: flex;
+#directions {
     width: 100vw;
     background: var(--black);
     -moz-backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
-    backdrop-filter: blur(0px);
-    flex-direction: column;
+    backdrop-filter: blur(0px)
 }
 
 .hero-grid {border: solid var(--yellow);}
@@ -300,8 +294,6 @@ ul {list-style-type: none}
     flex-direction: column-reverse;
     line-height: 30px;
     color: var(--white);
-    /* transform: scale(1.0); */
-    /* min-width: 0; */
 }
 
 .filters {
@@ -311,7 +303,6 @@ ul {list-style-type: none}
     padding: 10px;
     display: flex;
     flex-direction: row;
-    /* align-items: flex-start; */
     gap: 10px;
     overflow-x: scroll;}
 
@@ -322,9 +313,6 @@ ul {list-style-type: none}
     box-sizing: border-box;
     background: var(--black);
     color: var(--white);
-    /* border-style: solid; 
-	border-color: #f3f2eb69;
-    border-width: 2px; */
     border: 2px solid #f3f2eb69;
     display: flex;
     align-items: center;
@@ -386,7 +374,6 @@ ul {list-style-type: none}
 }
 
 .topnav h1 {
-    float: left;
     color: #ffffff78;
     text-align: center;
     padding: 14px 16px;
@@ -412,15 +399,6 @@ ul {list-style-type: none}
 .hero-grid:hover #logo {
     opacity: .5;
 }
-
-/* div.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0; 
-    background: yellow;
-    padding: 50px;
-    font-size: 20px;
-} */
 
 .student-banner-name {font-size: 50px;}
 .student-banner-symbol {font-size: 50px; color: var(--yellow);}
@@ -593,57 +571,62 @@ ul {list-style-type: none}
 }
 
 @media only screen and (max-width: 400px) {
-    .container{line-height: 7.03125vw;}
-    .design{padding-left: 2.08125vw;}
-    div.container>h1 {font-size: 9vw;}
-    .hero-sub {line-height: 3.12vw;} 
-    div.hero-sub>h1 {font-size: 2.8vw;}
+    .container{line-height: 7.03125vw}
+    .design{padding-left: 2.08125vw}
+    div.container>h1 {font-size: 9vw}
+    .hero-sub {line-height: 3.12vw} 
+    div.hero-sub>h1 {font-size: 2.8vw}
+}
+
+@media only screen and (max-width: 400px) {
+    .student {transform: scale(0.8) translate(-10px, 0)}
+    .students-grid-right {padding: 0px; gap: 0px}
 }
 
 .website-end a {text-decoration: underline}
 
 .student {background-size: 10250px !important; background: url('s.webp')}
-#DANYALAHMED {background-position: -0 -0;}
-#EVANGELOSANGELOU {background-position: -250px -0}
-#SARAANSTEE {background-position: -500px -0}
-#JADEBEARD {background-position: -750px -0}
-#FARZANANOORBHUIYAN {background-position: -1000px -0}
-#KAIBURLEY {background-position: -1250px -0}
-#XIYUCAI {background-position: -1500px -0}
-#KEYICHEN {background-position: -1750px -0}
-#DORIDASHTI {background-position: -2000px -0}
-#ADRIANDELGADO {background-position: -2250px -0}
-#JAIDHALIWAL {background-position: -2500px -0}
-#BOBBIEDIKE {background-position: -2750px -0}
-#CHARLIEFITZPATRICK {background-position: -3000px -0}
-#SAMUELGREEN {background-position: -3250px -0}
-#ZIMOUHUANG {background-position: -3500px -0}
-#RUICHENHUANG {background-position: -3750px -0}
-#ZHEHUANG {background-position: -4000px -0}
-#REHEEMIFILL {background-position: -4250px -0}
-#MIRELALESNEANU {background-position: -4500px -0}
-#YUJIALI {background-position: -4750px -0}
-#YONGLINLIAO {background-position: -5000px -0}
-#ALEXLINDON {background-position: -5250px -0}
-#ZHENLILIU {background-position: -5500px -0}
-#CHIHIMLO {background-position: -5750px -0}
-#ANNATENZINLOCKLEY {background-position: -6000px -0}
-#LOKEYEANNETUNG {background-position: -6250px -0}
-#GIOVANNINAMISDIAZ {background-position: -6500px -0}
-#ADAOBIOBIOHA {background-position: -6750px -0}
-#ALEXANDRAPANAYI {background-position: -7000px -0}
-#ANGELIKAPIORO {background-position: -7250px -0}
-#SAVINASALLAN {background-position: -7500px -0}
-#TOMASSAMPAIOROCHA {background-position: -7750px -0}
-#ELINORSLACK {background-position: -8000px -0}
-#MOHAMMEDUDDIN {background-position: -8250px -0}
-#BRITNEYWALLBANK {background-position: -8500px -0}
-#HOHINWAN {background-position: -8750px -0}
-#IZZYWILDE {background-position: -9000px -0}
-#XIZEWU {background-position: -9250px -0}
-#ZHANWENWU {background-position: -9500px -0}
-#KSAWIERWYDRA {background-position: -9750px -0}
-#SIFANXIANG {background-position: -10000px -0}
+#DANYALAHMED {background-position: -0 -0}
+#EVANGELOSANGELOU {background-position: -250px 0}
+#SARAANSTEE {background-position: -500px 0}
+#JADEBEARD {background-position: -750px 0}
+#FARZANANOORBHUIYAN {background-position: -1000px 0}
+#KAIBURLEY {background-position: -1250px 0}
+#XIYUCAI {background-position: -1500px 0}
+#KEYICHEN {background-position: -1750px 0}
+#DORIDASHTI {background-position: -2000px 0}
+#ADRIANDELGADO {background-position: -2250px 0}
+#JAIDHALIWAL {background-position: -2500px 0}
+#BOBBIEDIKE {background-position: -2750px 0}
+#CHARLIEFITZPATRICK {background-position: -3000px 0}
+#SAMUELGREEN {background-position: -3250px 0}
+#ZIMOUHUANG {background-position: -3500px 0}
+#RUICHENHUANG {background-position: -3750px 0}
+#ZHEHUANG {background-position: -4000px 0}
+#REHEEMIFILL {background-position: -4250px 0}
+#MIRELALESNEANU {background-position: -4500px 0}
+#YUJIALI {background-position: -4750px 0}
+#YONGLINLIAO {background-position: -5000px 0}
+#ALEXLINDON {background-position: -5250px 0}
+#ZHENLILIU {background-position: -5500px 0}
+#CHIHIMLO {background-position: -5750px 0}
+#ANNATENZINLOCKLEY {background-position: -6000px 0}
+#LOKEYEANNETUNG {background-position: -6250px 0}
+#GIOVANNINAMISDIAZ {background-position: -6500px 0}
+#ADAOBIOBIOHA {background-position: -6750px 0}
+#ALEXANDRAPANAYI {background-position: -7000px 0}
+#ANGELIKAPIORO {background-position: -7250px 0}
+#SAVINASALLAN {background-position: -7500px 0}
+#TOMASSAMPAIOROCHA {background-position: -7750px 0}
+#ELINORSLACK {background-position: -8000px 0}
+#MOHAMMEDUDDIN {background-position: -8250px 0}
+#BRITNEYWALLBANK {background-position: -8500px 0}
+#HOHINWAN {background-position: -8750px 0}
+#IZZYWILDE {background-position: -9000px 0}
+#XIZEWU {background-position: -9250px 0}
+#ZHANWENWU {background-position: -9500px 0}
+#KSAWIERWYDRA {background-position: -9750px 0}
+#SIFANXIANG {background-position: -10000px 0}
 
 .sticky {
     position: fixed;

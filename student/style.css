@@ -8,9 +8,10 @@ symbol {font-family: "space-mono", monospace; font-weight: 700; font-style: norm
 a {color: inherit;}
 html {scroll-behavior: smooth}
 
-.student-banner {
-    height: 70vh;
-}
+.d-f {display: flex}
+.f-r {flex-direction: row}
+
+.student-banner {height: 70vh}
 
 .fill {height: 100%; width:100%; background-color: rgba(0, 0, 0, 0.7)}
 
@@ -187,16 +188,15 @@ ul {list-style-type: none}
 .nav1 {display: none}
 
 .topnav {
+    z-index: 9999;
+    align-self: flex-start;
     width: 100%;
-	padding: 15px;
-	padding-left: 30px;
+	padding: 15px 30px;
     position: fixed;
-    overflow: hidden;
     background: linear-gradient(0.5turn, #121212 0%, #121212c7 20%, #1212127a 40%, #1212124a 60%, #12121222 75%, #1212120a 90%, #12121200 100%)
 }
 
 .topnav h1 {
-    float: left;
     color: #ffffff78;
     text-align: center;
     padding: 14px 16px;
@@ -277,8 +277,8 @@ ul {list-style-type: none}
 .footer-column > h2 {color: var(--white)}
 .footer-column > a > h2 {color: var(--white) !important}
 
-.footer-column {width: 25%; box-sizing: border-box;}
-.footer-logo {width: 100px; height: auto; padding: 50px;}
+.footer-column {width: 25%; box-sizing: border-box}
+.footer-logo {width: 100px; padding: 50px}
 .website-end {
     background-color: var(--yellow);
     padding: 0px 100px 0px 100px;
@@ -309,8 +309,7 @@ ul {list-style-type: none}
     }
     .footer-logo {
         box-sizing: border-box;
-        width: 100%;
-        height: auto;
+        width: 50%;
         padding: 20px;
     }
 }

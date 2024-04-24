@@ -11,7 +11,7 @@
             <div id="menuToggle">
                 <input type="checkbox" id="Toggle" aria-label="Hamburger Menu"/>
                 <span></span><span></span><span></span>
-                <ul class="menu">
+                <ul class="menu f-c">
                     <li><a href="#home"><h1>HOME</h1></a></li>
                     <li><a href="#about"><h1>ABOUT</h1></a></li>
                     <li><a href="#directions"><h1>DIRECTIONS</h1></a></li>
@@ -19,7 +19,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="topnav">
+        <div class="d-f f-r topnav">
             <a href="#home"><h1>HOME</h1></a>
             <a href="#about"><h1>ABOUT</h1></a>
             <a href="#directions"><h1>DIRECTIONS</h1></a>
@@ -28,33 +28,31 @@
     </head>
     <body>
         <div class="pages" id="scrollableElement">
-            <section id="home">
-                <div class="hero">
-                    <div class="d-f f-r" style="align-items: right; height: 70vh;">
-                        <div class="d-f hero-grid hero-grid-left hero-logo" style="border-width: 0 1px 1px 0">
-                            <div class="container" id="helo">
-                                <h1><span class="auto-type">JUST</span><br><span class="design">DESIGN.</span></h1>
-                            </div>
-                            <h2><span id="logo" class="animate">font-family: "owners", sans-serif;<br>
-                                letter-spacing: 1pt;<br>
-                                line-height: 12.5vw;<br>
-                                margin: 0;<br>
-                                color: #F3F2EB;</span></h2>
+            <section id="home" class="d-f f-c ">
+                <div class="d-f f-r" style="align-items: right; height: 70vh;">
+                    <div class="d-f hero-grid hero-grid-left hero-logo" style="border-width: 0 1px 1px 0">
+                        <div class="container" id="helo">
+                            <h1><span class="auto-type">JUST</span><br><span class="design">DESIGN.</span></h1>
                         </div>
-                        <div class="hero-grid hero-grid-right" style="border-width: 0 0 1px 1px"></div>
+                        <h2><span id="logo" class="animate">font-family: "owners", sans-serif;<br>
+                            letter-spacing: 1pt;<br>
+                            line-height: 12.5vw;<br>
+                            margin: 0;<br>
+                            color: #F3F2EB;</span></h2>
                     </div>
-                    <div class="d-f f-r" style="align-items: right; height: 30vh">
-                        <div class="hero-grid hero-grid-left hero-sub">
-                            <h1>GRAPHIC DESIGN BA (HONS)<br>
-                                DEGREE SHOW<br>
-                                XX - XX MAY 2024</h1>
-                            
-                        </div>
-                        <div class="hero-grid hero-grid-right" style="border-width: 1px 0 0 1px"></div>
+                    <div class="hero-grid hero-grid-right" style="border-width: 0 0 1px 1px"></div>
+                </div>
+                <div class="d-f f-r" style="align-items: right; height: 30vh">
+                    <div class="hero-grid hero-grid-left hero-sub">
+                        <h1>GRAPHIC DESIGN BA (HONS)<br>
+                            DEGREE SHOW<br>
+                            XX - XX MAY 2024</h1>
+                        
                     </div>
+                    <div class="hero-grid hero-grid-right" style="border-width: 1px 0 0 1px"></div>
                 </div>
             </section>
-            <section id="about">
+            <section id="about" class="d-f">
                 <div class="about-column">
                     <h1>EXAMPLE</h1>
                     <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2>
@@ -68,9 +66,8 @@
                     <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2>
                 </div>
             </section>
-            <div class="directions">
-                <section id="directions">
-                <div class="pageheader">
+            <section id="directions" class="d-f f-c">
+                <div class="pageheader d-f f-r">
                     <div class="grid g-l" style="border-width: 0 1px 1px 0"></div>
                     <div class="d-f grid g-r header" style="border-width: 0 0 1px 1px">
                         <h1>DIRECTIONS</h1>
@@ -90,144 +87,141 @@
                                 <source media="(min-width: 600px)" srcset="/directions.webp">
                                 <source media="(min-width: 0px)" srcset="/directions-mobile.webp">
                                 <img src="/directions.webp" alt="Directions" class="directions-image">
-                              </picture>
+                            </picture>
                         </div>
                     </div>
                 </div>
             </section>
-            </div>
-            <div class="students-1">
-                <section id="students">
-                    <div class="students-top">
-                        <div class="pageheader">
-                            <div class="grid g-l" style="border-width: 0 0 1px 0"></div>
-                            <div class="d-f grid g-r header" style="border-width: 0 0 1px 2px" >
-                                <h1>STUDENTS</h1>
-                            </div>
-                        </div>
-                        <div class="d-f f-r" style="height: 70px;">
-                            <div class="grid g-l" style="border-width: 1px 0 0 0"></div>
-                            <div class="grid g-r filters">
-                                <button class="filter"><symbol>!</symbol><h1>BRANDING</h1></button>
-                                <button class="filter"><symbol>&</symbol><h1>TYPOGRAPHY</h1></button>
-                                <button class="filter"><symbol>&lt;</symbol><h1>WEB/UI/UX</h1></button>
-                                <button class="filter"><symbol>~</symbol><h1>ILLUSTRATION</h1></button>
-                                <button class="filter"><symbol>&#x2192;</symbol><h1>EXHIBITION</h1></button>
-                                <button class="filter"><symbol>?</symbol><h1>EDITORIAL</h1></button>
-                                <button class="filter"><symbol>+</symbol><h1>INFORMATION</h1></button>
-                                <button class="filter"><symbol>*</symbol><h1>PACKAGING</h1></button>
-                                <button class="filter"><symbol>&gt;</symbol><h1>ANIMATION/MOTION</h1></button>
-                            </div>
+            <section id="students">
+                <div class="students-top">
+                    <div class="pageheader d-f f-r">
+                        <div class="grid g-l" style="border-width: 0 0 1px 0"></div>
+                        <div class="d-f grid g-r header" style="border-width: 0 0 1px 2px" >
+                            <h1>STUDENTS</h1>
                         </div>
                     </div>
-                    <div id="scroll">
-                        <div class="scroll-1">
-                            <div class="grid g-l" style="border-width: 0"></div>
-                            <div class="grid students-grid-right" id="students-container" style="border-width: 0 0 0 2px">
-                                <script>
-                                    fetch('students.json')
-                                    .then(response => response.json())
-                                    .then(students => {
-                                        let buttons = document.querySelectorAll('.filter');
+                    <div class="d-f f-r" style="height: 70px;">
+                        <div class="grid g-l" style="border-width: 1px 0 0 0"></div>
+                        <div class="grid g-r filters">
+                            <button class="filter"><symbol>!</symbol><h1>BRANDING</h1></button>
+                            <button class="filter"><symbol>&</symbol><h1>TYPOGRAPHY</h1></button>
+                            <button class="filter"><symbol>&lt;</symbol><h1>WEB/UI/UX</h1></button>
+                            <button class="filter"><symbol>~</symbol><h1>ILLUSTRATION</h1></button>
+                            <button class="filter"><symbol>&#x2192;</symbol><h1>EXHIBITION</h1></button>
+                            <button class="filter"><symbol>?</symbol><h1>EDITORIAL</h1></button>
+                            <button class="filter"><symbol>+</symbol><h1>INFORMATION</h1></button>
+                            <button class="filter"><symbol>*</symbol><h1>PACKAGING</h1></button>
+                            <button class="filter"><symbol>&gt;</symbol><h1>ANIMATION/MOTION</h1></button>
+                        </div>
+                    </div>
+                </div>
+                <div id="scroll">
+                    <div class="scroll-1">
+                        <div class="grid g-l" style="border-width: 0"></div>
+                        <div class="grid students-grid-right" id="students-container" style="border-width: 0 0 0 2px">
+                            <script>
+                                fetch('students.json')
+                                .then(response => response.json())
+                                .then(students => {
+                                    let buttons = document.querySelectorAll('.filter');
 
-                                        buttons.forEach(button => {
-                                            button.addEventListener('click', function() {
-                                                if (this.classList.contains('active')) {
-                                                    this.classList.remove('active');
-                                                    displayStudents(Object.values(students));
-                                                    return;
-                                                }
+                                    buttons.forEach(button => {
+                                        button.addEventListener('click', function() {
+                                            if (this.classList.contains('active')) {
+                                                this.classList.remove('active');
+                                                displayStudents(Object.values(students));
+                                                return;
+                                            }
 
-                                                buttons.forEach(btn => btn.classList.remove('active'));
-                                                this.classList.add('active');
+                                            buttons.forEach(btn => btn.classList.remove('active'));
+                                            this.classList.add('active');
 
-                                                let symbol = this.querySelector('symbol').textContent;
-                                                let filteredStudents = filterBySymbol(symbol, Object.values(students));
-                                                displayStudents(filteredStudents);
-                                            });
+                                            let symbol = this.querySelector('symbol').textContent;
+                                            let filteredStudents = filterBySymbol(symbol, Object.values(students));
+                                            displayStudents(filteredStudents);
                                         });
-
-                                        function filterBySymbol(symbol, students) {
-                                            let filteredStudents = students.filter(student => 
-                                                student.work1s === symbol || 
-                                                student.work2s === symbol || 
-                                                student.work3s === symbol
-                                            );
-                                            return filteredStudents;
-                                        }
-
-                                        function displayStudents(students) {
-                                        let container = document.getElementById('students-container');
-                                        container.innerHTML = '';
-                                        students.forEach(student => {
-                                            let sD = document.createElement('div');
-                                            sD.className = 'student';
-                                            sD.id = student.n.replace(/ /g, '');
-                                            let a = document.createElement('a');
-                                            a.href = '/student?id=' + sD.id.toLowerCase();
-                                            a.appendChild(sD);
-                                            let n = document.createElement('div');
-                                            n.className = 'name';
-                                            
-                                            // Create a set of unique symbols
-                                            const uniqueSymbols = new Set([...student.work1s, ...student.work2s, ...student.work3s]);
-                                            
-                                            let symbolDiv = document.createElement('div');
-                                            symbolDiv.className = 'symbol';
-                                            
-                                            // Convert the set back to a string and assign it to textContent
-                                            symbolDiv.textContent = Array.from(uniqueSymbols).join('');
-                                            
-                                            let nameH1 = document.createElement('h1');
-                                            nameH1.innerHTML = student.n;
-                                            n.appendChild(nameH1);
-                                            n.appendChild(symbolDiv);
-                                            let q = document.createElement('div');
-                                            q.className = 'quote';
-                                            let quoteH1 = document.createElement('h1');
-                                            quoteH1.textContent = '"' + student.q + '"';
-                                            q.appendChild(quoteH1);
-                                            sD.appendChild(n);
-                                            sD.appendChild(q);
-                                            container.appendChild(a);
-                                        });
-                                    }
-
-                                        displayStudents(Object.values(students));
                                     });
 
-                                </script>
-                            </div>
-                        </div>
-                        <div class="footer">
-                            <div class="f1 footer-column">
-                                <img loading="lazy" src="/logo.webp" class="footer-logo" alt="Just Design Logo">
+                                    function filterBySymbol(symbol, students) {
+                                        let filteredStudents = students.filter(student => 
+                                            student.work1s === symbol || 
+                                            student.work2s === symbol || 
+                                            student.work3s === symbol
+                                        );
+                                        return filteredStudents;
+                                    }
 
-                            </div>
-                            <div class="f2 footer-column">
-                                <h1>LOCATION</h1>
-                                <h2>Coventry University<br>
-                                    Delia Derbyshire<br>
-                                    Cox Street<br>
-                                    Coventry<br>
-                                    CV1 5PH</h2>
-                            </div>
-                            <div class="f3 footer-column">
-                                <h1>CONTACT</h1>
-                                <h2>example@example.com</h2>
-                            </div>
-                            <div class="f4 footer-column">
-                                <h1>CONNECT</h1>
-                                <a href="https://www.instagram.com/justdesign.show"><h2>Instagram</h2></a>
-                                <a href="https://www.tiktok.com/@justdesign.show"><h2>TikTok</h2></a>
-                            </div>
-                        </div>
-                        <div class="website-end">
-                            <h2>Made with &lt;3 by the website team (<a href="/student?id=jaidhaliwal">Jai</a>, <a href="/student?id=lokeyeannetung">Loke</a>, <a href="/student?id=keyichen">Keyi</a>, <a href="/student?id=giovanninamisdiaz">Giovanni</a>, <a href="/student?id=zhenliliu">Zhenli</a>)<br>coded by <a href="/student?id=jaidhaliwal">Jai</a></h2>
+                                    function displayStudents(students) {
+                                    let container = document.getElementById('students-container');
+                                    container.innerHTML = '';
+                                    students.forEach(student => {
+                                        let sD = document.createElement('div');
+                                        sD.className = 'student';
+                                        sD.id = student.n.replace(/ /g, '');
+                                        let a = document.createElement('a');
+                                        a.href = '/student?id=' + sD.id.toLowerCase();
+                                        a.appendChild(sD);
+                                        let n = document.createElement('div');
+                                        n.className = 'name';
+                                        
+                                        // Create a set of unique symbols
+                                        const uniqueSymbols = new Set([...student.work1s, ...student.work2s, ...student.work3s]);
+                                        
+                                        let symbolDiv = document.createElement('div');
+                                        symbolDiv.className = 'symbol';
+                                        
+                                        // Convert the set back to a string and assign it to textContent
+                                        symbolDiv.textContent = Array.from(uniqueSymbols).join('');
+                                        
+                                        let nameH1 = document.createElement('h1');
+                                        nameH1.innerHTML = student.n;
+                                        n.appendChild(nameH1);
+                                        n.appendChild(symbolDiv);
+                                        let q = document.createElement('div');
+                                        q.className = 'quote';
+                                        let quoteH1 = document.createElement('h1');
+                                        quoteH1.textContent = '"' + student.q + '"';
+                                        q.appendChild(quoteH1);
+                                        sD.appendChild(n);
+                                        sD.appendChild(q);
+                                        container.appendChild(a);
+                                    });
+                                }
+
+                                    displayStudents(Object.values(students));
+                                });
+
+                            </script>
                         </div>
                     </div>
-                </section>
-            </div>
+                    <div class="footer">
+                        <div class="f1 footer-column">
+                            <img loading="lazy" src="/logo.webp" class="footer-logo" alt="Just Design Logo">
+
+                        </div>
+                        <div class="f2 footer-column">
+                            <h1>LOCATION</h1>
+                            <h2>Coventry University<br>
+                                Delia Derbyshire<br>
+                                Cox Street<br>
+                                Coventry<br>
+                                CV1 5PH</h2>
+                        </div>
+                        <div class="f3 footer-column">
+                            <h1>CONTACT</h1>
+                            <h2>example@example.com</h2>
+                        </div>
+                        <div class="f4 footer-column">
+                            <h1>CONNECT</h1>
+                            <a href="https://www.instagram.com/justdesign.show"><h2>Instagram</h2></a>
+                            <a href="https://www.tiktok.com/@justdesign.show"><h2>TikTok</h2></a>
+                        </div>
+                    </div>
+                    <div class="website-end">
+                        <h2>Made with &lt;3 by the website team (<a href="/student?id=jaidhaliwal">Jai</a>, <a href="/student?id=lokeyeannetung">Loke</a>, <a href="/student?id=keyichen">Keyi</a>, <a href="/student?id=giovanninamisdiaz">Giovanni</a>, <a href="/student?id=zhenliliu">Zhenli</a>)<br>coded by <a href="/student?id=jaidhaliwal">Jai</a></h2>
+                    </div>
+                </div>
+            </section>
         </div>
     </body>
     <script defer src="script.js"></script>

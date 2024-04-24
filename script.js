@@ -110,22 +110,32 @@ document.addEventListener('DOMContentLoaded', function() {
     var studentsTop = document.querySelector('.students-top');
     if (studentsTop) {
         var studentsTopInitialOffset = studentsTop.offsetTop;
+        var isSticky = false;
+        var placeholder = document.createElement('div');
+        placeholder.style.display = 'none';
+        studentsTop.parentNode.insertBefore(placeholder, studentsTop);
 
         var updateOffset = function() {
-            studentsTopInitialOffset = studentsTop.offsetTop;
+            if (!isSticky) {
+                studentsTopInitialOffset = studentsTop.offsetTop;
+                placeholder.style.height = '0px';
+            }
         };
 
         window.addEventListener('scroll', function() {
-            if (window.scrollY > studentsTopInitialOffset) {
+            if (window.scrollY > studentsTopInitialOffset && !isSticky) {
                 studentsTop.classList.add('sticky');
-            } else {
+                isSticky = true;
+                placeholder.style.display = 'block';
+                placeholder.style.height = studentsTop.offsetHeight + 'px';
+            } else if (window.scrollY <= studentsTopInitialOffset && isSticky) {
                 studentsTop.classList.remove('sticky');
+                isSticky = false;
+                placeholder.style.display = 'none';
             }
         });
 
         window.addEventListener('resize', updateOffset);
         new MutationObserver(updateOffset).observe(document.body, { childList: true, subtree: true });
-    } else {
-        console.error('The .students-top element is not found.');
-    }
+    } 
 });
