@@ -107,44 +107,48 @@ sections.forEach(section => {
 
 sections.forEach(section => {observer.observe(section);});
 
-// // JavaScript to manually implement sticky behavior
-// if (document.documentElement.clientWidth < 600) {
-//     // JavaScript to enhance sticky behavior and ensure the element stays on top
-//     var studentsTop = document.querySelector('.students-top');
-//     var studentsTopInitialOffset = studentsTop.offsetTop; // Store the initial offset top
+// document.addEventListener('DOMContentLoaded', function() {
+//     if (document.documentElement.clientWidth < 600) {
+//         var studentsTop = document.querySelector('.students-top');
+//         if (studentsTop) {
+//             var studentsTopInitialOffset = studentsTop.getBoundingClientRect().top + window.scrollY;
 
-//     window.addEventListener('scroll', function() {
-//     if (window.pageYOffset >= studentsTopInitialOffset) {
-//         studentsTop.style.position = 'fixed';
-//         studentsTop.style.top = '0';
-//         studentsTop.style.zIndex = '9999'; // High z-index to ensure it stays on top
-//         studentsTop.style.background = 'var(--black)';
-
-//     } else {
-//         studentsTop.style.position = 'static'; // Revert to default positioning
-//         studentsTop.style.top = '';
-//         studentsTop.style.zIndex = ''; // Reset z-index
+//             window.addEventListener('scroll', function() {
+//                 if (window.scrollY >= studentsTopInitialOffset) {
+//                     studentsTop.style.position = 'fixed';
+//                     studentsTop.style.top = '0';
+//                     studentsTop.style.width = '100%';
+//                 } else {
+//                     studentsTop.style.position = '';
+//                 }
+//             });
+//         } else {
+//             console.error('');
+//         }
 //     }
-//     });
-// }
+// });
+
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (document.documentElement.clientWidth < 600) {
-        var studentsTop = document.querySelector('.students-top');
-        if (studentsTop) {
-            var studentsTopInitialOffset = studentsTop.getBoundingClientRect().top + window.scrollY; // Get the accurate initial offset top
+    var studentsTop = document.querySelector('.students-top');
+    if (studentsTop) {
+        var studentsTopInitialOffset = studentsTop.offsetTop;
 
-            window.addEventListener('scroll', function() {
-                if (window.scrollY >= studentsTopInitialOffset) {
-                    studentsTop.style.position = 'fixed';
-                    studentsTop.style.top = '0';
-                    studentsTop.style.width = '100%'; // Ensure full width
-                } else {
-                    studentsTop.style.position = '';
-                }
-            });
-        } else {
-            console.error('Element with class "students-top" was not found.');
-        }
+        var updateOffset = function() {
+            studentsTopInitialOffset = studentsTop.offsetTop;
+        };
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > studentsTopInitialOffset) {
+                studentsTop.classList.add('sticky');
+            } else {
+                studentsTop.classList.remove('sticky');
+            }
+        });
+
+        window.addEventListener('resize', updateOffset);
+        new MutationObserver(updateOffset).observe(document.body, { childList: true, subtree: true });
+    } else {
+        console.error('The .students-top element is not found.');
     }
 });
