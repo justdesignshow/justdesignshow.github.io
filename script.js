@@ -61,7 +61,7 @@ function handleScroll(ev) {
     }
 }
 
-document.querySelectorAll('.filter').forEach(filterButton => {
+document.querySelectorAll('.filters').forEach(filterButton => {
     filterButton.addEventListener('touchmove', (ev) => {
         ev.stopPropagation();
     }, { passive: true });
@@ -85,6 +85,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
+
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.topnav a');
 
@@ -98,44 +100,56 @@ const observer = new IntersectionObserver(entries => {
       navLink.classList.remove('active');
     }
   });
-}, { threshold: 0.41 });
+}, { threshold: 0.3 });
 
 sections.forEach(section => {
   observer.observe(section);
 });
 
-sections.forEach(section => {observer.observe(section);});
+
+
+sections.forEach(section => {
+observer.observe(section);
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var studentsTop = document.querySelector('.students-top');
     if (studentsTop) {
         var studentsTopInitialOffset = studentsTop.offsetTop;
         var isSticky = false;
-        var placeholder = document.createElement('div');
-        placeholder.style.display = 'none';
-        studentsTop.parentNode.insertBefore(placeholder, studentsTop);
-
-        var updateOffset = function() {
-            if (!isSticky) {
-                studentsTopInitialOffset = studentsTop.offsetTop;
-                placeholder.style.height = '0px';
-            }
-        };
 
         window.addEventListener('scroll', function() {
             if (window.scrollY > studentsTopInitialOffset && !isSticky) {
                 studentsTop.classList.add('sticky');
                 isSticky = true;
+                // Create or update the placeholder
+                var placeholder = document.querySelector('.placeholder') || document.createElement('div');
+                placeholder.classList.add('placeholder'); // Ensure the class is added
                 placeholder.style.display = 'block';
-                placeholder.style.height = studentsTop.offsetHeight + 'px';
+                placeholder.style.height = (studentsTop.offsetHeight) + 'px'; // Set height to 1/4 of studentsTop
+                if (!document.querySelector('.placeholder')) {
+                    studentsTop.parentNode.insertBefore(placeholder, studentsTop);
+                }
             } else if (window.scrollY <= studentsTopInitialOffset && isSticky) {
                 studentsTop.classList.remove('sticky');
                 isSticky = false;
-                placeholder.style.display = 'none';
+                var placeholder = document.querySelector('.placeholder');
+                if (placeholder) {
+                    placeholder.style.display = 'none';
+                }
             }
         });
 
-        window.addEventListener('resize', updateOffset);
-        new MutationObserver(updateOffset).observe(document.body, { childList: true, subtree: true });
+        window.addEventListener('resize', function() {
+            if (!isSticky) {
+                studentsTopInitialOffset = studentsTop.offsetTop;
+            }
+        });
+        new MutationObserver(function() {
+            if (!isSticky) {
+                studentsTopInitialOffset = studentsTop.offsetTop;
+            }
+        }).observe(document.body, { childList: true, subtree: true });
     } 
+})
 });

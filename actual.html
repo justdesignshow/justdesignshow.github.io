@@ -28,13 +28,15 @@
     </head>
     <body>
         <div class="pages" id="scrollableElement">
-            <section id="home" class="d-f f-c ">
+            <section id="home" style="height: 0; width: 0"></section>
+            <div class="d-f f-c home">
                 <div class="d-f f-r" style="align-items: right; height: 70vh;">
                     <div class="d-f hero-grid hero-grid-left hero-logo" style="border-width: 0 1px 1px 0">
-                        <div class="container" id="helo">
+                        <div class="container">
                             <h1><span class="auto-type">JUST</span><br><span class="design">DESIGN.</span></h1>
                         </div>
-                        <h2><span id="logo" class="animate">font-family: "owners", sans-serif;<br>
+                        <h2><span id="logo" class="animate">
+                            font-family: "owners", sans-serif;<br>
                             letter-spacing: 1pt;<br>
                             line-height: 12.5vw;<br>
                             margin: 0;<br>
@@ -45,17 +47,17 @@
                 <div class="d-f f-r" style="align-items: right; height: 30vh">
                     <div class="hero-grid hero-grid-left hero-sub">
                         <h1>GRAPHIC DESIGN BA (HONS)<br>
-                            DEGREE SHOW<br>
-                            XX - XX MAY 2024</h1>
+                            DEGREE SHOWCASE<br>
+                            2 - XX 16 2024</h1>
                         
                     </div>
                     <div class="hero-grid hero-grid-right" style="border-width: 1px 0 0 1px"></div>
                 </div>
-            </section>
+            </div>
             <section id="about" class="d-f">
                 <div class="about-column">
-                    <h1>EXAMPLE</h1>
-                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum possimus aperiam totam odio accusamus enim architecto debitis temporibus, blanditiis optio eum harum, corrupti neque odit inventore voluptate quibusdam consequatur nam!</h2>
+                    <h1>THE CONCEPT</h1>
+                    <h2>As a designer, you often have to hear from people outside of industry, that what you do is “just” design. And yes, it is just design! But there is so much that goes into it. What better way to show the depth and complexity that design entails than to visualise and reveal all the technical parameters and design process that goes into our work. The concept is based on this premise. The degree show is therefore an invitation to all people who are not familiar with design and, at the same time, a display of our understanding of the design process to industry professionals. It offers a chance to connect over shared experience and humour too.</h2>
                 </div>
                 <div class="about-column">
                     <h1>EXAMPLE</h1>
@@ -101,17 +103,18 @@
                         </div>
                     </div>
                     <div class="d-f f-r" style="height: 70px;">
-                        <div class="grid g-l" style="border-width: 1px 0 0 0"></div>
-                        <div class="grid g-r filters">
-                            <button class="filter"><symbol>!</symbol><h1>BRANDING</h1></button>
-                            <button class="filter"><symbol>&</symbol><h1>TYPOGRAPHY</h1></button>
-                            <button class="filter"><symbol>&lt;</symbol><h1>WEB/UI/UX</h1></button>
-                            <button class="filter"><symbol>~</symbol><h1>ILLUSTRATION</h1></button>
-                            <button class="filter"><symbol>&#x2192;</symbol><h1>EXHIBITION</h1></button>
-                            <button class="filter"><symbol>?</symbol><h1>EDITORIAL</h1></button>
-                            <button class="filter"><symbol>+</symbol><h1>INFORMATION</h1></button>
-                            <button class="filter"><symbol>*</symbol><h1>PACKAGING</h1></button>
-                            <button class="filter"><symbol>&gt;</symbol><h1>ANIMATION/MOTION</h1></button>
+                        <div class="grid g-l d-f" style="border-width: 1px 0 0 0"></div>
+                        <div class="grid g-r d-f filters">
+                            <button><s>!</s><h1>BRANDING</h1></button>
+                            <button><s>&</s><h1>TYPOGRAPHY</h1></button>
+                            <button><s>&lt;</s><h1>WEB&#47;UI&#47;UX</h1></button>
+                            <button><h1>UX/UX</h1></button>
+                            <button><s>~</s><h1>ILLUSTRATION</h1></button>
+                            <button><s>&#x2192;</s><h1>EXHIBITION</h1></button>
+                            <button><s>?</s><h1>EDITORIAL</h1></button>
+                            <button><s>+</s><h1>INFORMATION</h1></button>
+                            <button><s>*</s><h1>PACKAGING</h1></button>
+                            <button><s>&gt;</s><h1>ANIMATION/MOTION</h1></button>
                         </div>
                     </div>
                 </div>
@@ -123,7 +126,7 @@
                                 fetch('students.json')
                                 .then(response => response.json())
                                 .then(students => {
-                                    let buttons = document.querySelectorAll('.filter');
+                                    let buttons = document.querySelectorAll('button');
 
                                     buttons.forEach(button => {
                                         button.addEventListener('click', function() {
@@ -136,7 +139,7 @@
                                             buttons.forEach(btn => btn.classList.remove('active'));
                                             this.classList.add('active');
 
-                                            let symbol = this.querySelector('symbol').textContent;
+                                            let symbol = this.querySelector('s').textContent;
                                             let filteredStudents = filterBySymbol(symbol, Object.values(students));
                                             displayStudents(filteredStudents);
                                         });
@@ -168,7 +171,7 @@
                                         const uniqueSymbols = new Set([...student.work1s, ...student.work2s, ...student.work3s]);
                                         
                                         let symbolDiv = document.createElement('div');
-                                        symbolDiv.className = 'symbol';
+                                        symbolDiv.className = 's';
                                         
                                         // Convert the set back to a string and assign it to textContent
                                         symbolDiv.textContent = Array.from(uniqueSymbols).join('');
@@ -225,7 +228,7 @@
         </div>
     </body>
     <script defer src="script.js"></script>
-    <script type="text/javascript">
+    <script>
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;

@@ -20,16 +20,22 @@ h2 {font-family: "space-mono", monospace;
     font-size: 16px
 }
 
-symbol {font-family: "space-mono", monospace;
+s {font-family: "space-mono", monospace;
     font-weight: 700;
     font-style: normal;
     font-size: 16px
 }
 
 * {text-decoration: none}
-body {margin: 0px 0px 0px 0px; background: var(--black)}
-html {scroll-behavior: smooth; --black: #121212; --yellow: rgb(230, 245, 0); --white: #F3F2EB; cursor: crosshair;}
+html {
+    scroll-behavior: smooth;
+    --black: #121212;
+    --yellow: rgb(230, 245, 0);
+    --white: #F3F2EB;
+    cursor: crosshair
+}
 
+body {margin: 0 0 0 0; background: var(--black)}
 .typed-cursor{color: var(--yellow)}
 
 a {color: inherit}
@@ -135,7 +141,7 @@ ul {list-style-type: none}
 
 .nav1 {display: none;}
 
-#home {
+.home {
     position: fixed;
     align-items: right;
     width: 100vw;
@@ -143,8 +149,8 @@ ul {list-style-type: none}
 }
 
 .pageheader {
-    width: 100vw;
-    height: 140px;
+    width: 100%;
+    height: 140px !important;
     overflow-x: hidden;
     color: var(--white);
 }
@@ -177,11 +183,8 @@ ul {list-style-type: none}
 }
 
 #directions {
-    width: 100vw;
     background: var(--black);
-    -moz-backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    backdrop-filter: blur(0px)
+    z-index: 1;
 }
 
 .hero-grid {border: solid var(--yellow);}
@@ -199,10 +202,9 @@ ul {list-style-type: none}
 .hero-grid-right {width:100px}
 
 .g-l {
+    background-color: var(--black);
     width: 100px;
-    background: var(--black);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px)
+    z-index: 1;
 }
 
 .g-r {
@@ -224,8 +226,9 @@ ul {list-style-type: none}
 
 .directions-container {
     box-sizing: border-box;
+    gap: 20px;
     height: 100%;
-    width: 100%;
+    max-width: 1000px;
     color: var(--white);
     padding-left: 50px;
     display: flex;
@@ -235,15 +238,24 @@ ul {list-style-type: none}
 }
 
 .directions-content {
-    height: 85vh;
+    height: calc(100% - 140px);
     align-items: right
 }
 
 .directions-image {
-    max-width: 300px;
+    max-width: 400px
+}
+
+@media only screen and (min-width: 600px) and (max-height: 800px) {
+    .directions-image {
+        
+        height: inherit;
+
+    }
 }
 
 .directions-text {
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -256,7 +268,9 @@ ul {list-style-type: none}
     width: 100vw;
     height: calc(100vh - 140px);
     overflow-y: scroll;
+    overflow-x: hidden;
     bottom: 0;
+    scrollbar-width: none; 
 }
 
 .scroll-1 {
@@ -266,7 +280,7 @@ ul {list-style-type: none}
     width: 100vw;
 }
 
-.pages::-webkit-scrollbar {display: none}
+.pages::-webkit-scrollbar, #scroll::-webkit-scrollbar {display: none}
 
 #students-container {padding-top: 90px}
 
@@ -297,16 +311,40 @@ ul {list-style-type: none}
 }
 
 .filters {
+    height: 47px;
     width: 1px;
     border-width: 1px 0px 2px 2px;
     text-align: left;
     padding: 10px;
-    display: flex;
     flex-direction: row;
     gap: 10px;
-    overflow-x: scroll;}
+    overflow-x: hidden;
+    scrollbar-width: thin; 
+    scrollbar-color: var(--white) var(--black);
+}
 
-.filter {
+.filters:hover {
+    overflow-x: scroll;
+    height: 55px;
+    border-width: 1px 0 2px 2px;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px
+}
+
+::-webkit-scrollbar-track {
+    background: var(--black); /* track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--white); /* thumb color */
+    border-radius: 0;
+}
+
+button {
     height: 100%;
     width: fit-content;
     padding: 10px 15px;
@@ -318,14 +356,15 @@ ul {list-style-type: none}
     align-items: center;
     gap: 15px;
     cursor: pointer;
+    white-space: nowrap
 }
 
-.filter:hover {border-color: var(--white);}
-.filter:active {border-color: var(--white) !important; background: var(--white) !important;color: var(--black);}
-.filter.active {border-color: var(--yellow); background: var(--yellow); color: var(--black);}
-.filter > h1 {font-size: 18px; margin-block-start: 1px}
-.filter > symbol {font-size: 26px; margin-block-start: 0}
-.filter > h1, .filter > symbol {margin-block-end: 0; line-height: 0}
+button:hover {border-color: var(--white);}
+button:active {border-color: var(--white) !important; background: var(--white) !important;color: var(--black);}
+button.active {border-color: var(--yellow); background: var(--yellow); color: var(--black);}
+button > h1 {font-size: 18px; margin-block-start: 1px}
+button > s {font-size: 26px; margin-block-start: 0}
+button > h1, button > s {margin-block-end: 0}
 
 .name, .quote {
     width: fill;
@@ -339,7 +378,7 @@ ul {list-style-type: none}
     flex-direction: column-reverse;
     background: linear-gradient(0turn, #000000d2 0%, #00000037 30%, #00000000 60%)}
 
-.name .symbol {
+.name .s {
     color: var(--white);
     font-size: 42px;
     font-family: "space-mono", monospace;
@@ -360,8 +399,9 @@ ul {list-style-type: none}
 .student:hover .name {display: none;}
 
 .student:hover {
-    transform: scale(1.05) 100ms ease-in-out;
-    transition: 100ms ease-in-out
+    transform: scale(1.05);
+    transition: 100ms ease-in-out;
+    box-shadow: 0px 0px 50px var(--yellow);
 }
 
 .topnav {
@@ -430,6 +470,13 @@ ul {list-style-type: none}
     text-align: center
 }
 
+.website-end a:hover {
+    background-color: #000;
+    color: var(--yellow);
+    text-decoration: none;
+    
+}
+
 @media only screen and (min-width: 1200px) and (max-height: 800px),
        only screen and (min-width: 1400px) and (max-height: 1000px),
        only screen and (min-width: 1600px) and (max-height: 1150px),
@@ -493,6 +540,8 @@ ul {list-style-type: none}
     .design{padding-left: 3.33vw}
     div.container>h1 {font-size: 14.4vw}
 
+    .hero-grid:hover #logo {opacity: 0}
+
     .pages {
         flex-direction: column;
         overflow-y: scroll;
@@ -512,7 +561,7 @@ ul {list-style-type: none}
     }
 
     .about-column {
-        padding: 50px 100px 50px 100px;
+        padding: 50px 50px 50px 70px;
         color: var(--black);
         width: auto;
     }
@@ -560,7 +609,7 @@ ul {list-style-type: none}
         height: fit-content;
         width: auto;}
     
-    .pageheader {height: 70px}
+    .pageheader {height: 70px !important}
     .g-l {width: 75px; min-width: 75px; border: none; background: #00000000;}
 }
 
