@@ -94,11 +94,11 @@ fetch('/students.json')
             '&': 'TYPOGRAPHY',
             '<': 'WEB/UI/UX',
             '~': 'ILLUSTRATION',
-            '&#x2192;': 'EXHIBITION',
+            '↗': 'EXPERIMENTAL',
             '?': 'EDITORIAL',
             '+': 'INFORMATION',
             '*': 'PACKAGING',
-            '>': 'ANIMATION/MOTION'
+            '>': 'MOTION'
         };
 
         // Function to check if the file exists

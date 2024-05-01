@@ -549,9 +549,18 @@ button > h1, button > s {margin-block-end: 0}
         overflow-x: hidden;
         height: auto
     }
+
+    .filters {
+        overflow-x: scroll;
+        height: 47px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 0px
+    }
     
     #about {
-        height: fit-content;
         width: 100vw;
         flex-direction: column;
         margin-left: auto;
@@ -660,7 +669,7 @@ button > h1, button > s {margin-block-end: 0}
 #ZHENLILIU {background-position: -5500px 0}
 #CHIHIMLO {background-position: -5750px 0}
 #ANNATENZINLOCKLEY {background-position: -6000px 0}
-#LOKEYEANNETUNG {background-position: -6250px 0}
+#YEANNETUNGLOKE {background-position: -6250px 0}
 #GIOVANNINAMISDIAZ {background-position: -6500px 0}
 #ADAOBIOBIOHA {background-position: -6750px 0}
 #ALEXANDRAPANAYI {background-position: -7000px 0}
