@@ -126,8 +126,11 @@
 
                                     buttons.forEach(button => {
                                         button.addEventListener('click', () => {
-                                            document.getElementById('students-container').scrollIntoView();
-                                            document.getElementById('students').scrollIntoView();
+                                            if (document.documentElement.clientWidth > 600) {
+                                                document.getElementById('students-container').scrollIntoView();
+                                            } else {
+                                                document.getElementById('students').scrollIntoView();
+                                            }
                                         });
                                         button.addEventListener('click', function() {
                                             if (this.classList.contains('active')) {
