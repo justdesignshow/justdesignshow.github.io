@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("May 2, 2024 10:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+            // Get today's date and time
+            var now = new Date().getTime();
+            
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+            
+            // Time calculations for days
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            
+            // Output the result in an element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + " DAYS LEFT";
+            
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "The event has started!";
+            }
+        }, 0);
+    </script>
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>JUST DESIGN</title>
+    <meta name="description" content="The degree show for Graphic Design BA Hons, Coventry University">
+    <head ontouchstart="">
+    </head>
+    <body>
+        <div class="pages" id="scrollableElement">
+            <div style="width: 100vw; height: 100vh">
+                <section id="home">
+                    <div class="hero" style="background: linear-gradient(0.75turn, #ffffb1 0%, var(--yellow) 100%)">
+                        <div class="d-f f-r" style="align-items: right; height: 70vh;">
+                            <div class="d-f hero-grid hero-grid-left" style="border-width: 0px 1px 1px 0px; flex-direction: column-reverse; align-items: flex-end; padding-right: 20px; border-color: #000;">
+                                <div class="container" id="helo" style="color:#000; opacity:0.5"">
+                                    <h1><span class="auto-type">JUST</span><br><span class="design">DESIGN.</span></h1>
+                                </div>
+                                <h2><span id="logo" class="animate" style="color:#000">font-family: "owners", sans-serif;<br>
+                                    letter-spacing: 1pt;<br>
+                                    line-height: 12.5vw;<br>
+                                    margin: 0;<br>
+                                    color: #F3F2EB;</span></h2>
+                            </div>
+                            <div class="hero-grid hero-grid-right" style="border-width: 0px 0px 1px 1px; border-color: #000;"></div>
+                        </div>
+                        <div class="d-f f-r"  style="align-items: right; height: 30vh;">
+                            <div class="hero-grid hero-grid-left hero-sub" style="color: #000000; border-width: 1px 1px 0px 0px; text-align: right;padding-right:20px;padding-top:20px; border-color: #000;">
+                                <h1>GRAPHIC DESIGN BA (HONS)<br>
+                                    DEGREE SHOWCASE<br>
+                                    COVENTRY UNIVERSITY<br>
+                                    DELIA DERBYSHIRE BUILDING<br>
+                                    2 - 16 MAY 2024<br>
+                                    <span id="countdown"></span>
+                                </h1>
+                            </div>
+                            <div class="hero-grid hero-grid-right bottom-right" style="border-width: 1px 0px 0px 1px; border-color: #000;"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+    <script defer src="script.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "lscab6tprj");
+    </script>
+</html>

@@ -2,76 +2,236 @@
 <html lang="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("May 2, 2024 17:00:00").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-            // Get today's date and time
-            var now = new Date().getTime();
-            
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-            
-            // Time calculations for days
-            var days = Math.floor(distance / (1000 * 60 * 60));
-            
-            // Output the result in an element with id="countdown"
-            document.getElementById("countdown").innerHTML = days + " HOURS TO GO!";
-            
-            // If the count down is over, write some text 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "THE EVENT HAS STARTED!";
-            }
-        }, 0);
-    </script>
     <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="style.css">
-    
-    <title>JUST DESIGN</title>
+    <title>JUST DESIGN DEGREE SHOW</title>
     <meta name="description" content="The degree show for Graphic Design BA Hons, Coventry University">
     <head ontouchstart="">
+        <nav role="navigation" class="nav1">
+            <div id="menuToggle">
+                <input type="checkbox" id="Toggle" aria-label="Hamburger Menu"/>
+                <span></span><span></span><span></span>
+                <ul class="menu f-c">
+                    <li><a href="#home"><h1>HOME</h1></a></li>
+                    <li><a href="#about"><h1>ABOUT</h1></a></li>
+                    <li><a href="#directions"><h1>DIRECTIONS</h1></a></li>
+                    <li><a href="#students"><h1>STUDENTS</h1></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="d-f f-r topnav">
+            <a href="#home"><h1>HOME</h1></a>
+            <a href="#about"><h1>ABOUT</h1></a>
+            <a href="#directions"><h1>DIRECTIONS</h1></a>
+            <a href="#students"><h1>STUDENTS</h1></a>
+        </div>
     </head>
     <body>
         <div class="pages" id="scrollableElement">
-            <div style="width: 100vw; height: 100vh">
-                <section id="home">
-                    <div class="hero" style="background: linear-gradient(0.75turn, #ffffb1 0%, var(--yellow) 100%)">
-                        <div class="d-f f-r" style="align-items: right; height: 70vh;">
-                            <div class="d-f hero-grid hero-grid-left" style="border-width: 0px 1px 1px 0px; flex-direction: column-reverse; align-items: flex-end; padding-right: 20px; border-color: #000;">
-                                <div class="container" id="helo" style="color:#000; opacity:0.5"">
-                                    <h1><span class="auto-type">JUST</span><br><span class="design">DESIGN.</span></h1>
-                                </div>
-                                <h2><span id="logo" class="animate" style="color:#000">font-family: "owners", sans-serif;<br>
-                                    letter-spacing: 1pt;<br>
-                                    line-height: 12.5vw;<br>
-                                    margin: 0;<br>
-                                    color: #F3F2EB;</span></h2>
-                            </div>
-                            <div class="hero-grid hero-grid-right" style="border-width: 0px 0px 1px 1px; border-color: #000;"></div>
+            <section id="home" style="height: 0; width: 0"></section>
+            <div class="d-f f-c home">
+                <div class="d-f f-r" style="align-items: right; height: 70vh;">
+                    <div class="d-f hero-grid hero-grid-left hero-logo" style="border-width: 0 1px 1px 0">
+                        <div class="container">
+                            <h1><span class="auto-type">JUST</span><br><span class="design">DESIGN.</span></h1>
                         </div>
-                        <div class="d-f f-r"  style="align-items: right; height: 30vh;">
-                            <div class="hero-grid hero-grid-left hero-sub" style="color: #000000; border-width: 1px 1px 0px 0px; text-align: right;padding-right:20px;padding-top:20px; border-color: #000;">
-                                <h1>GRAPHIC DESIGN BA (HONS)<br>
-                                    DEGREE SHOWCASE<br>
-                                    COVENTRY UNIVERSITY<br>
-                                    DELIA DERBYSHIRE BUILDING<br>
-                                    2 - 16 MAY 2024<br>
-                                    <span id="countdown"></span>
-                                </h1>
+                        <h2><span id="logo" class="animate">
+                            font-family: "owners", sans-serif;<br>
+                            letter-spacing: 1pt;<br>
+                            line-height: 12.5vw;<br>
+                            margin: 0;<br>
+                            color: #F3F2EB;</span></h2>
+                    </div>
+                    <div class="hero-grid hero-grid-right" style="border-width: 0 0 1px 1px"></div>
+                </div>
+                <div class="d-f f-r" style="align-items: right; height: 30vh">
+                    <div class="hero-grid hero-grid-left hero-sub">
+                        <h1>GRAPHIC DESIGN BA (HONS)<br>
+                            DEGREE SHOWCASE<br>
+                            2 - 16 MAY 2024</h1>
+                        
+                    </div>
+                    <div class="hero-grid hero-grid-right" style="border-width: 1px 0 0 1px"></div>
+                </div>
+            </div>
+            <section id="about" class="d-f">
+                <div class="about-column">
+                    <h1>THE CONCEPT</h1>
+                    <h2>As a designer, you often have to hear from people outside of industry, that what you do is “just” design. And yes, it is just design! But there is so much that goes into it. What better way to show the depth and complexity that design entails than to visualise and reveal all the technical parameters and design process that goes into our work. The concept is based on this premise. The degree show is therefore an invitation to all people who are not familiar with design and, at the same time, a display of our understanding of the design process to industry professionals. It offers a chance to connect over shared experience and humour too.</h2>
+                </div>
+                <div class="about-column">
+                    <h1>FOLLOW OUR SOCIALS</h1>
+                    <a class="link" href="https://www.instagram.com/justdesign.show"><h2>Instagram</h2></a>
+                    <a class="link" href="https://www.tiktok.com/@justdesign.show"><h2>TikTok</h2></a>
+                </div>
+            </section>
+            <section id="directions" class="d-f f-c">
+                <div class="pageheader d-f f-r">
+                    <div class="grid g-l" style="border-width: 0 1px 1px 0"></div>
+                    <div class="d-f grid g-r header" style="border-width: 0 0 1px 1px">
+                        <h1>DIRECTIONS</h1>
+                    </div>
+                </div>
+                <div class="d-f f-r directions-content">
+                    <div class="grid g-l" style="border-width: 1px 1px 0 0"></div>
+                    <div class="grid g-r" style="border-width: 1px 0 0 1px">
+                        <div class="directions-container">
+                            <div class="directions-text">
+                                <h1>LOCATION</h1>
+                                <h2>Delia Derbyshire Building<br>Floor 6 in room DD604</h2>
+                                <h1>OPENING HOURS</h1>
+                                <h2>10:00 - 1:00</h2>
                             </div>
-                            <div class="hero-grid hero-grid-right bottom-right" style="border-width: 1px 0px 0px 1px; border-color: #000;"></div>
+                            <picture class="directions-image">
+                                <source media="(min-width: 600px)" srcset="/directions.webp">
+                                <source media="(min-width: 0px)" srcset="/directions-mobile.webp">
+                                <img src="/directions.webp" alt="Directions" class="directions-image">
+                            </picture>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
+            <section id="students">
+                <div class="students-top">
+                    <div class="pageheader d-f f-r">
+                        <div class="grid g-l" style="border-width: 0 0 1px 0"></div>
+                        <div class="d-f grid g-r header" style="border-width: 0 0 1px 2px" >
+                            <h1>STUDENTS</h1>
+                        </div>
+                    </div>
+                    <div class="d-f f-r" style="height: 70px">
+                        <div class="grid g-l d-f" style="border-width: 1px 0 0 0"></div>
+                        <div class="grid g-r d-f filters">
+                            <button><s>!</s><h1>BRANDING</h1></button>
+                            <button><s>&</s><h1>TYPOGRAPHY</h1></button>
+                            <button><s>&lt;</s><h1>WEB&#47;UI&#47;UX</h1></button>
+                            <button><s>~</s><h1>ILLUSTRATION</h1></button>
+                            <button><s>↗</s><h1>EXPERIMENTAL</h1></button>
+                            <button><s>?</s><h1>EDITORIAL</h1></button>
+                            <button><s>+</s><h1>INFORMATION</h1></button>
+                            <button><s>*</s><h1>PACKAGING</h1></button>
+                            <button><s>&gt;</s><h1>MOTION</h1></button>
+                        </div>
+                    </div>
+                </div>
+                <div id="scroll">
+                    <div class="scroll-1">
+                        <div class="grid g-l" style="border-width: 0"></div>
+                        <div class="grid students-grid-right" id="students-container" style="border-width: 0 0 0 2px">
+                            <script>
+                                fetch('students.json')
+                                .then(response => response.json())
+                                .then(students => {
+                                    let buttons = document.querySelectorAll('button');
+
+                                    buttons.forEach(button => {
+                                        button.addEventListener('click', () => {
+                                            if (document.documentElement.clientWidth > 600) {
+                                                document.getElementById('students-container').scrollIntoView();
+                                            } else {
+                                                document.getElementById('students').scrollIntoView();
+                                            }
+                                        });
+                                        button.addEventListener('click', function() {
+                                            if (this.classList.contains('active')) {
+                                                this.classList.remove('active');
+                                                displayStudents(Object.values(students));
+                                                return;
+                                            }
+
+                                            buttons.forEach(btn => btn.classList.remove('active'));
+                                            this.classList.add('active');
+
+                                            let symbol = this.querySelector('s').textContent;
+                                            let filteredStudents = filterBySymbol(symbol, Object.values(students));
+                                            displayStudents(filteredStudents);
+                                        });
+                                    });
+
+                                    function filterBySymbol(symbol, students) {
+                                        let filteredStudents = students.filter(student => 
+                                            student.work1s === symbol || 
+                                            student.work2s === symbol || 
+                                            student.work3s === symbol
+                                        );
+                                        return filteredStudents;
+                                    }
+
+                                    function displayStudents(students) {
+                                    let container = document.getElementById('students-container');
+                                    container.innerHTML = '';
+                                    students.forEach(student => {
+                                        let sD = document.createElement('div');
+                                        sD.className = 'student';
+                                        sD.id = student.n.replace(/ /g, '');
+                                        let a = document.createElement('a');
+                                        a.href = '/student?id=' + sD.id.toLowerCase();
+                                        a.appendChild(sD);
+                                        let n = document.createElement('div');
+                                        n.className = 'name';
+                                        
+                                        // Create a set of unique symbols
+                                        const uniqueSymbols = new Set([...student.work1s, ...student.work2s, ...student.work3s]);
+                                        
+                                        let symbolDiv = document.createElement('div');
+                                        symbolDiv.className = 's';
+                                        
+                                        // Convert the set back to a string and assign it to textContent
+                                        symbolDiv.textContent = Array.from(uniqueSymbols).join('');
+                                        
+                                        let nameH1 = document.createElement('h1');
+                                        nameH1.innerHTML = student.n;
+                                        n.appendChild(nameH1);
+                                        n.appendChild(symbolDiv);
+                                        let q = document.createElement('div');
+                                        q.className = 'quote';
+                                        let quoteH1 = document.createElement('h1');
+                                        quoteH1.textContent = '"' + student.q + '"';
+                                        q.appendChild(quoteH1);
+                                        sD.appendChild(n);
+                                        sD.appendChild(q);
+                                        container.appendChild(a);
+                                    });
+                                }
+
+                                    displayStudents(Object.values(students));
+                                });
+
+                            </script>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="f1 footer-column">
+                            <img loading="lazy" src="/logo.webp" class="footer-logo" alt="Just Design Logo">
+
+                        </div>
+                        <div class="f2 footer-column">
+                            <h1>LOCATION</h1>
+                            <h2>Coventry University<br>
+                                Delia Derbyshire<br>
+                                Cox Street<br>
+                                Coventry<br>
+                                CV1 5PH</h2>
+                        </div>
+                        <div class="f3 footer-column">
+                            <h1>CONTACT</h1>
+                            <h2>example@example.com</h2>
+                        </div>
+                        <div class="f4 footer-column">
+                            <h1>CONNECT</h1>
+                            <a href="https://www.instagram.com/justdesign.show"><h2>Instagram</h2></a>
+                            <a href="https://www.tiktok.com/@justdesign.show"><h2>TikTok</h2></a>
+                        </div>
+                    </div>
+                    <div class="website-end">
+                        <h2>Made with &lt;3 by the website team (<a href="/student?id=jaidhaliwal">Jai</a>, <a href="/student?id=lokeyeannetung">Loke</a>, <a href="/student?id=zhenliliu">Zhenli</a>, Keyi & Giovanni)<br>coded by <a href="/student?id=jaidhaliwal">Jai</a></h2>
+                    </div>
+                </div>
+            </section>
         </div>
     </body>
     <script defer src="script.js"></script>
-    <script type="text/javascript">
+    <script>
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
