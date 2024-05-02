@@ -99,7 +99,7 @@
                             <h1>STUDENTS</h1>
                         </div>
                     </div>
-                    <div class="d-f f-r" style="height: 70px;">
+                    <div class="d-f f-r" style="height: 70px">
                         <div class="grid g-l d-f" style="border-width: 1px 0 0 0"></div>
                         <div class="grid g-r d-f filters">
                             <button><s>!</s><h1>BRANDING</h1></button>
@@ -125,6 +125,10 @@
                                     let buttons = document.querySelectorAll('button');
 
                                     buttons.forEach(button => {
+                                        button.addEventListener('click', () => {
+                                            document.getElementById('students-container').scrollIntoView();
+                                            document.getElementById('students').scrollIntoView();
+                                        });
                                         button.addEventListener('click', function() {
                                             if (this.classList.contains('active')) {
                                                 this.classList.remove('active');
@@ -217,7 +221,7 @@
                         </div>
                     </div>
                     <div class="website-end">
-                        <h2>Made with &lt;3 by the website team (<a href="/student?id=jaidhaliwal">Jai</a>, <a href="/student?id=lokeyeannetung">Loke</a>, <a href="/student?id=keyichen">Keyi</a>, <a href="/student?id=giovanninamisdiaz">Giovanni</a>, <a href="/student?id=zhenliliu">Zhenli</a>)<br>coded by <a href="/student?id=jaidhaliwal">Jai</a></h2>
+                        <h2>Made with &lt;3 by the website team (<a href="/student?id=jaidhaliwal">Jai</a>, <a href="/student?id=lokeyeannetung">Loke</a>, <a href="/student?id=zhenliliu">Zhenli</a>, Keyi & Giovanni)<br>coded by <a href="/student?id=jaidhaliwal">Jai</a></h2>
                     </div>
                 </div>
             </section>

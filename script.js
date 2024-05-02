@@ -111,45 +111,46 @@ sections.forEach(section => {
 sections.forEach(section => {
 observer.observe(section);
 
+if (document.documentElement.clientWidth < 600) {
+    document.addEventListener('DOMContentLoaded', function() {
+        var studentsTop = document.querySelector('.students-top');
+        if (studentsTop) {
+            var studentsTopInitialOffset = studentsTop.offsetTop;
+            var isSticky = false;
 
-document.addEventListener('DOMContentLoaded', function() {
-    var studentsTop = document.querySelector('.students-top');
-    if (studentsTop) {
-        var studentsTopInitialOffset = studentsTop.offsetTop;
-        var isSticky = false;
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > studentsTopInitialOffset && !isSticky) {
-                studentsTop.classList.add('sticky');
-                isSticky = true;
-                // Create or update the placeholder
-                var placeholder = document.querySelector('.placeholder') || document.createElement('div');
-                placeholder.classList.add('placeholder'); // Ensure the class is added
-                placeholder.style.display = 'block';
-                placeholder.style.height = (studentsTop.offsetHeight) + 'px'; // Set height to 1/4 of studentsTop
-                if (!document.querySelector('.placeholder')) {
-                    studentsTop.parentNode.insertBefore(placeholder, studentsTop);
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > studentsTopInitialOffset && !isSticky) {
+                    studentsTop.classList.add('sticky');
+                    isSticky = true;
+                    // Create or update the placeholder
+                    var placeholder = document.querySelector('.placeholder') || document.createElement('div');
+                    placeholder.classList.add('placeholder'); // Ensure the class is added
+                    placeholder.style.display = 'block';
+                    placeholder.style.height = (studentsTop.offsetHeight) + 'px'; // Set height to 1/4 of studentsTop
+                    if (!document.querySelector('.placeholder')) {
+                        studentsTop.parentNode.insertBefore(placeholder, studentsTop);
+                    }
+                } else if (window.scrollY <= studentsTopInitialOffset && isSticky) {
+                    studentsTop.classList.remove('sticky');
+                    isSticky = false;
+                    var placeholder = document.querySelector('.placeholder');
+                    if (placeholder) {
+                        placeholder.style.display = 'none';
+                    }
                 }
-            } else if (window.scrollY <= studentsTopInitialOffset && isSticky) {
-                studentsTop.classList.remove('sticky');
-                isSticky = false;
-                var placeholder = document.querySelector('.placeholder');
-                if (placeholder) {
-                    placeholder.style.display = 'none';
-                }
-            }
-        });
+            });
 
-        window.addEventListener('resize', function() {
-            if (!isSticky) {
-                studentsTopInitialOffset = studentsTop.offsetTop;
-            }
-        });
-        new MutationObserver(function() {
-            if (!isSticky) {
-                studentsTopInitialOffset = studentsTop.offsetTop;
-            }
-        }).observe(document.body, { childList: true, subtree: true });
-    } 
-})
+            window.addEventListener('resize', function() {
+                if (!isSticky) {
+                    studentsTopInitialOffset = studentsTop.offsetTop;
+                }
+            });
+            new MutationObserver(function() {
+                if (!isSticky) {
+                    studentsTopInitialOffset = studentsTop.offsetTop;
+                }
+            }).observe(document.body, { childList: true, subtree: true });
+        } 
+    })
+}
 });
