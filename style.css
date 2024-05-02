@@ -562,6 +562,7 @@ button > h1, button > s {margin-block-end: 0}
     }
     
     #about {
+        height: auto;
         width: 100vw;
         flex-direction: column;
         margin-left: auto;
@@ -571,7 +572,7 @@ button > h1, button > s {margin-block-end: 0}
     }
 
     .about-column {
-        padding: 50px 50px 50px 70px;
+        padding: 30px 50px 30px 70px;
         color: var(--black);
         width: auto;
     }
